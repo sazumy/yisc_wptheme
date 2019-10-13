@@ -1,0 +1,247 @@
+@media screen and (max-width: 1068px){
+  body{
+// 全ページ共通-------------------------------
+    padding-bottom: $footer-height;
+    .content{
+      width: 100%;
+      margin: 24px 0 0 0;
+      .content__inner{
+        width: 70%;
+      }
+    }
+// index-page */
+  .index-page{
+    .two-column{
+      display: block;
+      padding: 0px;
+    }
+    .last-content{
+      section{
+        width: 100% !important; // important取りたい
+      }
+    }
+  }
+// schedule-page---------------------------
+    .schedule-page{
+      .content__inner{
+        .calender{
+          &__google{
+            iframe{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .archive-page{
+      .archive{
+        .content__inner{
+          &--l{
+            img{
+              max-width:100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .wrapper{
+    .header{
+      .content__inner{
+        width: 100%;
+        max-width:100%;
+        display: block;
+        font-size: 1.4em;
+
+        .page__title{
+          margin-left: 20px;
+        }
+        &--r{
+          position: relative;
+
+          .page-nav-btn{
+            position: absolute;
+            top:-20px;
+            right:20px;
+          }
+          .page-nav-box{
+            // display: block; JSで切り替える
+            .page-nav{
+              width: 100%;
+              right: auto;
+              position: absolute;
+              top:20px;
+            }
+          }
+        }
+      }
+    } // end.header
+//  main--------------------------------------------
+    main{
+      // top page の場合----------------
+      .slider{
+        min-height: 200px;
+        &__slides{
+          .slide:first-child{
+            .main-copy{
+              font-size: 1.4em !important;
+            }
+          }
+        }
+      }
+      .schedule, .blog, .reservation, .about-us{
+        min-height: 200px !important;
+      }
+      .index-tile{
+        &__inner{
+          width: 100%;
+          .eyecatch{
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+          }
+          .section{
+            position: static;
+            transform: translate(0%, 0%);
+          }
+        }
+      }
+
+      // top 画像が２カラムの時 
+      .for-youth, .for-parents, .step{
+        .content__inner{
+          display: block !important;
+          max-width: 100%;
+          &--l{
+            width: 100%;
+            .eyecatch{
+              width: 150px;
+              height: auto;
+              margin-bottom: 20px;
+            }
+          }
+          &--r{
+            width: 100%;
+            .section{
+              position: static;
+              transform: translate(0%, 0%);
+            }
+          }
+        }
+      }
+      .content{
+    // <section></section>内の要素に共通のcss・レイアウトcss-------------
+        .content__inner{
+          padding:10px 0;
+          .section__title{
+            margin-bottom: 0px !important;
+          }
+        }
+          
+      
+    // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
+        
+        .about{
+          .content__inner{
+            .section{
+              top:25%;
+            }
+          }
+        }
+      }//end.content
+    }//end.main
+    aside{
+      .back-to-top{
+        width: 50px;
+        height: 50px;
+        font-size:1.6em;
+        line-height:2.1;
+        right:32px;
+      }
+    }
+
+// pages-------------------------------------
+    .for-youth-page, .for-parents-page{
+      .content__inner{
+        .support{
+          display: block;
+          &__image{
+            max-width: 250px;
+            margin:0 auto;
+            &__img{
+              width: 100%;
+              height: auto;
+              text-align: center;  
+            }
+          }
+          &__header.visible-sp{
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+          &__header.visible-pc{
+            display: none;
+          }
+        }
+      }
+    }
+    .reservation-page, .steps-page{
+      .content__inner{
+        .steps{
+          margin-bottom: 30px;
+          .section{
+            display: block;
+            margin-bottom: 20px;
+            
+            &__image{
+              margin:0 auto 10px;
+              &__img{
+                width: 100%;
+                text-align: center;  
+              }
+            }
+            &__info.visible-sp{
+              display: block;
+              width: 100%;
+              text-align: center;
+            }
+            &__info.visible-pc{
+              display: none;
+            }
+          }
+          .notification{
+            &__image{
+              max-width: 250px;
+            }
+          }
+        }
+      }
+    }
+
+  //個別投稿ページ-------------------
+  .post{
+    &__header{
+      text-align: center;
+    }
+    &__content{
+      display: block;
+      &__eyecatch{
+        margin:0 0 10px 0;
+        text-align: center;
+        img {
+          width: 250px;
+        }
+      }
+      &__right{
+        .post__text{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
+}//end.wrapper
+}

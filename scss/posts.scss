@@ -1,0 +1,46 @@
+.post{
+  @include column-content;
+  .content__inner{
+    @include content-inner;
+  }
+  &__header{
+    color: $saposute-green;
+    font-size: $h3-size;
+  }
+  &__content{
+    margin-top: 10px;
+    display: flex;
+    &__eyecatch{
+      margin-right:10px;
+      img {
+        width: 200px;
+      }
+    }
+    &__right{
+      .post__info, .post__categories, .post__tags{
+        display: flex;
+        margin-top: 5px;
+        *{
+          @include post-info;
+        }
+        &__date, &__auther{
+          font-style: italic;
+          color: $gray-lv3;
+        }
+      }
+      .post__tags{
+        * {
+          @include tags;
+          background-color: $gray-lv2;
+        }
+      }
+      .post__categories{
+        * {
+          @include tags;
+          background-color: $saposute-green;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.content{
+  .for-youth{
+    background-color: $saposute-aqua;
+    color:$white;
+  }
+}
+
+.index-page, .for-youth-page, .for-parents-page, .schedule-page, .about-us-page, .reservation-page, .steps-page, .archive{
+// 各ページのヘッダーの変更 ---------------------------------
+  .about{
+    background-color: $white;
+    color:$saposute-green;
+  }
+   
+// 全ページ共通 ---------------------------------
+  .content__inner{
+    @include column-content;
+    @include content-inner;
+    // index-page
+    .pick-up-header{
+      font-size:$h3-size;
+      color: $saposute-green;
+      text-align: center;
+    }
+    .pick-up{
+      text-align: center;
+      
+      &__list{
+        font-size:1.3em;
+        line-height: 2;
+        &:before{
+          color: $saposute-green;
+          content: '●';
+        }
+      }
+    }
+// for-youth.html / for-parebts.html ---------------------------------
+    .support{
+      padding: 20px 0;
+      display: flex;
+      &__header{
+        font-size:$h3-size;
+        color: $saposute-green;
+        margin:10px 0;
+      }
+      &__header.visible-sp{
+        display: none;
+      }
+      &__image{
+        margin-right: 15px;
+        &__img{
+          width: 250px;
+          height: 200px;
+        }
+      }
+      &__description{
+        padding-top:10px;
+      }
+    }
+// schedule.html ---------------------------------
+    .calender{
+      max-width:600px;
+      margin:0 auto;
+      padding: 20px 0;
+      &__description{
+        margin-bottom: 20px;
+      }
+      &__google{
+        margin:0 auto;
+        text-align: center;
+      }
+    }
+
+// about-us.html ---------------------------------
+    .introduction{
+      margin: 0 auto;
+      &__image{
+        margin: 50px auto;
+        text-align: center;
+        img{
+          max-width: 100%;
+        }
+      }
+      &__description{
+        text-align: center;
+      }
+    }
+    .adress{
+      *{
+        text-align: center;
+      }
+      &__header{
+        font-weight:900;
+        margin: 10px 0 5px 0;
+      }
+    }
+   
+// reservation.html ---------------------------------
+    .steps{
+      margin: 0 auto 40px;
+      &__header{
+        font-size: $h3-size;
+        font-weight: 900;
+        margin: 10px 0;
+        text-align: center;
+      }
+      .section{
+        display: block;
+        * {
+          text-align: center;
+        }
+        &__info{
+          font-size: $h4-size;
+          color: $saposute-green;
+          margin-bottom: 20px;
+        }
+        &__info--parents{
+          @extend .section__info;
+          margin-top: 20px;
+        }
+        &__image{
+          margin: 0 auto 20px;
+          &__img{
+            width: 250px;
+          }
+        }
+        &__description{
+          margin-bottom: 20px;
+        }
+      }
+    }
+  } //end.content__inner
+
+// about-us.html(google mapのみ) ---------------------------------
+  .access{
+    &__header{
+      font-size: $h3-size;
+      color: $saposute-green;
+      text-align: center;
+    }
+    &__map{
+      iframe{
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.header{
+  .content__inner{
+    @include column-content;
+    @include content-inner;
+    max-width: 70%;
+    color:$saposute-green;
+    display: flex;
+    justify-content: space-between;
+    font-size:1.8em;
+    .saposute-name{
+      font-size:0.4em;
+      line-height:0.4;
+    }
+
+    &--r{
+      .page-nav-btn{
+        line-height:1.2;
+      }
+      .page-nav-box{
+        position: relative;
+        display: none; //JSで見えるようにする
+
+        .page-nav{
+          width: 300px;
+          background-color: $white;
+          position: absolute;
+          top:28px;
+          right:-50px;
+          z-index:30;
+          color: $gray-lv4;
+          font-size: 14px;
+          border-bottom:$green-border-dotted; 
+          &__list{
+            padding: 10px 20px;
+            border-top:$green-border-dotted;
+            &:hover{
+              background-color: $saposute-green-hue;
+              color: $white;
+              font-weight:900;
+            }
+          }
+        }
+      }
+    }
+  }
+}
