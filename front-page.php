@@ -153,10 +153,10 @@ get_header();
           
             <div class="section">
               <h3 class="section__title">
-                卒業までのステップ
+                就職までのステップ
               </h3>
               <h4 class="section__description">
-                ご利用開始から卒業までの流れ
+                ご利用開始から就職までの流れ
               </h4>
             </div>
           </div><!--end.index-tile__inner-->

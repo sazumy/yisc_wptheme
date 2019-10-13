@@ -26,7 +26,7 @@ get_header();
     } else if (is_page('reservation')){
       get_template_part('template-parts/top-reservation');
     } else {
-      // 「卒業までのステップ」がここに入っています。ページ構造が変化する場合には変更してください
+      // 「就職までのステップ」がここに入っています。ページ構造が変化する場合には変更してください
       get_template_part('template-parts/top-steps');
     }
     ?>

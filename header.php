@@ -64,7 +64,7 @@
               <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
               <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/steps">卒業までのステップ</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
             </ul>
           </nav>

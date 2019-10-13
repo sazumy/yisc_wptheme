@@ -7,10 +7,10 @@
     <div class="content__inner--r">
       <div class="section">
         <h3 class="section__title">
-          卒業までのステップ
+          就職までのステップ
         </h3>
         <h4 class="section__description">
-          卒業までのステップのご案内
+          就職までのステップのご案内
         </h4>
       </div>
     </div>
