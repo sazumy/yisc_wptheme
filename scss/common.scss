@@ -80,3 +80,45 @@ img.size-post-thumbnail{
   margin-top: 15px;
   text-align: center;
 }
+
+/* ホバーエフェクト */
+/* アニメーション */ 
+.rotate{
+  &:hover{
+    transition: 1s;
+    transform: rotateZ( 360deg ) ;
+    opacity: 1;
+    }
+}
+
+.shake{
+  &:hover{
+    animation: shake .2s linear;
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  40% {
+    transform: translateX(-3%);
+  }
+  
+  80% {
+    transform: translateX(3%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bigger{
+  &:hover{
+    @include transition;
+    transform: perspective(500px) translate3d(0, -8px,50px);
+  }
+}

@@ -22,7 +22,7 @@ get_header();
     <section class="pick-up-index">
       <div class="content__inner">
       <a href="<?php get_template_directory_uri(); ?>/yisc/home">
-        <h3 class="pick-up-header">
+        <h3 class="pick-up-header bigger">
           PICK UP!
         </h3>
       </a>
@@ -36,8 +36,8 @@ get_header();
               foreach ( $posts as $post ): // ループの開始
                 setup_postdata( $post ); // 記事データの取得
               ?>
-              <li class="pick-up__list">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              <li class="pick-up__list bold">
+              <a href="<?php the_permalink(); ?>" class="bold"><?php the_title(); ?></a>
               </li>
             <?php
             endforeach; // ループの終了
@@ -51,8 +51,7 @@ get_header();
       <section class="for-youth index-tile">
         <a href="<?php echo home_url();?>/foryouth">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch">
-
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch rotate">
             <div class="section">
               <h3 class="section__title">
                 悩んでいるあなたへ
@@ -69,7 +68,7 @@ get_header();
       <section class="for-parents index-tile">
         <a href="<?php echo home_url();?>/forparents">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_02.png" alt="対象者のイメージ" class="eyecatch">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_02.png" alt="対象者のイメージ" class="eyecatch shake">
           
             <div class="section">
               <h3 class="section__title">
@@ -107,7 +106,7 @@ get_header();
       <section class="voice index-tile">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="eyecatch">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="eyecatch bigger">
       
             <div class="section">
               <h3 class="section__title">
@@ -149,7 +148,7 @@ get_header();
       <section class="step index-tile">
         <a href="<?php echo home_url();?>/steps">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_04.png" alt="対象者のイメージ" class="eyecatch">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_04.png" alt="対象者のイメージ" class="eyecatch rotate">
           
             <div class="section">
               <h3 class="section__title">

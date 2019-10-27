@@ -15,19 +15,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="ページの内容を表す文章" />
+  <meta name="description" content="埼玉県川口市にある若者就労支援施設、若者自立支援センター埼玉のホームページです" />
   <meta name="robots" content="noindex,nofollow" />
 
-  <meta property="og:url" content="ページのURL" />
-  <meta property="og:title" content="ページのタイトル" />
+  <meta property="og:url" content="https://yisc-saitama.com/" />
+  <meta property="og:title" content="若者自立支援センター埼玉" />
   <meta property="og:type" content="ページのタイプ">
-  <meta property="og:description" content="記事の抜粋" />
+  <meta property="og:description" content="若者自立支援センター埼玉では、若年無業やひきこもり状態などの「働きたいのに働けない」若者に対して、もう一度はじめの一歩を踏み出すお手伝いをしています。お子様の自立に悩む保護者の方はぜひ一度、当ウェブサイトをご覧下さい。" />
   <meta property="og:image" content="画像のURL" />
   <meta name="twitter:card" content="カード種類" />
   <meta name="twitter:site" content="@Twitterユーザー名" />
-  <meta property="og:site_name" content="サイト名" />
-  <meta property="og:locale" content="ja_JP" />
-  <meta property="fb:app_id" content="appIDを入力" />
 
 
   <script
@@ -36,15 +33,15 @@
   crossorigin="anonymous"></script>
   <script src="<?php echo get_theme_file_uri('js/app.js')?>"></script>
   <script src="https://kit.fontawesome.com/1f22ee88f6.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-  
   <title>若者自立支援センター埼玉</title>
   <?php wp_head(); ?>
 </head>
 <!--end head----------------------------------------------------------------->
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper" ontouchstart="">
     <header class="header">
       <div class="content__inner">
         <h1 class="page__title">
@@ -54,7 +51,7 @@
         </h1>
 
         <div class="content__inner--r">
-          <i class="fas fa-bars page-nav-btn" id="page-nav-btn"></i>
+          <i class="fas fa-bars page-nav-btn visible-tablet" id="page-nav-btn"></i>
 
           <nav class="page-nav-box">
             <ul class="page-nav">

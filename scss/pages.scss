@@ -16,21 +16,27 @@
   .content__inner{
     @include column-content;
     @include content-inner;
-    // index-page
     .pick-up-header{
       font-size:$h3-size;
       color: $saposute-green;
       text-align: center;
     }
     .pick-up{
-      text-align: center;
-      
+      text-align: center; 
       &__list{
         font-size:1.3em;
         line-height: 2;
+        &:hover{
+          opacity:.8;
+          font-weight: 900;
+        }
         &:before{
           color: $saposute-green;
-          content: '●';
+          font-family: font-awesome free;
+          content: '>>';
+          &:hover{
+            font-weight: 400;
+          }
         }
       }
     }

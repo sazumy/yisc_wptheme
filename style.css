@@ -1,13 +1,17 @@
-git/*
+@charset "UTF-8";
+/*
 Theme Name: YISC
 Theme URI: https://github.com/seinoazumi/yisc_wptheme
 Author: Seino Azumi
 Description: the original theme of YISC.
 Version: 1.0
 */
-
-@charset "UTF-8";
-
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap");
 html {
   color: #000;
@@ -65,8 +69,8 @@ legend {
 
 html {
   box-sizing: border-box; }
-  html *, html *::before, html *::after {
-    box-sizing: inheritate; }
+html *, html *::before, html *::after {
+  box-sizing: inheritate; }
 
 body {
   color: #666;
@@ -82,12 +86,12 @@ body {
 
 a {
   text-decoration: none; }
-  a:link {
-    color: inherit; }
-  a:hover {
-    color: inherit; }
-  a:visited {
-    color: inherit; }
+a:link {
+  color: inherit; }
+a:hover {
+  color: inherit; }
+a:visited {
+  color: inherit; }
 
 figure {
   margin-block-start: 0;
@@ -115,8 +119,8 @@ button {
   background: #61B420;
   color: #fafcfc;
   margin-bottom: 20px; }
-  button:hover {
-    opacity: 0.8; }
+button:hover {
+  opacity: 0.8; }
 
 .page__title:hover, .eyecatch:hover, .section__title:hover, .section__description:hover {
   opacity: 0.8; }
@@ -145,57 +149,81 @@ img.size-post-thumbnail {
   margin-top: 15px;
   text-align: center; }
 
+/* ホバーエフェクト */
+/* アニメーション */
+.rotate:hover {
+  transition: 1s;
+  transform: rotateZ(360deg);
+  opacity: 1; }
+
+.shake:hover {
+  animation: shake .2s linear;
+  opacity: 1; }
+
+@keyframes shake {
+  0% {
+    transform: translateX(0); }
+  40% {
+    transform: translateX(-3%); }
+  80% {
+    transform: translateX(3%); }
+  100% {
+    transform: translateX(0); } }
+.bigger:hover {
+  transition: all 0.5s ease;
+  transform: perspective(500px) translate3d(0, -8px, 50px); }
+
 main .slider .slider__slides .slide__img {
   width: 100%; }
 main .slider .slider__slides .slide:first-child {
   position: relative; }
-  main .slider .slider__slides .slide:first-child .main-copy {
-    font-size: 2em;
-    color: #fafcfc;
-    text-align: center;
-    text-shadow: 2px 2px 2px #666;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%); }
+main .slider .slider__slides .slide:first-child .main-copy {
+  font-size: 2em;
+  color: #fafcfc;
+  text-align: center;
+  text-shadow: 2px 2px 2px #666;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%); }
 main .slider .slider__slides .slide:nth-child(n+2) {
   display: none; }
 main .for-youth, main .for-parents, main .schedule, main .about, main .reservation, main .step, main .voice, main .blog, main .about-us, main .post-page, main .archive {
   width: 100%;
   padding: 24px 0; }
-  main .for-youth .content__inner, main .for-parents .content__inner, main .schedule .content__inner, main .about .content__inner, main .reservation .content__inner, main .step .content__inner, main .voice .content__inner, main .blog .content__inner, main .about-us .content__inner, main .post-page .content__inner, main .archive .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 70%;
-    text-align: center; }
-    main .for-youth .content__inner .section__title, main .for-parents .content__inner .section__title, main .schedule .content__inner .section__title, main .about .content__inner .section__title, main .reservation .content__inner .section__title, main .step .content__inner .section__title, main .voice .content__inner .section__title, main .blog .content__inner .section__title, main .about-us .content__inner .section__title, main .post-page .content__inner .section__title, main .archive .content__inner .section__title {
-      font-size: 1.8em;
-      margin-bottom: 15px; }
-    main .for-youth .content__inner .section__description, main .for-parents .content__inner .section__description, main .schedule .content__inner .section__description, main .about .content__inner .section__description, main .reservation .content__inner .section__description, main .step .content__inner .section__description, main .voice .content__inner .section__description, main .blog .content__inner .section__description, main .about-us .content__inner .section__description, main .post-page .content__inner .section__description, main .archive .content__inner .section__description {
-      font-size: 1.2em; }
+main .for-youth .content__inner, main .for-parents .content__inner, main .schedule .content__inner, main .about .content__inner, main .reservation .content__inner, main .step .content__inner, main .voice .content__inner, main .blog .content__inner, main .about-us .content__inner, main .post-page .content__inner, main .archive .content__inner {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 70%;
+  text-align: center; }
+main .for-youth .content__inner .section__title, main .for-parents .content__inner .section__title, main .schedule .content__inner .section__title, main .about .content__inner .section__title, main .reservation .content__inner .section__title, main .step .content__inner .section__title, main .voice .content__inner .section__title, main .blog .content__inner .section__title, main .about-us .content__inner .section__title, main .post-page .content__inner .section__title, main .archive .content__inner .section__title {
+  font-size: 1.8em;
+  margin-bottom: 15px; }
+main .for-youth .content__inner .section__description, main .for-parents .content__inner .section__description, main .schedule .content__inner .section__description, main .about .content__inner .section__description, main .reservation .content__inner .section__description, main .step .content__inner .section__description, main .voice .content__inner .section__description, main .blog .content__inner .section__description, main .about-us .content__inner .section__description, main .post-page .content__inner .section__description, main .archive .content__inner .section__description {
+  font-size: 1.2em; }
 main .for-youth .content__inner, main .for-parents .content__inner, main .voice .content__inner, main .step .content__inner {
   display: flex; }
-  main .for-youth .content__inner--l .eyecatch, main .for-parents .content__inner--l .eyecatch, main .voice .content__inner--l .eyecatch, main .step .content__inner--l .eyecatch {
-    border-radius: 50%;
-    border: solid 3px #61B420; }
-  main .for-youth .content__inner--r, main .for-parents .content__inner--r, main .voice .content__inner--r, main .step .content__inner--r {
-    position: relative;
-    width: 100%; }
-    main .for-youth .content__inner--r .section, main .for-parents .content__inner--r .section, main .voice .content__inner--r .section, main .step .content__inner--r .section {
-      color: #fafcfc;
-      position: absolute;
-      top: 40%;
-      left: 30%;
-      transform: translate(-30%, -40%); }
+main .for-youth .content__inner--l .eyecatch, main .for-parents .content__inner--l .eyecatch, main .voice .content__inner--l .eyecatch, main .step .content__inner--l .eyecatch {
+  border-radius: 50%;
+  border: solid 3px #61B420; }
+main .for-youth .content__inner--r, main .for-parents .content__inner--r, main .voice .content__inner--r, main .step .content__inner--r {
+  position: relative;
+  width: 100%; }
+main .for-youth .content__inner--r .section, main .for-parents .content__inner--r .section, main .voice .content__inner--r .section, main .step .content__inner--r .section {
+  color: #fafcfc;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-30%, -40%); }
 main .schedule .content__inner, main .about-us .content__inner, main .blog .content__inner, main .reservation .content__inner {
   position: relative;
   min-height: 220px; }
-  main .schedule .content__inner .section, main .about-us .content__inner .section, main .blog .content__inner .section, main .reservation .content__inner .section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
+main .schedule .content__inner .section, main .about-us .content__inner .section, main .blog .content__inner .section, main .reservation .content__inner .section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%); }
 main .step {
   background-color: rgba(97, 180, 32, 0.6);
   color: #fafcfc; }
@@ -207,8 +235,8 @@ main .schedule {
   color: #fafcfc; }
 main .for-parents, main .about-us, main .archive {
   background-color: #F2E8D4; }
-  main .for-parents .section__title, main .for-parents .section__description, main .about-us .section__title, main .about-us .section__description, main .archive .section__title, main .archive .section__description {
-    color: #666; }
+main .for-parents .section__title, main .for-parents .section__description, main .about-us .section__title, main .about-us .section__description, main .archive .section__title, main .archive .section__description {
+  color: #666; }
 main .blog {
   background-image: url("img/blog_bg.jpg");
   background-size: cover;
@@ -216,8 +244,8 @@ main .blog {
   color: #fafcfc; }
 main .for-youth, main .reservation {
   background-color: #8CC4E3; }
-  main .for-youth .section__title, main .for-youth .section__description, main .reservation .section__title, main .reservation .section__description {
-    color: #fafcfc; }
+main .for-youth .section__title, main .for-youth .section__description, main .reservation .section__title, main .reservation .section__description {
+  color: #fafcfc; }
 
 .content {
   width: 80%;
@@ -229,105 +257,105 @@ main .for-youth, main .reservation {
 .two-column {
   display: flex;
   padding: 32px 0; }
-  .two-column section:first-child {
-    margin-right: 32px; }
+.two-column section:first-child {
+  margin-right: 32px; }
 
 .last-content {
   width: 100%; }
-  .last-content section {
-    width: 50% !important;
-    margin: 0 auto; }
+.last-content section {
+  width: 50% !important;
+  margin: 0 auto; }
 
 .index-tile {
   position: relative;
   min-height: 220px; }
-  .index-tile__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .index-tile__inner .eyecatch {
-      border-radius: 50%;
-      border: solid 3px #61B420; }
-    .index-tile__inner .section__title {
-      font-size: 1.8em; }
-    .index-tile__inner .section__description {
-      font-size: 1.2em; }
-  .index-tile .no-eyecatch {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
+.index-tile__inner {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+.index-tile__inner .eyecatch {
+  border-radius: 50%;
+  border: solid 3px #61B420; }
+.index-tile__inner .section__title {
+  font-size: 1.8em; }
+.index-tile__inner .section__description {
+  font-size: 1.2em; }
+.index-tile .no-eyecatch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%); }
 
 @media screen and (max-width: 1068px) {
   body {
     padding-bottom: 100px; }
-    body .content {
-      width: 100%;
-      margin: 24px 0 0 0; }
-      body .content .content__inner {
-        width: 70%; }
-    body .index-page .two-column {
-      display: block;
-      padding: 0px; }
-    body .index-page .last-content section {
-      width: 100% !important; }
-    body .schedule-page .content__inner .calender__google iframe {
-      width: 100%; }
-    body .archive-page .archive .content__inner--l img {
-      max-width: 100%; } }
+  body .content {
+    width: 100%;
+    margin: 24px 0 0 0; }
+  body .content .content__inner {
+    width: 70%; }
+  body .index-page .two-column {
+    display: block;
+    padding: 0px; }
+  body .index-page .last-content section {
+    width: 100% !important; }
+  body .schedule-page .content__inner .calender__google iframe {
+    width: 100%; }
+  body .archive-page .archive .content__inner--l img {
+    max-width: 100%; } }
 @media screen and (max-width: 680px) {
   .wrapper .header .content__inner {
     width: 100%;
     max-width: 100%;
     display: block;
     font-size: 1.4em; }
-    .wrapper .header .content__inner .page__title {
-      margin-left: 20px; }
-    .wrapper .header .content__inner--r {
-      position: relative; }
-      .wrapper .header .content__inner--r .page-nav-btn {
-        position: absolute;
-        top: -20px;
-        right: 20px; }
-      .wrapper .header .content__inner--r .page-nav-box .page-nav {
-        width: 100%;
-        right: auto;
-        position: absolute;
-        top: 20px; }
+  .wrapper .header .content__inner .page__title {
+    margin-left: 20px; }
+  .wrapper .header .content__inner--r {
+    position: relative; }
+  .wrapper .header .content__inner--r .page-nav-btn {
+    position: absolute;
+    top: -20px;
+    right: 20px; }
+  .wrapper .header .content__inner--r .page-nav-box .page-nav {
+    width: 100%;
+    right: auto;
+    position: absolute;
+    top: 20px; }
   .wrapper main .slider {
     min-height: 200px; }
-    .wrapper main .slider__slides .slide:first-child .main-copy {
-      font-size: 1.4em !important; }
+  .wrapper main .slider__slides .slide:first-child .main-copy {
+    font-size: 1.4em !important; }
   .wrapper main .schedule, .wrapper main .blog, .wrapper main .reservation, .wrapper main .about-us {
     min-height: 200px !important; }
   .wrapper main .index-tile__inner {
     width: 100%; }
-    .wrapper main .index-tile__inner .eyecatch {
-      width: 150px;
-      height: auto;
-      margin-bottom: 20px; }
-    .wrapper main .index-tile__inner .section {
-      position: static;
-      transform: translate(0%, 0%); }
+  .wrapper main .index-tile__inner .eyecatch {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px; }
+  .wrapper main .index-tile__inner .section {
+    position: static;
+    transform: translate(0%, 0%); }
   .wrapper main .for-youth .content__inner, .wrapper main .for-parents .content__inner, .wrapper main .step .content__inner {
     display: block !important;
     max-width: 100%; }
-    .wrapper main .for-youth .content__inner--l, .wrapper main .for-parents .content__inner--l, .wrapper main .step .content__inner--l {
-      width: 100%; }
-      .wrapper main .for-youth .content__inner--l .eyecatch, .wrapper main .for-parents .content__inner--l .eyecatch, .wrapper main .step .content__inner--l .eyecatch {
-        width: 150px;
-        height: auto;
-        margin-bottom: 20px; }
-    .wrapper main .for-youth .content__inner--r, .wrapper main .for-parents .content__inner--r, .wrapper main .step .content__inner--r {
-      width: 100%; }
-      .wrapper main .for-youth .content__inner--r .section, .wrapper main .for-parents .content__inner--r .section, .wrapper main .step .content__inner--r .section {
-        position: static;
-        transform: translate(0%, 0%); }
+  .wrapper main .for-youth .content__inner--l, .wrapper main .for-parents .content__inner--l, .wrapper main .step .content__inner--l {
+    width: 100%; }
+  .wrapper main .for-youth .content__inner--l .eyecatch, .wrapper main .for-parents .content__inner--l .eyecatch, .wrapper main .step .content__inner--l .eyecatch {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px; }
+  .wrapper main .for-youth .content__inner--r, .wrapper main .for-parents .content__inner--r, .wrapper main .step .content__inner--r {
+    width: 100%; }
+  .wrapper main .for-youth .content__inner--r .section, .wrapper main .for-parents .content__inner--r .section, .wrapper main .step .content__inner--r .section {
+    position: static;
+    transform: translate(0%, 0%); }
   .wrapper main .content .content__inner {
     padding: 10px 0; }
-    .wrapper main .content .content__inner .section__title {
-      margin-bottom: 0px !important; }
+  .wrapper main .content .content__inner .section__title {
+    margin-bottom: 0px !important; }
   .wrapper main .content .about .content__inner .section {
     top: 25%; }
   .wrapper aside .back-to-top {
@@ -338,48 +366,48 @@ main .for-youth, main .reservation {
     right: 32px; }
   .wrapper .for-youth-page .content__inner .support, .wrapper .for-parents-page .content__inner .support {
     display: block; }
-    .wrapper .for-youth-page .content__inner .support__image, .wrapper .for-parents-page .content__inner .support__image {
-      max-width: 250px;
-      margin: 0 auto; }
-      .wrapper .for-youth-page .content__inner .support__image__img, .wrapper .for-parents-page .content__inner .support__image__img {
-        width: 100%;
-        height: auto;
-        text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-sp, .wrapper .for-parents-page .content__inner .support__header.visible-sp {
-      display: block;
-      width: 100%;
-      text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-pc, .wrapper .for-parents-page .content__inner .support__header.visible-pc {
-      display: none; }
+  .wrapper .for-youth-page .content__inner .support__image, .wrapper .for-parents-page .content__inner .support__image {
+    max-width: 250px;
+    margin: 0 auto; }
+  .wrapper .for-youth-page .content__inner .support__image__img, .wrapper .for-parents-page .content__inner .support__image__img {
+    width: 100%;
+    height: auto;
+    text-align: center; }
+  .wrapper .for-youth-page .content__inner .support__header.visible-sp, .wrapper .for-parents-page .content__inner .support__header.visible-sp {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .wrapper .for-youth-page .content__inner .support__header.visible-pc, .wrapper .for-parents-page .content__inner .support__header.visible-pc {
+    display: none; }
   .wrapper .reservation-page .content__inner .steps, .wrapper .steps-page .content__inner .steps {
     margin-bottom: 30px; }
-    .wrapper .reservation-page .content__inner .steps .section, .wrapper .steps-page .content__inner .steps .section {
-      display: block;
-      margin-bottom: 20px; }
-      .wrapper .reservation-page .content__inner .steps .section__image, .wrapper .steps-page .content__inner .steps .section__image {
-        margin: 0 auto 10px; }
-        .wrapper .reservation-page .content__inner .steps .section__image__img, .wrapper .steps-page .content__inner .steps .section__image__img {
-          width: 100%;
-          text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-sp, .wrapper .reservation-page .content__inner .steps .visible-sp.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-sp, .wrapper .steps-page .content__inner .steps .visible-sp.section__info--parents {
-        display: block;
-        width: 100%;
-        text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-pc, .wrapper .reservation-page .content__inner .steps .visible-pc.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-pc, .wrapper .steps-page .content__inner .steps .visible-pc.section__info--parents {
-        display: none; }
-    .wrapper .reservation-page .content__inner .steps .notification__image, .wrapper .steps-page .content__inner .steps .notification__image {
-      max-width: 250px; }
+  .wrapper .reservation-page .content__inner .steps .section, .wrapper .steps-page .content__inner .steps .section {
+    display: block;
+    margin-bottom: 20px; }
+  .wrapper .reservation-page .content__inner .steps .section__image, .wrapper .steps-page .content__inner .steps .section__image {
+    margin: 0 auto 10px; }
+  .wrapper .reservation-page .content__inner .steps .section__image__img, .wrapper .steps-page .content__inner .steps .section__image__img {
+    width: 100%;
+    text-align: center; }
+  .wrapper .reservation-page .content__inner .steps .section__info.visible-sp, .wrapper .reservation-page .content__inner .steps .visible-sp.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-sp, .wrapper .steps-page .content__inner .steps .visible-sp.section__info--parents {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .wrapper .reservation-page .content__inner .steps .section__info.visible-pc, .wrapper .reservation-page .content__inner .steps .visible-pc.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-pc, .wrapper .steps-page .content__inner .steps .visible-pc.section__info--parents {
+    display: none; }
+  .wrapper .reservation-page .content__inner .steps .notification__image, .wrapper .steps-page .content__inner .steps .notification__image {
+    max-width: 250px; }
   .wrapper .post__header {
     text-align: center; }
   .wrapper .post__content {
     display: block; }
-    .wrapper .post__content__eyecatch {
-      margin: 0 0 10px 0;
-      text-align: center; }
-      .wrapper .post__content__eyecatch img {
-        width: 250px; }
-    .wrapper .post__content__right .post__text {
-      margin-top: 10px; } }
+  .wrapper .post__content__eyecatch {
+    margin: 0 0 10px 0;
+    text-align: center; }
+  .wrapper .post__content__eyecatch img {
+    width: 250px; }
+  .wrapper .post__content__right .post__text {
+    margin-top: 10px; } }
 .header .content__inner {
   width: 100%;
   padding: 24px 0;
@@ -390,31 +418,31 @@ main .for-youth, main .reservation {
   display: flex;
   justify-content: space-between;
   font-size: 1.8em; }
-  .header .content__inner .saposute-name {
-    font-size: 0.4em;
-    line-height: 0.4; }
-  .header .content__inner--r .page-nav-btn {
-    line-height: 1.2; }
-  .header .content__inner--r .page-nav-box {
-    position: relative;
-    display: none; }
-    .header .content__inner--r .page-nav-box .page-nav {
-      width: 300px;
-      background-color: #fafcfc;
-      position: absolute;
-      top: 28px;
-      right: -50px;
-      z-index: 30;
-      color: #666;
-      font-size: 14px;
-      border-bottom: dotted 1px #61B420; }
-      .header .content__inner--r .page-nav-box .page-nav__list {
-        padding: 10px 20px;
-        border-top: dotted 1px #61B420; }
-        .header .content__inner--r .page-nav-box .page-nav__list:hover {
-          background-color: rgba(97, 180, 32, 0.6);
-          color: #fafcfc;
-          font-weight: 900; }
+.header .content__inner .saposute-name {
+  font-size: 0.4em;
+  line-height: 0.4; }
+.header .content__inner--r .page-nav-btn {
+  line-height: 1.2; }
+.header .content__inner--r .page-nav-box {
+  position: relative;
+  display: none; }
+.header .content__inner--r .page-nav-box .page-nav {
+  width: 300px;
+  background-color: #fafcfc;
+  position: absolute;
+  top: 28px;
+  right: -50px;
+  z-index: 30;
+  color: #666;
+  font-size: 14px;
+  border-bottom: dotted 1px #61B420; }
+.header .content__inner--r .page-nav-box .page-nav__list {
+  padding: 10px 20px;
+  border-top: dotted 1px #61B420; }
+.header .content__inner--r .page-nav-box .page-nav__list:hover {
+  background-color: rgba(97, 180, 32, 0.6);
+  color: #fafcfc;
+  font-weight: 900; }
 
 .aside .back-to-top {
   width: 80px;
@@ -424,7 +452,7 @@ main .for-youth, main .reservation {
   text-align: center;
   line-height: 2.2;
   color: #fafcfc;
-  background: #61B420;
+  background: rgba(97, 180, 32, 0.6);
   position: fixed;
   top: 50%;
   right: 64px;
@@ -436,20 +464,20 @@ main .for-youth, main .reservation {
   height: 100px;
   width: 100%;
   position: relative; }
-  .footer .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .footer .content__inner .contact {
-      display: flex;
-      justify-content: center; }
-      .footer .content__inner .contact__list {
-        width: 50px;
-        height: 50px;
-        font-size: 2em;
-        text-align: center;
-        line-height: 1.8;
-        margin: 5px 10px; }
+.footer .content__inner {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+.footer .content__inner .contact {
+  display: flex;
+  justify-content: center; }
+.footer .content__inner .contact__list {
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.8;
+  margin: 5px 10px; }
 
 .footer.sticky {
   position: fixed;
@@ -467,80 +495,86 @@ main .for-youth, main .reservation {
   padding: 24px 0;
   width: 90%;
   margin: 0 auto; }
-  .index-page .content__inner .pick-up-header, .for-youth-page .content__inner .pick-up-header, .for-parents-page .content__inner .pick-up-header, .schedule-page .content__inner .pick-up-header, .about-us-page .content__inner .pick-up-header, .reservation-page .content__inner .pick-up-header, .steps-page .content__inner .pick-up-header, .archive .content__inner .pick-up-header {
-    font-size: 1.8em;
-    color: #61B420;
-    text-align: center; }
-  .index-page .content__inner .pick-up, .for-youth-page .content__inner .pick-up, .for-parents-page .content__inner .pick-up, .schedule-page .content__inner .pick-up, .about-us-page .content__inner .pick-up, .reservation-page .content__inner .pick-up, .steps-page .content__inner .pick-up, .archive .content__inner .pick-up {
-    text-align: center; }
-    .index-page .content__inner .pick-up__list, .for-youth-page .content__inner .pick-up__list, .for-parents-page .content__inner .pick-up__list, .schedule-page .content__inner .pick-up__list, .about-us-page .content__inner .pick-up__list, .reservation-page .content__inner .pick-up__list, .steps-page .content__inner .pick-up__list, .archive .content__inner .pick-up__list {
-      font-size: 1.3em;
-      line-height: 2; }
-      .index-page .content__inner .pick-up__list:before, .for-youth-page .content__inner .pick-up__list:before, .for-parents-page .content__inner .pick-up__list:before, .schedule-page .content__inner .pick-up__list:before, .about-us-page .content__inner .pick-up__list:before, .reservation-page .content__inner .pick-up__list:before, .steps-page .content__inner .pick-up__list:before, .archive .content__inner .pick-up__list:before {
-        color: #61B420;
-        content: '●'; }
-  .index-page .content__inner .support, .for-youth-page .content__inner .support, .for-parents-page .content__inner .support, .schedule-page .content__inner .support, .about-us-page .content__inner .support, .reservation-page .content__inner .support, .steps-page .content__inner .support, .archive .content__inner .support {
-    padding: 20px 0;
-    display: flex; }
-    .index-page .content__inner .support__header, .for-youth-page .content__inner .support__header, .for-parents-page .content__inner .support__header, .schedule-page .content__inner .support__header, .about-us-page .content__inner .support__header, .reservation-page .content__inner .support__header, .steps-page .content__inner .support__header, .archive .content__inner .support__header {
-      font-size: 1.8em;
-      color: #61B420;
-      margin: 10px 0; }
-    .index-page .content__inner .support__header.visible-sp, .for-youth-page .content__inner .support__header.visible-sp, .for-parents-page .content__inner .support__header.visible-sp, .schedule-page .content__inner .support__header.visible-sp, .about-us-page .content__inner .support__header.visible-sp, .reservation-page .content__inner .support__header.visible-sp, .steps-page .content__inner .support__header.visible-sp, .archive .content__inner .support__header.visible-sp {
-      display: none; }
-    .index-page .content__inner .support__image, .for-youth-page .content__inner .support__image, .for-parents-page .content__inner .support__image, .schedule-page .content__inner .support__image, .about-us-page .content__inner .support__image, .reservation-page .content__inner .support__image, .steps-page .content__inner .support__image, .archive .content__inner .support__image {
-      margin-right: 15px; }
-      .index-page .content__inner .support__image__img, .for-youth-page .content__inner .support__image__img, .for-parents-page .content__inner .support__image__img, .schedule-page .content__inner .support__image__img, .about-us-page .content__inner .support__image__img, .reservation-page .content__inner .support__image__img, .steps-page .content__inner .support__image__img, .archive .content__inner .support__image__img {
-        width: 250px;
-        height: 200px; }
-    .index-page .content__inner .support__description, .for-youth-page .content__inner .support__description, .for-parents-page .content__inner .support__description, .schedule-page .content__inner .support__description, .about-us-page .content__inner .support__description, .reservation-page .content__inner .support__description, .steps-page .content__inner .support__description, .archive .content__inner .support__description {
-      padding-top: 10px; }
-  .index-page .content__inner .calender, .for-youth-page .content__inner .calender, .for-parents-page .content__inner .calender, .schedule-page .content__inner .calender, .about-us-page .content__inner .calender, .reservation-page .content__inner .calender, .steps-page .content__inner .calender, .archive .content__inner .calender {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 0; }
-    .index-page .content__inner .calender__description, .for-youth-page .content__inner .calender__description, .for-parents-page .content__inner .calender__description, .schedule-page .content__inner .calender__description, .about-us-page .content__inner .calender__description, .reservation-page .content__inner .calender__description, .steps-page .content__inner .calender__description, .archive .content__inner .calender__description {
-      margin-bottom: 20px; }
-    .index-page .content__inner .calender__google, .for-youth-page .content__inner .calender__google, .for-parents-page .content__inner .calender__google, .schedule-page .content__inner .calender__google, .about-us-page .content__inner .calender__google, .reservation-page .content__inner .calender__google, .steps-page .content__inner .calender__google, .archive .content__inner .calender__google {
-      margin: 0 auto;
-      text-align: center; }
-  .index-page .content__inner .introduction, .for-youth-page .content__inner .introduction, .for-parents-page .content__inner .introduction, .schedule-page .content__inner .introduction, .about-us-page .content__inner .introduction, .reservation-page .content__inner .introduction, .steps-page .content__inner .introduction, .archive .content__inner .introduction {
-    margin: 0 auto; }
-    .index-page .content__inner .introduction__image, .for-youth-page .content__inner .introduction__image, .for-parents-page .content__inner .introduction__image, .schedule-page .content__inner .introduction__image, .about-us-page .content__inner .introduction__image, .reservation-page .content__inner .introduction__image, .steps-page .content__inner .introduction__image, .archive .content__inner .introduction__image {
-      margin: 50px auto;
-      text-align: center; }
-      .index-page .content__inner .introduction__image img, .for-youth-page .content__inner .introduction__image img, .for-parents-page .content__inner .introduction__image img, .schedule-page .content__inner .introduction__image img, .about-us-page .content__inner .introduction__image img, .reservation-page .content__inner .introduction__image img, .steps-page .content__inner .introduction__image img, .archive .content__inner .introduction__image img {
-        max-width: 100%; }
-    .index-page .content__inner .introduction__description, .for-youth-page .content__inner .introduction__description, .for-parents-page .content__inner .introduction__description, .schedule-page .content__inner .introduction__description, .about-us-page .content__inner .introduction__description, .reservation-page .content__inner .introduction__description, .steps-page .content__inner .introduction__description, .archive .content__inner .introduction__description {
-      text-align: center; }
-  .index-page .content__inner .adress *, .for-youth-page .content__inner .adress *, .for-parents-page .content__inner .adress *, .schedule-page .content__inner .adress *, .about-us-page .content__inner .adress *, .reservation-page .content__inner .adress *, .steps-page .content__inner .adress *, .archive .content__inner .adress * {
-    text-align: center; }
-  .index-page .content__inner .adress__header, .for-youth-page .content__inner .adress__header, .for-parents-page .content__inner .adress__header, .schedule-page .content__inner .adress__header, .about-us-page .content__inner .adress__header, .reservation-page .content__inner .adress__header, .steps-page .content__inner .adress__header, .archive .content__inner .adress__header {
-    font-weight: 900;
-    margin: 10px 0 5px 0; }
-  .index-page .content__inner .steps, .for-youth-page .content__inner .steps, .for-parents-page .content__inner .steps, .schedule-page .content__inner .steps, .about-us-page .content__inner .steps, .reservation-page .content__inner .steps, .steps-page .content__inner .steps, .archive .content__inner .steps {
-    margin: 0 auto 40px; }
-    .index-page .content__inner .steps__header, .for-youth-page .content__inner .steps__header, .for-parents-page .content__inner .steps__header, .schedule-page .content__inner .steps__header, .about-us-page .content__inner .steps__header, .reservation-page .content__inner .steps__header, .steps-page .content__inner .steps__header, .archive .content__inner .steps__header {
-      font-size: 1.8em;
-      font-weight: 900;
-      margin: 10px 0;
-      text-align: center; }
-    .index-page .content__inner .steps .section, .for-youth-page .content__inner .steps .section, .for-parents-page .content__inner .steps .section, .schedule-page .content__inner .steps .section, .about-us-page .content__inner .steps .section, .reservation-page .content__inner .steps .section, .steps-page .content__inner .steps .section, .archive .content__inner .steps .section {
-      display: block; }
-      .index-page .content__inner .steps .section *, .for-youth-page .content__inner .steps .section *, .for-parents-page .content__inner .steps .section *, .schedule-page .content__inner .steps .section *, .about-us-page .content__inner .steps .section *, .reservation-page .content__inner .steps .section *, .steps-page .content__inner .steps .section *, .archive .content__inner .steps .section * {
-        text-align: center; }
-      .index-page .content__inner .steps .section__info, .index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info, .archive .content__inner .steps .section__info--parents {
-        font-size: 1.2em;
-        color: #61B420;
-        margin-bottom: 20px; }
-      .index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info--parents {
-        margin-top: 20px; }
-      .index-page .content__inner .steps .section__image, .for-youth-page .content__inner .steps .section__image, .for-parents-page .content__inner .steps .section__image, .schedule-page .content__inner .steps .section__image, .about-us-page .content__inner .steps .section__image, .reservation-page .content__inner .steps .section__image, .steps-page .content__inner .steps .section__image, .archive .content__inner .steps .section__image {
-        margin: 0 auto 20px; }
-        .index-page .content__inner .steps .section__image__img, .for-youth-page .content__inner .steps .section__image__img, .for-parents-page .content__inner .steps .section__image__img, .schedule-page .content__inner .steps .section__image__img, .about-us-page .content__inner .steps .section__image__img, .reservation-page .content__inner .steps .section__image__img, .steps-page .content__inner .steps .section__image__img, .archive .content__inner .steps .section__image__img {
-          width: 250px; }
-      .index-page .content__inner .steps .section__description, .for-youth-page .content__inner .steps .section__description, .for-parents-page .content__inner .steps .section__description, .schedule-page .content__inner .steps .section__description, .about-us-page .content__inner .steps .section__description, .reservation-page .content__inner .steps .section__description, .steps-page .content__inner .steps .section__description, .archive .content__inner .steps .section__description {
-        margin-bottom: 20px; }
+.index-page .content__inner .pick-up-header, .for-youth-page .content__inner .pick-up-header, .for-parents-page .content__inner .pick-up-header, .schedule-page .content__inner .pick-up-header, .about-us-page .content__inner .pick-up-header, .reservation-page .content__inner .pick-up-header, .steps-page .content__inner .pick-up-header, .archive .content__inner .pick-up-header {
+  font-size: 1.8em;
+  color: #61B420;
+  text-align: center; }
+.index-page .content__inner .pick-up, .for-youth-page .content__inner .pick-up, .for-parents-page .content__inner .pick-up, .schedule-page .content__inner .pick-up, .about-us-page .content__inner .pick-up, .reservation-page .content__inner .pick-up, .steps-page .content__inner .pick-up, .archive .content__inner .pick-up {
+  text-align: center; }
+.index-page .content__inner .pick-up__list, .for-youth-page .content__inner .pick-up__list, .for-parents-page .content__inner .pick-up__list, .schedule-page .content__inner .pick-up__list, .about-us-page .content__inner .pick-up__list, .reservation-page .content__inner .pick-up__list, .steps-page .content__inner .pick-up__list, .archive .content__inner .pick-up__list {
+  font-size: 1.3em;
+  line-height: 2; }
+.index-page .content__inner .pick-up__list:hover, .for-youth-page .content__inner .pick-up__list:hover, .for-parents-page .content__inner .pick-up__list:hover, .schedule-page .content__inner .pick-up__list:hover, .about-us-page .content__inner .pick-up__list:hover, .reservation-page .content__inner .pick-up__list:hover, .steps-page .content__inner .pick-up__list:hover, .archive .content__inner .pick-up__list:hover {
+  opacity: .8;
+  font-weight: 900; }
+.index-page .content__inner .pick-up__list:before, .for-youth-page .content__inner .pick-up__list:before, .for-parents-page .content__inner .pick-up__list:before, .schedule-page .content__inner .pick-up__list:before, .about-us-page .content__inner .pick-up__list:before, .reservation-page .content__inner .pick-up__list:before, .steps-page .content__inner .pick-up__list:before, .archive .content__inner .pick-up__list:before {
+  color: #61B420;
+  font-family: font-awesome free;
+  content: '>>'; }
+.index-page .content__inner .pick-up__list:before:hover, .for-youth-page .content__inner .pick-up__list:before:hover, .for-parents-page .content__inner .pick-up__list:before:hover, .schedule-page .content__inner .pick-up__list:before:hover, .about-us-page .content__inner .pick-up__list:before:hover, .reservation-page .content__inner .pick-up__list:before:hover, .steps-page .content__inner .pick-up__list:before:hover, .archive .content__inner .pick-up__list:before:hover {
+  font-weight: 400; }
+.index-page .content__inner .support, .for-youth-page .content__inner .support, .for-parents-page .content__inner .support, .schedule-page .content__inner .support, .about-us-page .content__inner .support, .reservation-page .content__inner .support, .steps-page .content__inner .support, .archive .content__inner .support {
+  padding: 20px 0;
+  display: flex; }
+.index-page .content__inner .support__header, .for-youth-page .content__inner .support__header, .for-parents-page .content__inner .support__header, .schedule-page .content__inner .support__header, .about-us-page .content__inner .support__header, .reservation-page .content__inner .support__header, .steps-page .content__inner .support__header, .archive .content__inner .support__header {
+  font-size: 1.8em;
+  color: #61B420;
+  margin: 10px 0; }
+.index-page .content__inner .support__header.visible-sp, .for-youth-page .content__inner .support__header.visible-sp, .for-parents-page .content__inner .support__header.visible-sp, .schedule-page .content__inner .support__header.visible-sp, .about-us-page .content__inner .support__header.visible-sp, .reservation-page .content__inner .support__header.visible-sp, .steps-page .content__inner .support__header.visible-sp, .archive .content__inner .support__header.visible-sp {
+  display: none; }
+.index-page .content__inner .support__image, .for-youth-page .content__inner .support__image, .for-parents-page .content__inner .support__image, .schedule-page .content__inner .support__image, .about-us-page .content__inner .support__image, .reservation-page .content__inner .support__image, .steps-page .content__inner .support__image, .archive .content__inner .support__image {
+  margin-right: 15px; }
+.index-page .content__inner .support__image__img, .for-youth-page .content__inner .support__image__img, .for-parents-page .content__inner .support__image__img, .schedule-page .content__inner .support__image__img, .about-us-page .content__inner .support__image__img, .reservation-page .content__inner .support__image__img, .steps-page .content__inner .support__image__img, .archive .content__inner .support__image__img {
+  width: 250px;
+  height: 200px; }
+.index-page .content__inner .support__description, .for-youth-page .content__inner .support__description, .for-parents-page .content__inner .support__description, .schedule-page .content__inner .support__description, .about-us-page .content__inner .support__description, .reservation-page .content__inner .support__description, .steps-page .content__inner .support__description, .archive .content__inner .support__description {
+  padding-top: 10px; }
+.index-page .content__inner .calender, .for-youth-page .content__inner .calender, .for-parents-page .content__inner .calender, .schedule-page .content__inner .calender, .about-us-page .content__inner .calender, .reservation-page .content__inner .calender, .steps-page .content__inner .calender, .archive .content__inner .calender {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 0; }
+.index-page .content__inner .calender__description, .for-youth-page .content__inner .calender__description, .for-parents-page .content__inner .calender__description, .schedule-page .content__inner .calender__description, .about-us-page .content__inner .calender__description, .reservation-page .content__inner .calender__description, .steps-page .content__inner .calender__description, .archive .content__inner .calender__description {
+  margin-bottom: 20px; }
+.index-page .content__inner .calender__google, .for-youth-page .content__inner .calender__google, .for-parents-page .content__inner .calender__google, .schedule-page .content__inner .calender__google, .about-us-page .content__inner .calender__google, .reservation-page .content__inner .calender__google, .steps-page .content__inner .calender__google, .archive .content__inner .calender__google {
+  margin: 0 auto;
+  text-align: center; }
+.index-page .content__inner .introduction, .for-youth-page .content__inner .introduction, .for-parents-page .content__inner .introduction, .schedule-page .content__inner .introduction, .about-us-page .content__inner .introduction, .reservation-page .content__inner .introduction, .steps-page .content__inner .introduction, .archive .content__inner .introduction {
+  margin: 0 auto; }
+.index-page .content__inner .introduction__image, .for-youth-page .content__inner .introduction__image, .for-parents-page .content__inner .introduction__image, .schedule-page .content__inner .introduction__image, .about-us-page .content__inner .introduction__image, .reservation-page .content__inner .introduction__image, .steps-page .content__inner .introduction__image, .archive .content__inner .introduction__image {
+  margin: 50px auto;
+  text-align: center; }
+.index-page .content__inner .introduction__image img, .for-youth-page .content__inner .introduction__image img, .for-parents-page .content__inner .introduction__image img, .schedule-page .content__inner .introduction__image img, .about-us-page .content__inner .introduction__image img, .reservation-page .content__inner .introduction__image img, .steps-page .content__inner .introduction__image img, .archive .content__inner .introduction__image img {
+  max-width: 100%; }
+.index-page .content__inner .introduction__description, .for-youth-page .content__inner .introduction__description, .for-parents-page .content__inner .introduction__description, .schedule-page .content__inner .introduction__description, .about-us-page .content__inner .introduction__description, .reservation-page .content__inner .introduction__description, .steps-page .content__inner .introduction__description, .archive .content__inner .introduction__description {
+  text-align: center; }
+.index-page .content__inner .adress *, .for-youth-page .content__inner .adress *, .for-parents-page .content__inner .adress *, .schedule-page .content__inner .adress *, .about-us-page .content__inner .adress *, .reservation-page .content__inner .adress *, .steps-page .content__inner .adress *, .archive .content__inner .adress * {
+  text-align: center; }
+.index-page .content__inner .adress__header, .for-youth-page .content__inner .adress__header, .for-parents-page .content__inner .adress__header, .schedule-page .content__inner .adress__header, .about-us-page .content__inner .adress__header, .reservation-page .content__inner .adress__header, .steps-page .content__inner .adress__header, .archive .content__inner .adress__header {
+  font-weight: 900;
+  margin: 10px 0 5px 0; }
+.index-page .content__inner .steps, .for-youth-page .content__inner .steps, .for-parents-page .content__inner .steps, .schedule-page .content__inner .steps, .about-us-page .content__inner .steps, .reservation-page .content__inner .steps, .steps-page .content__inner .steps, .archive .content__inner .steps {
+  margin: 0 auto 40px; }
+.index-page .content__inner .steps__header, .for-youth-page .content__inner .steps__header, .for-parents-page .content__inner .steps__header, .schedule-page .content__inner .steps__header, .about-us-page .content__inner .steps__header, .reservation-page .content__inner .steps__header, .steps-page .content__inner .steps__header, .archive .content__inner .steps__header {
+  font-size: 1.8em;
+  font-weight: 900;
+  margin: 10px 0;
+  text-align: center; }
+.index-page .content__inner .steps .section, .for-youth-page .content__inner .steps .section, .for-parents-page .content__inner .steps .section, .schedule-page .content__inner .steps .section, .about-us-page .content__inner .steps .section, .reservation-page .content__inner .steps .section, .steps-page .content__inner .steps .section, .archive .content__inner .steps .section {
+  display: block; }
+.index-page .content__inner .steps .section *, .for-youth-page .content__inner .steps .section *, .for-parents-page .content__inner .steps .section *, .schedule-page .content__inner .steps .section *, .about-us-page .content__inner .steps .section *, .reservation-page .content__inner .steps .section *, .steps-page .content__inner .steps .section *, .archive .content__inner .steps .section * {
+  text-align: center; }
+.index-page .content__inner .steps .section__info, .index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info, .archive .content__inner .steps .section__info--parents {
+  font-size: 1.2em;
+  color: #61B420;
+  margin-bottom: 20px; }
+.index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info--parents {
+  margin-top: 20px; }
+.index-page .content__inner .steps .section__image, .for-youth-page .content__inner .steps .section__image, .for-parents-page .content__inner .steps .section__image, .schedule-page .content__inner .steps .section__image, .about-us-page .content__inner .steps .section__image, .reservation-page .content__inner .steps .section__image, .steps-page .content__inner .steps .section__image, .archive .content__inner .steps .section__image {
+  margin: 0 auto 20px; }
+.index-page .content__inner .steps .section__image__img, .for-youth-page .content__inner .steps .section__image__img, .for-parents-page .content__inner .steps .section__image__img, .schedule-page .content__inner .steps .section__image__img, .about-us-page .content__inner .steps .section__image__img, .reservation-page .content__inner .steps .section__image__img, .steps-page .content__inner .steps .section__image__img, .archive .content__inner .steps .section__image__img {
+  width: 250px; }
+.index-page .content__inner .steps .section__description, .for-youth-page .content__inner .steps .section__description, .for-parents-page .content__inner .steps .section__description, .schedule-page .content__inner .steps .section__description, .about-us-page .content__inner .steps .section__description, .reservation-page .content__inner .steps .section__description, .steps-page .content__inner .steps .section__description, .archive .content__inner .steps .section__description {
+  margin-bottom: 20px; }
 .index-page .access__header, .for-youth-page .access__header, .for-parents-page .access__header, .schedule-page .access__header, .about-us-page .access__header, .reservation-page .access__header, .steps-page .access__header, .archive .access__header {
   font-size: 1.8em;
   color: #61B420;
@@ -552,38 +586,38 @@ main .for-youth, main .reservation {
 .post {
   width: 100%;
   padding: 24px 0; }
-  .post .content__inner {
-    width: 90%;
-    margin: 0 auto; }
-  .post__header {
-    color: #61B420;
-    font-size: 1.8em; }
-  .post__content {
-    margin-top: 10px;
-    display: flex; }
-    .post__content__eyecatch {
-      margin-right: 10px; }
-      .post__content__eyecatch img {
-        width: 200px; }
-    .post__content__right .post__info, .post__content__right .post__categories, .post__content__right .post__tags {
-      display: flex;
-      margin-top: 5px; }
-      .post__content__right .post__info *, .post__content__right .post__categories *, .post__content__right .post__tags * {
-        font-size: 0.8em;
-        margin-right: 10px; }
-      .post__content__right .post__info__date, .post__content__right .post__info__auther, .post__content__right .post__categories__date, .post__content__right .post__categories__auther, .post__content__right .post__tags__date, .post__content__right .post__tags__auther {
-        font-style: italic;
-        color: #999; }
-    .post__content__right .post__tags * {
-      color: #fafcfc;
-      padding: 3px 5px;
-      border-radius: 3px;
-      background-color: #ccc; }
-    .post__content__right .post__categories * {
-      color: #fafcfc;
-      padding: 3px 5px;
-      border-radius: 3px;
-      background-color: #61B420;
-      opacity: 0.5; }
+.post .content__inner {
+  width: 90%;
+  margin: 0 auto; }
+.post__header {
+  color: #61B420;
+  font-size: 1.8em; }
+.post__content {
+  margin-top: 10px;
+  display: flex; }
+.post__content__eyecatch {
+  margin-right: 10px; }
+.post__content__eyecatch img {
+  width: 200px; }
+.post__content__right .post__info, .post__content__right .post__categories, .post__content__right .post__tags {
+  display: flex;
+  margin-top: 5px; }
+.post__content__right .post__info *, .post__content__right .post__categories *, .post__content__right .post__tags * {
+  font-size: 0.8em;
+  margin-right: 10px; }
+.post__content__right .post__info__date, .post__content__right .post__info__auther, .post__content__right .post__categories__date, .post__content__right .post__categories__auther, .post__content__right .post__tags__date, .post__content__right .post__tags__auther {
+  font-style: italic;
+  color: #999; }
+.post__content__right .post__tags * {
+  color: #fafcfc;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: #ccc; }
+.post__content__right .post__categories * {
+  color: #fafcfc;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: #61B420;
+  opacity: 0.5; }
 
 /*# sourceMappingURL=style.css.map */
