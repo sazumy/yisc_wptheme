@@ -2,6 +2,14 @@
   body{
 // 全ページ共通-------------------------------
     padding-bottom: $footer-height;
+    header{
+      .visible-tablet{
+        display: block;
+      }
+      .visivle-pc{
+        display: none;
+      }
+    }
     .content{
       width: 100%;
       margin: 24px 0 0 0;

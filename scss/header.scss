@@ -11,7 +11,9 @@
       font-size:0.4em;
       line-height:0.4;
     }
-
+    .visible-tablet{
+      display: none;
+    }
     &--r{
       .page-nav-btn{
         line-height:1.2;

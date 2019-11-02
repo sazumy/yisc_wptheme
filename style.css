@@ -290,6 +290,10 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
 @media screen and (max-width: 1068px) {
   body {
     padding-bottom: 100px; }
+  body header .visible-tablet {
+    display: block; }
+  body header .visivle-pc {
+    display: none; }
   body .content {
     width: 100%;
     margin: 24px 0 0 0; }
@@ -421,6 +425,8 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
 .header .content__inner .saposute-name {
   font-size: 0.4em;
   line-height: 0.4; }
+.header .content__inner .visible-tablet {
+  display: none; }
 .header .content__inner--r .page-nav-btn {
   line-height: 1.2; }
 .header .content__inner--r .page-nav-box {

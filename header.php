@@ -49,9 +49,26 @@
           <p class="saposute-name">かわぐち若者サポートステーション</p>
           </a>
         </h1>
+        <div class="content__inner--r visible-pc">
+          <i class="fas fa-bars page-nav-btn" id="page-nav-btn"></i>
 
-        <div class="content__inner--r">
-          <i class="fas fa-bars page-nav-btn visible-tablet" id="page-nav-btn"></i>
+          <nav class="page-nav-box">
+            <ul class="page-nav">
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
+              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
+              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
+              <li class="page-nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- タブレットサイズ以下で見えるメニュー -->
+        <div class="content__inner--r visible-tablet">
+          <i class="fas fa-bars page-nav-btn" id="page-nav-btn"></i>
 
           <nav class="page-nav-box">
             <ul class="page-nav">
