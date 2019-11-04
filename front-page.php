@@ -53,7 +53,7 @@ get_header();
           <div class="index-tile__inner">
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch rotate">
             <div class="section">
-              <h3 class="section__title">
+              <h3 class="section__title .font-kotodama">
                 悩んでいるあなたへ
               </h3>
               <h4 class="section__description">

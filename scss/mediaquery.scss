@@ -2,19 +2,16 @@
   body{
 // 全ページ共通-------------------------------
     padding-bottom: $footer-height;
-    header{
-      .visible-tablet{
-        display: block;
-      }
-      .visivle-pc{
-        display: none;
-      }
-    }
-    .content{
-      width: 100%;
-      margin: 24px 0 0 0;
+    header{ //header要素
       .content__inner{
-        width: 70%;
+        &--r{
+          &.visible-tablet{
+            display: block !important;
+          }
+          &.visible-pc{
+            display: none;
+          }
+        }
       }
     }
 // index-page */
@@ -61,34 +58,31 @@
       .content__inner{
         width: 100%;
         max-width:100%;
-        display: block;
         font-size: 1.4em;
-
         .page__title{
           margin-left: 20px;
         }
         &--r{
           position: relative;
-
+          max-width: 100%;
           .page-nav-btn{
             position: absolute;
-            top:-20px;
+            top:0px;
             right:20px;
           }
           .page-nav-box{
-            // display: block; JSで切り替える
             .page-nav{
-              width: 100%;
-              right: auto;
+              width: 100vw;
+              top:48px;
+              right: 0;
               position: absolute;
-              top:20px;
             }
           }
         }
-      }
+      } // end header content__inner
     } // end.header
 //  main--------------------------------------------
-    main{
+    main[class$="page"]{
       // top page の場合----------------
       .slider{
         min-height: 200px;
@@ -107,7 +101,7 @@
         &__inner{
           width: 100%;
           .eyecatch{
-            width: 150px;
+            width: 150px ;
             height: auto;
             margin-bottom: 20px;
           }
@@ -117,7 +111,6 @@
           }
         }
       }
-
       // top 画像が２カラムの時 
       .for-youth, .for-parents, .step{
         .content__inner{
@@ -141,6 +134,7 @@
         }
       }
       .content{
+        margin: 0px auto 40px auto;
     // <section></section>内の要素に共通のcss・レイアウトcss-------------
         .content__inner{
           padding:10px 0;
@@ -148,10 +142,7 @@
             margin-bottom: 0px !important;
           }
         }
-          
-      
-    // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
-        
+    // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------ 
         .about{
           .content__inner{
             .section{
@@ -159,7 +150,7 @@
             }
           }
         }
-      }//end.content
+      }
     }//end.main
     aside{
       .back-to-top{

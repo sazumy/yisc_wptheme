@@ -34,7 +34,17 @@
   <script src="<?php echo get_theme_file_uri('js/app.js')?>"></script>
   <script src="https://kit.fontawesome.com/1f22ee88f6.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'kvi5vqm',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">  
   <title>若者自立支援センター埼玉</title>
   <?php wp_head(); ?>
 </head>
@@ -50,10 +60,9 @@
           </a>
         </h1>
         <div class="content__inner--r visible-pc">
-          <i class="fas fa-bars page-nav-btn" id="page-nav-btn"></i>
-
-          <nav class="page-nav-box">
+          <nav class="page-nav-pc">
             <ul class="page-nav">
+              <li class="page-nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
@@ -68,10 +77,15 @@
 
         <!-- タブレットサイズ以下で見えるメニュー -->
         <div class="content__inner--r visible-tablet">
-          <i class="fas fa-bars page-nav-btn" id="page-nav-btn"></i>
+          <a class="page-nav-btn" id="page-nav-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
 
           <nav class="page-nav-box">
             <ul class="page-nav">
+              <li class="page-nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
               <li class="page-nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>

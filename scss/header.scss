@@ -2,7 +2,7 @@
   .content__inner{
     @include column-content;
     @include content-inner;
-    max-width: 70%;
+    max-width: 80%;
     color:$saposute-green;
     display: flex;
     justify-content: space-between;
@@ -11,22 +11,79 @@
       font-size:0.4em;
       line-height:0.4;
     }
-    .visible-tablet{
-      display: none;
-    }
     &--r{
-      .page-nav-btn{
-        line-height:1.2;
+      max-width: 500px;
+      //--------- PCサイズの時の設定 ----------
+      &.visible-tablet{
+        display: none;
       }
+      .page-nav-pc{
+        .page-nav{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          &__list{
+            font-size: 0.49em;
+            line-height: 2;
+            margin-right: 20px;
+            &:hover{
+              color: $gray-lv4;
+            }
+            &:last-child{
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+      //----- ヘッダー上部のボタン --------------
+      .page-nav-btn, .page-nav-btn span{
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+      }
+      .page-nav-btn {
+        position: relative;
+        width: 36px;
+        height: 33px;
+        &.active span:nth-of-type(1) {
+          -webkit-transform: translateY(15px) rotate(-45deg);
+          transform: translateY(15px) rotate(-45deg);
+        }
+        &.active span:nth-of-type(2) {
+          opacity: 0;
+        }
+        &.active span:nth-of-type(3) {
+          -webkit-transform: translateY(-15px) rotate(45deg);
+          transform: translateY(-15px) rotate(45deg);
+        }
+      }
+      .page-nav-btn span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $saposute-green;
+        border-radius: 3px;
+        &:nth-of-type(1) {
+          top: 0;
+        }
+        &:nth-of-type(2) {
+          top: 15px;
+        }
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+
+      //-------- タブレット以下の場合のナビゲーションボックスr ------------
       .page-nav-box{
         position: relative;
-        display: none; //JSで見えるようにする
-
+        display: none;
         .page-nav{
           width: 300px;
           background-color: $white;
           position: absolute;
-          top:28px;
+          top:24px;
           right:-50px;
           z-index:30;
           color: $gray-lv4;
@@ -42,6 +99,9 @@
             }
           }
         }
+      }
+      .active + .page-nav-box{
+        display: block;
       }
     }
   }
