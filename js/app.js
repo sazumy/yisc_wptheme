@@ -1,15 +1,12 @@
 $(document).ready(function(){
-
+  // メニューボタン -----------------------------------
   // ドロップダウンメニュー-----------------------------
     var $pageNavBtn = $('#page-nav-btn'),
-        $pageNavBox = $('.page-nav-box');
-  
-    $pageNavBtn.mouseover(function(){
-      $pageNavBox.css("display", "block");
-      
-      $pageNavBox.mouseleave(function(){
-        $(this).css("display", "none");
-      });
+        $pageNavBox = $('.page-nav-box'),
+        $active = $('.active');
+
+    $pageNavBtn.on('click',function(){
+    $(this).toggleClass('active');
     });
   
   // ページトップに向かうボタン---------------------------

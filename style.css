@@ -173,6 +173,11 @@ img.size-post-thumbnail {
   transition: all 0.5s ease;
   transform: perspective(500px) translate3d(0, -8px, 50px); }
 
+.font-kotodama {
+  font-family: ta-kotodama-r, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
 main .slider .slider__slides .slide__img {
   width: 100%; }
 main .slider .slider__slides .slide:first-child {
@@ -290,11 +295,10 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
 @media screen and (max-width: 1068px) {
   body {
     padding-bottom: 100px; }
-  body .content {
-    width: 100%;
-    margin: 24px 0 0 0; }
-  body .content .content__inner {
-    width: 70%; }
+  body header .content__inner--r.visible-tablet {
+    display: block !important; }
+  body header .content__inner--r.visible-pc {
+    display: none; }
   body .index-page .two-column {
     display: block;
     padding: 0px; }
@@ -308,55 +312,57 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
   .wrapper .header .content__inner {
     width: 100%;
     max-width: 100%;
-    display: block;
     font-size: 1.4em; }
   .wrapper .header .content__inner .page__title {
     margin-left: 20px; }
   .wrapper .header .content__inner--r {
-    position: relative; }
+    position: relative;
+    max-width: 100%; }
   .wrapper .header .content__inner--r .page-nav-btn {
     position: absolute;
-    top: -20px;
+    top: 0px;
     right: 20px; }
   .wrapper .header .content__inner--r .page-nav-box .page-nav {
-    width: 100%;
-    right: auto;
-    position: absolute;
-    top: 20px; }
-  .wrapper main .slider {
+    width: 100vw;
+    top: 48px;
+    right: 0;
+    position: absolute; }
+  .wrapper main[class$="page"] .slider {
     min-height: 200px; }
-  .wrapper main .slider__slides .slide:first-child .main-copy {
+  .wrapper main[class$="page"] .slider__slides .slide:first-child .main-copy {
     font-size: 1.4em !important; }
-  .wrapper main .schedule, .wrapper main .blog, .wrapper main .reservation, .wrapper main .about-us {
+  .wrapper main[class$="page"] .schedule, .wrapper main[class$="page"] .blog, .wrapper main[class$="page"] .reservation, .wrapper main[class$="page"] .about-us {
     min-height: 200px !important; }
-  .wrapper main .index-tile__inner {
+  .wrapper main[class$="page"] .index-tile__inner {
     width: 100%; }
-  .wrapper main .index-tile__inner .eyecatch {
+  .wrapper main[class$="page"] .index-tile__inner .eyecatch {
     width: 150px;
     height: auto;
     margin-bottom: 20px; }
-  .wrapper main .index-tile__inner .section {
+  .wrapper main[class$="page"] .index-tile__inner .section {
     position: static;
     transform: translate(0%, 0%); }
-  .wrapper main .for-youth .content__inner, .wrapper main .for-parents .content__inner, .wrapper main .step .content__inner {
+  .wrapper main[class$="page"] .for-youth .content__inner, .wrapper main[class$="page"] .for-parents .content__inner, .wrapper main[class$="page"] .step .content__inner {
     display: block !important;
     max-width: 100%; }
-  .wrapper main .for-youth .content__inner--l, .wrapper main .for-parents .content__inner--l, .wrapper main .step .content__inner--l {
+  .wrapper main[class$="page"] .for-youth .content__inner--l, .wrapper main[class$="page"] .for-parents .content__inner--l, .wrapper main[class$="page"] .step .content__inner--l {
     width: 100%; }
-  .wrapper main .for-youth .content__inner--l .eyecatch, .wrapper main .for-parents .content__inner--l .eyecatch, .wrapper main .step .content__inner--l .eyecatch {
+  .wrapper main[class$="page"] .for-youth .content__inner--l .eyecatch, .wrapper main[class$="page"] .for-parents .content__inner--l .eyecatch, .wrapper main[class$="page"] .step .content__inner--l .eyecatch {
     width: 150px;
     height: auto;
     margin-bottom: 20px; }
-  .wrapper main .for-youth .content__inner--r, .wrapper main .for-parents .content__inner--r, .wrapper main .step .content__inner--r {
+  .wrapper main[class$="page"] .for-youth .content__inner--r, .wrapper main[class$="page"] .for-parents .content__inner--r, .wrapper main[class$="page"] .step .content__inner--r {
     width: 100%; }
-  .wrapper main .for-youth .content__inner--r .section, .wrapper main .for-parents .content__inner--r .section, .wrapper main .step .content__inner--r .section {
+  .wrapper main[class$="page"] .for-youth .content__inner--r .section, .wrapper main[class$="page"] .for-parents .content__inner--r .section, .wrapper main[class$="page"] .step .content__inner--r .section {
     position: static;
     transform: translate(0%, 0%); }
-  .wrapper main .content .content__inner {
+  .wrapper main[class$="page"] .content {
+    margin: 0px auto 40px auto; }
+  .wrapper main[class$="page"] .content .content__inner {
     padding: 10px 0; }
-  .wrapper main .content .content__inner .section__title {
+  .wrapper main[class$="page"] .content .content__inner .section__title {
     margin-bottom: 0px !important; }
-  .wrapper main .content .about .content__inner .section {
+  .wrapper main[class$="page"] .content .about .content__inner .section {
     top: 25%; }
   .wrapper aside .back-to-top {
     width: 50px;
@@ -413,7 +419,7 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
   padding: 24px 0;
   width: 90%;
   margin: 0 auto;
-  max-width: 70%;
+  max-width: 80%;
   color: #61B420;
   display: flex;
   justify-content: space-between;
@@ -421,8 +427,51 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
 .header .content__inner .saposute-name {
   font-size: 0.4em;
   line-height: 0.4; }
+.header .content__inner--r {
+  max-width: 500px; }
+.header .content__inner--r.visible-tablet {
+  display: none; }
+.header .content__inner--r .page-nav-pc .page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+.header .content__inner--r .page-nav-pc .page-nav__list {
+  font-size: 0.49em;
+  line-height: 2;
+  margin-right: 20px; }
+.header .content__inner--r .page-nav-pc .page-nav__list:hover {
+  color: #666; }
+.header .content__inner--r .page-nav-pc .page-nav__list:last-child {
+  margin-right: 0px; }
+.header .content__inner--r .page-nav-btn, .header .content__inner--r .page-nav-btn span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box; }
 .header .content__inner--r .page-nav-btn {
-  line-height: 1.2; }
+  position: relative;
+  width: 36px;
+  height: 33px; }
+.header .content__inner--r .page-nav-btn.active span:nth-of-type(1) {
+  -webkit-transform: translateY(15px) rotate(-45deg);
+  transform: translateY(15px) rotate(-45deg); }
+.header .content__inner--r .page-nav-btn.active span:nth-of-type(2) {
+  opacity: 0; }
+.header .content__inner--r .page-nav-btn.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-15px) rotate(45deg); }
+.header .content__inner--r .page-nav-btn span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #61B420;
+  border-radius: 3px; }
+.header .content__inner--r .page-nav-btn span:nth-of-type(1) {
+  top: 0; }
+.header .content__inner--r .page-nav-btn span:nth-of-type(2) {
+  top: 15px; }
+.header .content__inner--r .page-nav-btn span:nth-of-type(3) {
+  bottom: 0; }
 .header .content__inner--r .page-nav-box {
   position: relative;
   display: none; }
@@ -430,7 +479,7 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
   width: 300px;
   background-color: #fafcfc;
   position: absolute;
-  top: 28px;
+  top: 24px;
   right: -50px;
   z-index: 30;
   color: #666;
@@ -443,6 +492,8 @@ main .for-youth .section__title, main .for-youth .section__description, main .re
   background-color: rgba(97, 180, 32, 0.6);
   color: #fafcfc;
   font-weight: 900; }
+.header .content__inner--r .active + .page-nav-box {
+  display: block; }
 
 .aside .back-to-top {
   width: 80px;
