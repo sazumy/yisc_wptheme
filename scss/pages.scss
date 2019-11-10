@@ -128,6 +128,12 @@
           margin: 0 auto 20px;
           &__img{
             width: 250px;
+            &.wider{
+              width: 400px;
+            }
+            &.middle{
+              width: 300px;
+            }
           }
         }
         &__description{
