@@ -16,7 +16,7 @@ get_header();
 <main class="index-page for-yhouth-page for-parents-page about-us-page post-page blog-page schedule-page reservation-page archive-page">
     
     <?php if(is_page('foryouth')){ 
-      get_template_part('template-parts/top-foryouth');
+      get_template_part('get_template_parttop-foryouth');
     } else if (is_page('forparents')){
      get_template_part('template-parts/top-forparents');
     } else if (is_page('schedule')){
@@ -25,9 +25,11 @@ get_header();
       get_template_part('template-parts/top-aboutus');
     } else if (is_page('reservation')){
       get_template_part('template-parts/top-reservation');
-    } else {
-      // 「就職までのステップ」がここに入っています。ページ構造が変化する場合には変更してください
+    } else if (is_page('steps')){
       get_template_part('template-parts/top-steps');
+    } else {
+      // 汎用ページのキービジュアルです。
+      get_template_part('template-parts/top-other');
     }
     ?>
     <div class="content">

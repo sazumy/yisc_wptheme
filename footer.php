@@ -16,7 +16,7 @@
         <ul class="contact">
           <li class="contact__list"><a href="tel:0482558680"><i class="fas fa-phone"></i></a></li>
           <li class="contact__list">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=jQcBbzbtJUu5dI_c8rRTVJ0Nxk_wr3pAtVzXEYqrKKBUQUVYSFYwOVpRTUJSM0U3TVpUVlRTSTFLSC4u" target="_new">
+            <a href="https://www.sodateage.net/yss/kawaguchi/contact/" target="_new">
               <i class="far fa-envelope"></i>
             </a>
           </li>

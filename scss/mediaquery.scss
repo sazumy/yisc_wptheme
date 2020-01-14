@@ -158,7 +158,7 @@
         height: 50px;
         font-size:1.6em;
         line-height:2.1;
-        right:32px;
+        right:15px;
       }
     }
 
@@ -197,9 +197,9 @@
             
             &__image{
               margin:0 auto 10px;
-              &__img{
+              &__img, &__img.wider, &__img.middle{
                 width: 100%;
-                text-align: center;  
+                text-align: center; 
               }
             }
             &__info.visible-sp{
