@@ -39,6 +39,12 @@
   }
 }
 
+@mixin hover-gray {
+  &:hover{
+    color: $gray-lv4;
+  }
+}
+
 @mixin green-btn{
   background: $saposute-green;
   color: $white;

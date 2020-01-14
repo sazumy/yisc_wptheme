@@ -1,10 +1,8 @@
 .header{
   color:$saposute-green;
-  display: flex;
-  justify-content: space-between;
-  min-height: 100px;
   
   .page__title{
+    @include hover-gray;
     &--yisc{
       font-size: 2.4rem;
     }
@@ -13,92 +11,87 @@
       line-height:0.4;
     }
   }
- 
-      .page__nav{
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 500px;
-          
-        &__list{
-          font-size: 0.49em;
-          line-height: 2;
-          margin-right: 20px;
-          &:hover{
-            color: $gray-lv4;
-          }
-          &:last-child{
-            margin-right: 0px;
-          }
-        }
-      }
-      //----- ヘッダー上部のボタン --------------
-      .page-nav-btn, .page-nav-btn span{
-        display: inline-block;
-        transition: all .4s;
-        box-sizing: border-box;
-      }
-      .page-nav-btn {
-        position: relative;
-        width: 36px;
-        height: 33px;
-        &.active span:nth-of-type(1) {
-          -webkit-transform: translateY(15px) rotate(-45deg);
-          transform: translateY(15px) rotate(-45deg);
-        }
-        &.active span:nth-of-type(2) {
-          opacity: 0;
-        }
-        &.active span:nth-of-type(3) {
-          -webkit-transform: translateY(-15px) rotate(45deg);
-          transform: translateY(-15px) rotate(45deg);
-        }
-      }
-      .page-nav-btn span {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: $saposute-green;
-        border-radius: 3px;
-        &:nth-of-type(1) {
-          top: 0;
-        }
-        &:nth-of-type(2) {
-          top: 15px;
-        }
-        &:nth-of-type(3) {
-          bottom: 0;
-        }
-      }
 
-      //-------- タブレット以下の場合のナビゲーションボックスr ------------
-      .page-nav-box{
-        position: relative;
-        display: none;
-        .page-nav{
-          width: 300px;
-          background-color: $white;
-          position: absolute;
-          top:24px;
-          right:-50px;
-          z-index:30;
-          color: $gray-lv4;
-          font-size: 14px;
-          border-bottom:$green-border-dotted; 
-          &__list{
-            padding: 10px 20px;
-            border-top:$green-border-dotted;
-            &:hover{
-              background-color: $saposute-green-hue;
-              color: $white;
-              font-weight:900;
-            }
-          }
+  .page__nav{
+    flex-wrap: wrap;
+    &__list{
+      @include hover-gray;
+      display: block;
+      margin: 0 1.5rem .5rem 0;
+    }
+  }
+//----- ハンバーガーメニューのボタン --------------
+  .page-nav-btn, .page-nav-btn span{
+    display: inline-block;
+    transition: all .4s;
+  }
+  .page-nav-btn {
+    height: 33px;
+    position: relative;
+    width: 36px;
+    
+    &.active span:nth-of-type(1) {
+      transform: translateY(15px) rotate(-45deg);
+      -webkit-transform: translateY(15px) rotate(-45deg);
+      
+    }
+    &.active span:nth-of-type(2) {
+      opacity: 0;
+    }
+    &.active span:nth-of-type(3) {
+      transform: translateY(-15px) rotate(45deg);
+      -webkit-transform: translateY(-15px) rotate(45deg);
+    }
+  }
+  .page-nav-btn span {
+    background-color: $saposute-green;
+    border-radius: 3px;
+    height: 3px;
+    position: absolute;
+      left: 0;
+    width: 100%;
+    
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 15px;
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+}
+
+  //-------- タブレット以下の場合のナビゲーションボックス ------------
+@media all and (max-width: 768px) {
+  .page__nav__box{
+    display: none;
+    position: absolute;
+      top: 9rem;
+      left: 0;
+    z-index: 1;
+    .page__nav{
+      background: $white;
+      border-bottom:$green-border-dotted; 
+      color: $gray-lv4;
+      
+      &__list{
+        display: block;
+        border-top:$green-border-dotted;
+        padding: 1rem 2rem;
+        margin: 0;
+        width: 100%;
+        
+        &:hover{
+          background-color: $saposute-green-hue;
+          color: $white;
+          font-weight:900;
         }
       }
-      .active + .page-nav-box{
-        display: block;
-      }
-    
-  
+    }
+  }
+  .active{
+    display: block;
+  }
 }

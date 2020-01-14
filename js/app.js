@@ -1,24 +1,13 @@
-// webfont
-
-(function(d) {
-  var config = {
-    kitId: 'kvi5vqm',
-    scriptTimeout: 3000,
-    async: true
-  },
-  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-
 $(document).ready(function(){
-  
   // メニューボタン -----------------------------------
   // ドロップダウンメニュー-----------------------------
     var $pageNavBtn = $('#page-nav-btn'),
-        $pageNavBox = $('.page-nav-box'),
+        $pageNavBox = $('#page-nav-box'),
         $active = $('.active');
 
     $pageNavBtn.on('click',function(){
-    $(this).toggleClass('active');
+      $pageNavBtn.toggleClass('active');
+      $pageNavBox.toggleClass('active');
     });
   
   // ページトップに向かうボタン---------------------------
