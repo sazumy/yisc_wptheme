@@ -109,6 +109,9 @@ get_header();
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="eyecatch bigger">
       
             <div class="section">
+              <p class="balloon">
+                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+              </p>
               <h3 class="section__title">
                 利用者の声
               </h3>
@@ -121,9 +124,12 @@ get_header();
         <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
           <div class="index-tile__inner no-eyecatch">
             <div class="section">
+              <p class="balloon">
+                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+              </p>
               <h3 class="section__title">
                 スタッフブログ
-              </h3>
+              </h3> 
             </div>
           </div>
         </a>

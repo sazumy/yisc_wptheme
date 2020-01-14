@@ -16,15 +16,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="埼玉県川口市にある若者就労支援施設、若者自立支援センター埼玉のホームページです" />
-  <meta name="robots" content="noindex,nofollow" />
 
   <meta property="og:url" content="https://yisc-saitama.com/" />
   <meta property="og:title" content="若者自立支援センター埼玉" />
-  <meta property="og:type" content="ページのタイプ">
+  <meta property="og:type" content="website">
   <meta property="og:description" content="若者自立支援センター埼玉では、若年無業やひきこもり状態などの「働きたいのに働けない」若者に対して、もう一度はじめの一歩を踏み出すお手伝いをしています。お子様の自立に悩む保護者の方はぜひ一度、当ウェブサイトをご覧下さい。" />
-  <meta property="og:image" content="画像のURL" />
-  <meta name="twitter:card" content="カード種類" />
-  <meta name="twitter:site" content="@Twitterユーザー名" />
+  <meta property="og:image" content="https://yisc-saitama.com/wp-content/uploads/YISC_logo.jpg" />
+  <meta name="twitter:card" content="Summary Card" />
 
 
   <script
@@ -44,7 +42,8 @@
       h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">  
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+  <link rel="ICON" href="<?php echo get_theme_file_uri('favicon.ico')?>">
   <title>若者自立支援センター埼玉</title>
   <?php wp_head(); ?>
 </head>

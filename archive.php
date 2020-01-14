@@ -21,7 +21,7 @@ get_header();
   <section class="archive">
     <div class="content__inner">
       <figure class="content__inner--l">
-        <img src="<?php echo get_template_directory_uri();?>/img/archve_keyviz.png" alt="対象者のイメージ" class="eyecatch__img">
+        <img src="<?php echo get_template_directory_uri();?>/img/archve_keyviz.png" alt="対象者のイメージ" class="eyecatch__img w-100">
       </figure>
 
       <div class="content__inner--r">
