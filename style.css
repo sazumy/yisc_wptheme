@@ -505,25 +505,18 @@ main .for-youth, main .reservation {
   display: none; }
 
 .footer {
-  background-color: #333;
+  background: #333;
   color: #fafcfc;
-  height: 100px;
-  width: 100%;
-  position: relative; }
-  .footer .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .footer .content__inner .contact {
-      display: flex;
-      justify-content: center; }
-      .footer .content__inner .contact__list {
-        width: 50px;
-        height: 50px;
-        font-size: 2em;
-        text-align: center;
-        line-height: 1.8;
-        margin: 5px 10px; }
+  height: 100px; }
+  .footer .contact__list {
+    font-size: 2rem;
+    height: 50px;
+    text-align: center;
+    width: 50px; }
+  .footer .privacy {
+    font-size: 80%; }
+    .footer .privacy__link:hover {
+      text-decoration: underline; }
 
 .footer.sticky {
   position: fixed;

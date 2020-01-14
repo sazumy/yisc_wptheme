@@ -1,22 +1,20 @@
-.footer{
-  background-color: $gray-lv5;
+.footer {
+  background:$gray-lv5;
   color: $white;
   height: $footer-height;
-  width: 100%;
-  position: relative; //jsでsticky footerを設定しているため、高さを確保
-  .content__inner{
-    @include content-inner;
-    text-align: center;
-    .contact{
-      display: flex;
-      justify-content: center;
-      &__list{
-        width:50px;
-        height: 50px;
-        font-size:2em;
-        text-align: center;
-        line-height:1.8;
-        margin: 5px 10px;
+  .contact {  
+    &__list{
+      font-size: 2rem;
+      height: 50px;
+      text-align: center;
+      width:50px;
+    }
+  }
+  .privacy {
+    font-size: 80%;
+    &__link {
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

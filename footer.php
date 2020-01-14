@@ -10,10 +10,9 @@
  */ ?>
 
  
-    <footer class="footer">
-      <nav class="content__inner">
-        
-        <ul class="contact">
+    <footer class="footer container-fluid">
+      <nav class="footer__nav row d-flex pt-4 justify-content-center">
+        <ul class="contact d-flex col-4 justify-content-center">
           <li class="contact__list"><a href="tel:0482558680"><i class="fas fa-phone"></i></a></li>
           <li class="contact__list">
             <a href="https://www.sodateage.net/yss/kawaguchi/contact/" target="_new">
@@ -21,11 +20,20 @@
             </a>
           </li>
         </ul>
-
-        <small class="copy">
-          &copy; YISC 2019 All Rights Reserved.
-        </small>
       </nav>
+
+      <div class="footer__info row d-flex justify-content-center">
+        <small class="copy mr-2">
+          &copy; YISC <?php echo date('Y'); ?> All Rights Reserved.
+        </small>
+
+        <p class="privacy">
+          <a href="<?php echo home_url();?>/privacy" class="privacy__link">
+            プライバシーポリシー
+          </a>
+        </p>
+      </div>
+     
     </footer>
   </div><!--end.wrapper-->
   <?php wp_footer(); ?>
