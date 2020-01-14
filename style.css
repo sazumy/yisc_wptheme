@@ -68,28 +68,27 @@ legend {
   display: none; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
   html *, html *::before, html *::after {
     box-sizing: inheritate; }
 
 body {
   color: #666;
   font-family: 'M PLUS 1p', sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   position: relative;
   background-color: #fafcfc;
   background-size: contain;
   background-repeat: repeat-y; }
-
-.wrapper {
-  background-color: #fafcfc; }
 
 a {
   text-decoration: none; }
   a:link {
     color: inherit; }
   a:hover {
-    color: inherit; }
+    color: inherit;
+    text-decoration: none; }
   a:visited {
     color: inherit; }
 
@@ -312,191 +311,189 @@ main .for-youth, main .reservation {
     body .archive-page .archive .content__inner--l img {
       max-width: 100%; } }
 @media screen and (max-width: 680px) {
-  .wrapper .header .content__inner {
+  .header .content__inner {
     width: 100%;
     max-width: 100%;
     font-size: 1.4em; }
-    .wrapper .header .content__inner .page__title {
+    .header .content__inner .page__title {
       margin-left: 20px; }
-    .wrapper .header .content__inner--r {
+    .header .content__inner--r {
       position: relative;
       max-width: 100%; }
-      .wrapper .header .content__inner--r .page-nav-btn {
+      .header .content__inner--r .page-nav-btn {
         position: absolute;
         top: 0px;
         right: 20px; }
-      .wrapper .header .content__inner--r .page-nav-box .page-nav {
+      .header .content__inner--r .page-nav-box .page-nav {
         width: 100vw;
         top: 48px;
         right: 0;
         position: absolute; }
-  .wrapper main[class$="page"] .slider {
+
+  main[class$="page"] .slider {
     min-height: 200px; }
-    .wrapper main[class$="page"] .slider__slides .slide:first-child .main-copy {
+    main[class$="page"] .slider__slides .slide:first-child .main-copy {
       font-size: 1.4em !important; }
-  .wrapper main[class$="page"] .schedule, .wrapper main[class$="page"] .blog, .wrapper main[class$="page"] .reservation, .wrapper main[class$="page"] .about-us {
+  main[class$="page"] .schedule, main[class$="page"] .blog, main[class$="page"] .reservation, main[class$="page"] .about-us {
     min-height: 200px !important; }
-  .wrapper main[class$="page"] .index-tile__inner {
+  main[class$="page"] .index-tile__inner {
     width: 100%; }
-    .wrapper main[class$="page"] .index-tile__inner .eyecatch {
+    main[class$="page"] .index-tile__inner .eyecatch {
       width: 150px;
       height: auto;
       margin-bottom: 20px; }
-    .wrapper main[class$="page"] .index-tile__inner .section {
+    main[class$="page"] .index-tile__inner .section {
       position: static;
       transform: translate(0%, 0%); }
-  .wrapper main[class$="page"] .for-youth .content__inner, .wrapper main[class$="page"] .for-parents .content__inner, .wrapper main[class$="page"] .step .content__inner {
+  main[class$="page"] .for-youth .content__inner, main[class$="page"] .for-parents .content__inner, main[class$="page"] .step .content__inner {
     display: block !important;
     max-width: 100%; }
-    .wrapper main[class$="page"] .for-youth .content__inner--l, .wrapper main[class$="page"] .for-parents .content__inner--l, .wrapper main[class$="page"] .step .content__inner--l {
+    main[class$="page"] .for-youth .content__inner--l, main[class$="page"] .for-parents .content__inner--l, main[class$="page"] .step .content__inner--l {
       width: 100%; }
-      .wrapper main[class$="page"] .for-youth .content__inner--l .eyecatch, .wrapper main[class$="page"] .for-parents .content__inner--l .eyecatch, .wrapper main[class$="page"] .step .content__inner--l .eyecatch {
+      main[class$="page"] .for-youth .content__inner--l .eyecatch, main[class$="page"] .for-parents .content__inner--l .eyecatch, main[class$="page"] .step .content__inner--l .eyecatch {
         width: 150px;
         height: auto;
         margin-bottom: 20px; }
-    .wrapper main[class$="page"] .for-youth .content__inner--r, .wrapper main[class$="page"] .for-parents .content__inner--r, .wrapper main[class$="page"] .step .content__inner--r {
+    main[class$="page"] .for-youth .content__inner--r, main[class$="page"] .for-parents .content__inner--r, main[class$="page"] .step .content__inner--r {
       width: 100%; }
-      .wrapper main[class$="page"] .for-youth .content__inner--r .section, .wrapper main[class$="page"] .for-parents .content__inner--r .section, .wrapper main[class$="page"] .step .content__inner--r .section {
+      main[class$="page"] .for-youth .content__inner--r .section, main[class$="page"] .for-parents .content__inner--r .section, main[class$="page"] .step .content__inner--r .section {
         position: static;
         transform: translate(0%, 0%); }
-  .wrapper main[class$="page"] .content {
+  main[class$="page"] .content {
     margin: 0px auto 40px auto; }
-    .wrapper main[class$="page"] .content .content__inner {
+    main[class$="page"] .content .content__inner {
       padding: 10px 0; }
-      .wrapper main[class$="page"] .content .content__inner .section__title {
+      main[class$="page"] .content .content__inner .section__title {
         margin-bottom: 0px !important; }
-    .wrapper main[class$="page"] .content .about .content__inner .section {
+    main[class$="page"] .content .about .content__inner .section {
       top: 25%; }
-  .wrapper aside .back-to-top {
+
+  aside .back-to-top {
     width: 50px;
     height: 50px;
     font-size: 1.6em;
     line-height: 2.1;
     right: 15px; }
-  .wrapper .for-youth-page .content__inner .support, .wrapper .for-parents-page .content__inner .support {
+
+  .for-youth-page .content__inner .support, .for-parents-page .content__inner .support {
     display: block; }
-    .wrapper .for-youth-page .content__inner .support__image, .wrapper .for-parents-page .content__inner .support__image {
+    .for-youth-page .content__inner .support__image, .for-parents-page .content__inner .support__image {
       max-width: 250px;
       margin: 0 auto; }
-      .wrapper .for-youth-page .content__inner .support__image__img, .wrapper .for-parents-page .content__inner .support__image__img {
+      .for-youth-page .content__inner .support__image__img, .for-parents-page .content__inner .support__image__img {
         width: 100%;
         height: auto;
         text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-sp, .wrapper .for-parents-page .content__inner .support__header.visible-sp {
+    .for-youth-page .content__inner .support__header.visible-sp, .for-parents-page .content__inner .support__header.visible-sp {
       display: block;
       width: 100%;
       text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-pc, .wrapper .for-parents-page .content__inner .support__header.visible-pc {
+    .for-youth-page .content__inner .support__header.visible-pc, .for-parents-page .content__inner .support__header.visible-pc {
       display: none; }
-  .wrapper .reservation-page .content__inner .steps, .wrapper .steps-page .content__inner .steps {
+
+  .reservation-page .content__inner .steps, .steps-page .content__inner .steps {
     margin-bottom: 30px; }
-    .wrapper .reservation-page .content__inner .steps .section, .wrapper .steps-page .content__inner .steps .section {
+    .reservation-page .content__inner .steps .section, .steps-page .content__inner .steps .section {
       display: block;
       margin-bottom: 20px; }
-      .wrapper .reservation-page .content__inner .steps .section__image, .wrapper .steps-page .content__inner .steps .section__image {
+      .reservation-page .content__inner .steps .section__image, .steps-page .content__inner .steps .section__image {
         margin: 0 auto 10px; }
-        .wrapper .reservation-page .content__inner .steps .section__image__img, .wrapper .reservation-page .content__inner .steps .section__image__img.wider, .wrapper .reservation-page .content__inner .steps .section__image__img.middle, .wrapper .steps-page .content__inner .steps .section__image__img, .wrapper .steps-page .content__inner .steps .section__image__img.wider, .wrapper .steps-page .content__inner .steps .section__image__img.middle {
+        .reservation-page .content__inner .steps .section__image__img, .reservation-page .content__inner .steps .section__image__img.wider, .reservation-page .content__inner .steps .section__image__img.middle, .steps-page .content__inner .steps .section__image__img, .steps-page .content__inner .steps .section__image__img.wider, .steps-page .content__inner .steps .section__image__img.middle {
           width: 100%;
           text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-sp, .wrapper .reservation-page .content__inner .steps .visible-sp.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-sp, .wrapper .steps-page .content__inner .steps .visible-sp.section__info--parents {
+      .reservation-page .content__inner .steps .section__info.visible-sp, .reservation-page .content__inner .steps .visible-sp.section__info--parents, .steps-page .content__inner .steps .section__info.visible-sp, .steps-page .content__inner .steps .visible-sp.section__info--parents {
         display: block;
         width: 100%;
         text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-pc, .wrapper .reservation-page .content__inner .steps .visible-pc.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-pc, .wrapper .steps-page .content__inner .steps .visible-pc.section__info--parents {
+      .reservation-page .content__inner .steps .section__info.visible-pc, .reservation-page .content__inner .steps .visible-pc.section__info--parents, .steps-page .content__inner .steps .section__info.visible-pc, .steps-page .content__inner .steps .visible-pc.section__info--parents {
         display: none; }
-    .wrapper .reservation-page .content__inner .steps .notification__image, .wrapper .steps-page .content__inner .steps .notification__image {
+    .reservation-page .content__inner .steps .notification__image, .steps-page .content__inner .steps .notification__image {
       max-width: 250px; }
-  .wrapper .post__header {
+
+  .post__header {
     text-align: center; }
-  .wrapper .post__content {
+  .post__content {
     display: block; }
-    .wrapper .post__content__eyecatch {
+    .post__content__eyecatch {
       margin: 0 0 10px 0;
       text-align: center; }
-      .wrapper .post__content__eyecatch img {
+      .post__content__eyecatch img {
         width: 250px; }
-    .wrapper .post__content__right .post__text {
+    .post__content__right .post__text {
       margin-top: 10px; } }
-.header .content__inner {
-  width: 100%;
-  padding: 24px 0;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 80%;
+.header {
   color: #61B420;
   display: flex;
   justify-content: space-between;
-  font-size: 1.8em; }
-  .header .content__inner .saposute-name {
-    font-size: 0.4em;
+  min-height: 100px; }
+  .header .page__title--yisc {
+    font-size: 2.4rem; }
+  .header .page__title .saposute-name {
+    font-size: 1.2rem;
     line-height: 0.4; }
-  .header .content__inner--r {
+  .header .page__nav {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 500px; }
-    .header .content__inner--r.visible-tablet {
-      display: none; }
-    .header .content__inner--r .page-nav-pc .page-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-      .header .content__inner--r .page-nav-pc .page-nav__list {
-        font-size: 0.49em;
-        line-height: 2;
-        margin-right: 20px; }
-        .header .content__inner--r .page-nav-pc .page-nav__list:hover {
-          color: #666; }
-        .header .content__inner--r .page-nav-pc .page-nav__list:last-child {
-          margin-right: 0px; }
-    .header .content__inner--r .page-nav-btn, .header .content__inner--r .page-nav-btn span {
-      display: inline-block;
-      transition: all .4s;
-      box-sizing: border-box; }
-    .header .content__inner--r .page-nav-btn {
-      position: relative;
-      width: 36px;
-      height: 33px; }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(1) {
-        -webkit-transform: translateY(15px) rotate(-45deg);
-        transform: translateY(15px) rotate(-45deg); }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(2) {
-        opacity: 0; }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(3) {
-        -webkit-transform: translateY(-15px) rotate(45deg);
-        transform: translateY(-15px) rotate(45deg); }
-    .header .content__inner--r .page-nav-btn span {
+    .header .page__nav__list {
+      font-size: 0.49em;
+      line-height: 2;
+      margin-right: 20px; }
+      .header .page__nav__list:hover {
+        color: #666; }
+      .header .page__nav__list:last-child {
+        margin-right: 0px; }
+  .header .page-nav-btn, .header .page-nav-btn span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box; }
+  .header .page-nav-btn {
+    position: relative;
+    width: 36px;
+    height: 33px; }
+    .header .page-nav-btn.active span:nth-of-type(1) {
+      -webkit-transform: translateY(15px) rotate(-45deg);
+      transform: translateY(15px) rotate(-45deg); }
+    .header .page-nav-btn.active span:nth-of-type(2) {
+      opacity: 0; }
+    .header .page-nav-btn.active span:nth-of-type(3) {
+      -webkit-transform: translateY(-15px) rotate(45deg);
+      transform: translateY(-15px) rotate(45deg); }
+  .header .page-nav-btn span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #61B420;
+    border-radius: 3px; }
+    .header .page-nav-btn span:nth-of-type(1) {
+      top: 0; }
+    .header .page-nav-btn span:nth-of-type(2) {
+      top: 15px; }
+    .header .page-nav-btn span:nth-of-type(3) {
+      bottom: 0; }
+  .header .page-nav-box {
+    position: relative;
+    display: none; }
+    .header .page-nav-box .page-nav {
+      width: 300px;
+      background-color: #fafcfc;
       position: absolute;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #61B420;
-      border-radius: 3px; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(1) {
-        top: 0; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(2) {
-        top: 15px; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(3) {
-        bottom: 0; }
-    .header .content__inner--r .page-nav-box {
-      position: relative;
-      display: none; }
-      .header .content__inner--r .page-nav-box .page-nav {
-        width: 300px;
-        background-color: #fafcfc;
-        position: absolute;
-        top: 24px;
-        right: -50px;
-        z-index: 30;
-        color: #666;
-        font-size: 14px;
-        border-bottom: dotted 1px #61B420; }
-        .header .content__inner--r .page-nav-box .page-nav__list {
-          padding: 10px 20px;
-          border-top: dotted 1px #61B420; }
-          .header .content__inner--r .page-nav-box .page-nav__list:hover {
-            background-color: #a3d17c;
-            color: #fafcfc;
-            font-weight: 900; }
-    .header .content__inner--r .active + .page-nav-box {
-      display: block; }
+      top: 24px;
+      right: -50px;
+      z-index: 30;
+      color: #666;
+      font-size: 14px;
+      border-bottom: dotted 1px #61B420; }
+      .header .page-nav-box .page-nav__list {
+        padding: 10px 20px;
+        border-top: dotted 1px #61B420; }
+        .header .page-nav-box .page-nav__list:hover {
+          background-color: #a3d17c;
+          color: #fafcfc;
+          font-weight: 900; }
+  .header .active + .page-nav-box {
+    display: block; }
 
 .aside .back-to-top {
   width: 80px;

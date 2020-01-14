@@ -53,34 +53,33 @@
 }
 
 @media screen and (max-width: 680px){
-  .wrapper{
-    .header{
-      .content__inner{
-        width: 100%;
-        max-width:100%;
-        font-size: 1.4em;
-        .page__title{
-          margin-left: 20px;
+  .header{
+    .content__inner{
+      width: 100%;
+      max-width:100%;
+      font-size: 1.4em;
+      .page__title{
+        margin-left: 20px;
+      }
+      &--r{
+        position: relative;
+        max-width: 100%;
+        .page-nav-btn{
+          position: absolute;
+          top:0px;
+          right:20px;
         }
-        &--r{
-          position: relative;
-          max-width: 100%;
-          .page-nav-btn{
+        .page-nav-box{
+          .page-nav{
+            width: 100vw;
+            top:48px;
+            right: 0;
             position: absolute;
-            top:0px;
-            right:20px;
-          }
-          .page-nav-box{
-            .page-nav{
-              width: 100vw;
-              top:48px;
-              right: 0;
-              position: absolute;
-            }
           }
         }
-      } // end header content__inner
-    } // end.header
+      }
+    } // end header content__inner
+  } // end.header
 //  main--------------------------------------------
     main[class$="page"]{
       // top page の場合----------------
@@ -241,6 +240,4 @@
       }
     }
   }
-  
-}//end.wrapper
 }
