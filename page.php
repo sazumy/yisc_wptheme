@@ -19,7 +19,7 @@ get_header();
 
   <section class="page-top <?php echo $slug; ?> container-fluid  py-4 d-flex justify-content-center">
     <?php if(is_page($slug)){ 
-      get_template_part('template-parts/top-'.$slug);
+      get_template_part('template-parts/top-basic');
     }  else {
       // 汎用ページのキービジュアルです。
       get_template_part('template-parts/top-other');

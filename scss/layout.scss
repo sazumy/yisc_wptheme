@@ -1,34 +1,8 @@
-// 各ページのトップ画像 */
-.foryouth {
-  background-color: $saposute-aqua;
-  color: $white;
-}
-.page-top__content{
-  position: relative;
-  .page-info {
-    &__title{
-      font-size:$h3-size;
-    }
-    &__description{
-      font-size:$h4-size;
-    }
-  }
-}
 
-@media all and (min-width: 720px) {
-  .page-info {
-    position: absolute;
-      right: 0px;
-      top: 50%;
-    transform: translateY(-50%);
-  }
-}
 
 // 各ページのheaderが２カラムの時のcss */
 
-.eyecatch{
-  @include eyecatch;
-}
+
    
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
 .schedule, .about-us, .blog, .reservation{

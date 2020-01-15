@@ -184,27 +184,6 @@ img.size-post-thumbnail {
 .w-100 {
   width: 100%; }
 
-.foryouth {
-  background-color: #8CC4E3;
-  color: #fafcfc; }
-
-.page-top__content {
-  position: relative; }
-  .page-top__content .page-info__title {
-    font-size: 1.8em; }
-  .page-top__content .page-info__description {
-    font-size: 1.2em; }
-
-@media all and (min-width: 720px) {
-  .page-info {
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%); } }
-.eyecatch {
-  border-radius: 50%;
-  border: solid 3px #61B420; }
-
 .schedule .content__inner, .about-us .content__inner, .blog .content__inner, .reservation .content__inner {
   position: relative;
   min-height: 220px; }
@@ -511,6 +490,41 @@ img.size-post-thumbnail {
   position: fixed;
   bottom: 0; }
 
+/*----------------------------------------------
+ 固定ページのトップ画像 
+ ---------------------------------------------*/
+/* 背景色・画像の設定----------------------------*/
+.foryouth {
+  background-color: #8CC4E3;
+  color: #fafcfc; }
+
+.forparents {
+  background-color: #F2E8D4; }
+
+.steps {
+  background-color: #a3d17c;
+  color: #fafcfc; }
+
+/* 人物のイラスト-----------------------------------*/
+.eyecatch {
+  border-radius: 50%;
+  border: solid 3px #61B420; }
+
+/* ページタイトル・説明-------------------------------*/
+.page-top__content {
+  position: relative; }
+  .page-top__content .page-info__title {
+    font-size: 1.8em; }
+  .page-top__content .page-info__description {
+    font-size: 1.2em; }
+
+@media all and (min-width: 720px) {
+  /* ページトップ---------------------------*/
+  .page-info {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%); } }
 .index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
   background-color: #fafcfc;
   color: #61B420; }

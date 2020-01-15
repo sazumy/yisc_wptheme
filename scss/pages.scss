@@ -1,3 +1,52 @@
+/*----------------------------------------------
+ 固定ページのトップ画像 
+ ---------------------------------------------*/
+ /* 背景色・画像の設定----------------------------*/
+.foryouth {
+  background-color: $saposute-aqua;
+  color: $white;
+}
+
+.forparents {
+  background-color: $saposute-beige;
+}
+
+.steps {
+  background-color: $saposute-green-hue;
+  color: $white;
+}
+
+/* 人物のイラスト-----------------------------------*/
+.eyecatch{
+  @include eyecatch;
+}
+
+
+/* ページタイトル・説明-------------------------------*/
+.page-top__content{
+  position: relative;
+  .page-info {
+    &__title{
+      font-size:$h3-size;
+    }
+    &__description{
+      font-size:$h4-size;
+    }
+  }
+}
+
+
+
+
+@media all and (min-width: 720px) {
+  /* ページトップ---------------------------*/ 
+  .page-info {
+    position: absolute;
+      right: 0px;
+      top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 .index-page, .for-youth-page, .for-parents-page, .schedule-page, .about-us-page, .reservation-page, .steps-page, .archive{
 // 各ページのヘッダーの変更 ---------------------------------

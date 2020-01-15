@@ -1,6 +1,8 @@
 <div class="page-top__content col-10 d-md-flex">
   <figure class="keyvis text-center col-md-4">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch">
+    <?php $url = get_template_directory_uri();
+          $slug = esc_attr($post->post_name); ?>
+    <img src="<?php echo $url; ?>/img/eyecatch_<?php echo $slug; ?>.png" alt="対象者のイメージ" class="eyecatch">
 </figure>
 
   <div class="page-info text-center float-right mt-3 col-md-6">
