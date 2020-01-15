@@ -19,8 +19,10 @@ get_header();
 
   <section class="page-top <?php echo $slug; ?> container-fluid  py-4 d-flex justify-content-center">
     <?php if(is_page(array('foryouth', 'forparents', 'steps'))){ 
+      // トップが２カラムのキービジュアルです。
       get_template_part('template-parts/top-basic');
-    }  elseif(is_page($slug)) {
+    }  elseif(is_page(array('aboutus', 'schedule', 'reservation'))) {
+      // トップが１カラムのキービジュアルです。
       get_template_part('template-parts/top-single');
     } else {
       // 汎用ページのキービジュアルです。
@@ -29,23 +31,23 @@ get_header();
     ?>
   </section>
 
-    <div class="content">
-<!-- start wordpress loop -->
-  <?php
-    if (have_posts()){
-      while ( have_posts()){
-        the_post();
-    ?>
-    <main>
-      <article id="">      
-        <?php the_content();?>
-      </article>
-    </main>
+  <div class="container">
+    <!-- start wordpress loop -->
+    <?php
+      if (have_posts()){
+        while ( have_posts()){
+          the_post();
+      ?>
+
+    <article class="row" id="">      
+      <?php the_content();?>
+    </article>
+
     <?php
       }
     }
     ?>
-<!-- end wordpress loop -->
+    <!-- end wordpress loop -->
 
   </div>
 </main>
