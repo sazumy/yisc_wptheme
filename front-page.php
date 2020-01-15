@@ -13,76 +13,78 @@
 get_header();
 ?>
 
-<main class="index-page">
-
+<!-- スライダー ---------------------------------------------->
 <?php echo do_shortcode('[metaslider id="75"]'); ?>
+<!-- スライダー ここまで---------------------------------------->
 
-
-  <div class="content">
-    <section class="pick-up-index">
-      <div class="content__inner">
+<!-- コンテンツ ---------------------------------------------->
+<!-- PICK UP! -------->
+<main class="container">
+  <div class="row">
+    <section class="pick-up text-center col-12">
       <a href="<?php get_template_directory_uri(); ?>/yisc/home">
-        <h3 class="pick-up-header bigger">
+        <h3 class="pick-up__header anim-bigger">
           PICK UP!
         </h3>
       </a>
 
-        <ul class="pick-up">
-          <?php
-            $args = array(
-              'posts_per_page' => 4 // 表示件数
-              );
-              $posts = get_posts( $args );
-              foreach ( $posts as $post ): // ループの開始
-                setup_postdata( $post ); // 記事データの取得
-              ?>
-              <li class="pick-up__list bold">
-              <a href="<?php the_permalink(); ?>" class="bold"><?php the_title(); ?></a>
-              </li>
-            <?php
-            endforeach; // ループの終了
-            ?>
-          </ul>
-
-      </div>
+    <ul class="pick-up__index">
+      <?php
+        $args = array(
+          'posts_per_page' => 4 // 表示件数
+          );
+          $posts = get_posts( $args );
+          foreach ( $posts as $post ): // ループの開始
+            setup_postdata( $post ); // 記事データの取得
+          ?>
+          <li class="pick-up__list">
+            <a href="<?php the_permalink(); ?>" class="pick-up__link">
+              <?php the_title(); ?>
+            </a>
+          </li>
+        <?php
+          endforeach; // ループの終了
+      ?>
+    </ul>
+  </section>
+<!-- PICK UP! ここまで-------->
+<!-- 各ページへのリンク-------->
+  <div class="col-12 d-md-flex">
+    <section class="foryouth w-md-50">
+      <a href="<?php echo home_url();?>/foryouth">
+        <div class="index-tile__inner">
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="eyecatch anim-rotate">
+          <div class="section">
+            <h3 class="section__title">
+              悩んでいるあなたへ
+            </h3>
+            <h4 class="section__description">
+              支援内容
+            </h4>
+          </div>
+        </div><!--end.index-tile__inner-->
+      </a>
     </section>
+    
 
-    <div class="two-column">
-      <section class="for-youth index-tile">
-        <a href="<?php echo home_url();?>/foryouth">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch rotate">
-            <div class="section">
-              <h3 class="section__title .font-kotodama">
-                悩んでいるあなたへ
-              </h3>
-              <h4 class="section__description">
-                支援内容
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-      
-
-      <section class="for-parents index-tile">
-        <a href="<?php echo home_url();?>/forparents">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_02.png" alt="対象者のイメージ" class="eyecatch shake">
-          
-            <div class="section">
-              <h3 class="section__title">
-                保護者の皆様へ
-              </h3>
-              <h4 class="section__description">
-                保護者支援のご案内
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-      
-    </div><!-- end.two-column-->
+    <section class="forparents w-md-50">
+      <a href="<?php echo home_url();?>/forparents">
+        <div class="index-tile__inner">
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="eyecatch anim-shake">
+        
+          <div class="section">
+            <h3 class="section__title">
+              保護者の皆様へ
+            </h3>
+            <h4 class="section__description">
+              保護者支援のご案内
+            </h4>
+          </div>
+        </div><!--end.index-tile__inner-->
+      </a>
+    </section>
+    
+  </div><!-- end.two-column-->
 
         
     <section class="schedule index-tile">

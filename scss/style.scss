@@ -13,12 +13,10 @@ Version: 1.0
 @import 'variables.scss';
 @import 'mixin.scss';
 @import 'common.scss';
-@import 'layout.scss';
-@import 'mediaquery.scss';
 
-//index-page -----------------------------------
+
+@import 'index.scss';
 @import 'header.scss';
-
 @import 'aside.scss';
 @import 'footer.scss';
 

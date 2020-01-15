@@ -21,13 +21,13 @@
   color: $white;
 }
 
-/* 人物のイラスト-----------------------------------*/
+/* 人物のイラスト------*/
 .eyecatch{
   @include eyecatch;
 }
 
 
-/* ページタイトル・説明-------------------------------*/
+/* ページタイトル・説明-----*/
 .page-top__content{
   position: relative;
   .page-info {
@@ -63,33 +63,8 @@
   }
    
 // 全ページ共通 ---------------------------------
-  .content__inner{
-    @include column-content;
-    @include content-inner;
-    .pick-up-header{
-      font-size:$h3-size;
-      color: $saposute-green;
-      text-align: center;
-    }
-    .pick-up{
-      text-align: center; 
-      &__list{
-        font-size:1.3em;
-        line-height: 2;
-        &:hover{
-          opacity:.8;
-          font-weight: 900;
-        }
-        &:before{
-          color: $saposute-green;
-          font-family: font-awesome free;
-          content: '>>';
-          &:hover{
-            font-weight: 400;
-          }
-        }
-      }
-    }
+  
+    
 // for-youth.html / for-parebts.html ---------------------------------
     .support{
       padding: 20px 0;
@@ -207,4 +182,3 @@
       }
     }
   }
-}

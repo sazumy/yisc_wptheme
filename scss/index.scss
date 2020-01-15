@@ -1,9 +1,30 @@
+/*------------------------------------------------
+PICK UP
+--------------------------------------------------*/ 
+.pick-up__header{
+  color: $saposute-green;
+  font-size:$h3-size;
+}
+.pick-up{
+  text-align: center; 
+  &__list{
+    font-size:1.3em;
+    line-height: 2;
+    &:hover{
+      opacity:.8;
+      font-weight: 900;
+    }
+    &:before{
+      color: $saposute-green;
+      font-family: font-awesome free;
+      content: '>>';
+      &:hover{
+        font-weight: 400;
+      }
+    }
+  }
+}
 
-
-// 各ページのheaderが２カラムの時のcss */
-
-
-   
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
 .schedule, .about-us, .blog, .reservation{
   .content__inner{
