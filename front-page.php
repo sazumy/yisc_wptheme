@@ -69,9 +69,9 @@ get_header();
 
     <section class="forparents w-md-50">
       <a href="<?php echo home_url();?>/forparents">
- 
-        <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">
-      
+        <figure>
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">      
+        </figure>
         <div class="page-info">
           <h3 class="page-info__title">
             保護者の皆様へ
@@ -87,86 +87,76 @@ get_header();
   </div><!-- end.two-column-->
 
         
-    <section class="schedule index-tile">
+    <section class="schedule col-12">
       <a href="<?php echo home_url();?>/schedule">
-        <div class="index-tile__inner no-keyvis">
-          <div class="section">
-            <h3 class="section__title">
-              スケジュール
-            </h3>
-            <h4 class="section__description">
-              講座開催情報
-            </h4>
-          </div>
+        <div class="page-info">
+          <h3 class="page-info__title">
+            スケジュール
+          </h3>
+          <h4 class="page-info__description">
+            講座開催情報
+          </h4>
         </div>
       </a>
     </section>
     <!-- end top-schedule.php -->
 
-    <div class="two-column">
+    <div class="col-12 d-md-flex">
       <!-- 外部サイトへのリンク -->
-      <section class="voice index-tile">
+      <section class="voice w-md-50">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/keyvis_03.png" alt="対象者のイメージ" class="keyvis bigger">
-      
-            <div class="section">
-              <p class="balloon">
-                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
-              </p>
-              <h3 class="section__title">
-                利用者の声
-              </h3>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-
-      <section class="blog index-tile">
-        <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
-          <div class="index-tile__inner no-keyvis">
-            <div class="section">
-              <p class="balloon">
-                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
-              </p>
-              <h3 class="section__title">
-                スタッフブログ
-              </h3> 
-            </div>
+          <figure>
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="keyvis__img bigger">
+          </figure>
+          <div class="page-info">
+            <p class="balloon">
+              若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+            </p>
+            <h3 class="page-info__title">
+              利用者の声
+            </h3>
           </div>
         </a>
       </section>
 
+      <section class="blog w-md-50">
+        <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
+          <div class="section">
+            <p class="balloon">
+              若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+            </p>
+            <h3 class="section__title">
+              スタッフブログ
+            </h3> 
+          </div>
+        </a>
+      </section>
     </div>
 
-    <div class="two-column">
+    <div class="col-12 d-md-flex">
       <!-- start top-reservation.php -->
-      <section class="reservation index-tile">
+      <section class="reservation w-md-50">
         <a href="<?php echo home_url();?>/reservation">
-          <div class="index-tile__inner no-keyvis">
-            <div class="section">
-              <h3 class="section__title">
-                ご利用・ご予約方法
-              </h3>
-            </div>
+          <div class="page-info">
+            <h3 class="page-info__title">
+              ご利用・ご予約方法
+            </h3>
           </div>
         </a>
       </section>
 
-      <section class="step index-tile">
+      <section class="step w-md-50">
         <a href="<?php echo home_url();?>/steps">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/keyvis_04.png" alt="対象者のイメージ" class="keyvis rotate">
-          
-            <div class="section">
-              <h3 class="section__title">
-                就職までのステップ
-              </h3>
-              <h4 class="section__description">
-                ご利用開始から就職までの流れ
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
+        
+          <div class="page-info">
+            <h3 class="page-info__title">
+              就職までのステップ
+            </h3>
+            <h4 class="page-info__description">
+              ご利用開始から就職までの流れ
+            </h4>
+          </div>
         </a>
       </section>
     <!-- end top-steps.php -->
@@ -174,9 +164,9 @@ get_header();
 
     <div class="last-content">
       <!-- start top-aboutus.php -->
-      <section class="about-us index-tile">
+      <section class="about-us">
         <a href="<?php echo home_url();?>/aboutus">
-          <div class="index-tile__inner no-keyvis">
+
             <div class="section">
               <h3 class="section__title">
                 運営組織・アクセス
@@ -186,7 +176,7 @@ get_header();
                 育て上げネットについて
               </h4>
             </div>
-          </div>
+
         </a>
       </section>
       <!-- end top-aboutus.php -->
