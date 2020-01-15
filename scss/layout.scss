@@ -1,43 +1,35 @@
-main {
 // 各ページのトップ画像 */
-  .for-youth, .for-parents, .schedule, .about, .reservation, .step, .voice, .blog, .about-us, .post-page, .archive{
-    @include column-content;
-    .content__inner{
-      @include content-inner;
-      max-width: 70%;
-      text-align: center;
-      .section__title{
-        font-size:$h3-size;
-        margin-bottom:15px;
-      }
-      .section__description{
-        font-size:$h4-size;
-      }
+.foryouth {
+  background-color: $saposute-aqua;
+  color: $white;
+}
+.page-top__content{
+  position: relative;
+  .page-info {
+    &__title{
+      font-size:$h3-size;
     }
-  }
-// 各ページのheaderが２カラムの時のcss */
-.for-youth, .for-parents, .voice, .step{
-  .content__inner{
-    display: flex;
-    &--l{
-      .eyecatch{
-        @include eyecatch;
-      }
-    }
-    &--r{
-      position: relative;
-      width:100%;
-      .section{
-        color: $white;
-        position: absolute;
-        top:40%;
-        left:30%;
-        transform: translate(-30%, -40%);
-      }
+    &__description{
+      font-size:$h4-size;
     }
   }
 }
 
+@media all and (min-width: 720px) {
+  .page-info {
+    position: absolute;
+      right: 0px;
+      top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// 各ページのheaderが２カラムの時のcss */
+
+.eyecatch{
+  @include eyecatch;
+}
+   
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
 .schedule, .about-us, .blog, .reservation{
   .content__inner{
@@ -82,7 +74,7 @@ main {
     }
   }
 }
-}
+
 .content{
   width: 80%;
   margin: 40px auto;

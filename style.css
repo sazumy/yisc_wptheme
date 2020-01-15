@@ -121,6 +121,10 @@ button {
   button:hover {
     opacity: 0.8; }
 
+.no-gutters {
+  margin: 0;
+  padding: 0; }
+
 .page__title:hover, .eyecatch:hover, .section__title:hover, .section__description:hover {
   opacity: 0.8; }
 
@@ -180,78 +184,63 @@ img.size-post-thumbnail {
 .w-100 {
   width: 100%; }
 
-main .slider .slider__slides .slide__img {
-  width: 100%; }
-main .slider .slider__slides .slide:first-child {
+.foryouth {
+  background-color: #8CC4E3;
+  color: #fafcfc; }
+
+.page-top__content {
   position: relative; }
-  main .slider .slider__slides .slide:first-child .main-copy {
-    font-size: 2em;
-    color: #fafcfc;
-    text-align: center;
-    text-shadow: 2px 2px 2px #666;
+  .page-top__content .page-info__title {
+    font-size: 1.8em; }
+  .page-top__content .page-info__description {
+    font-size: 1.2em; }
+
+@media all and (min-width: 720px) {
+  .page-info {
     position: absolute;
+    right: 0px;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%); }
-main .slider .slider__slides .slide:nth-child(n+2) {
-  display: none; }
-main .for-youth, main .for-parents, main .schedule, main .about, main .reservation, main .step, main .voice, main .blog, main .about-us, main .post-page, main .archive {
-  width: 100%;
-  padding: 24px 0; }
-  main .for-youth .content__inner, main .for-parents .content__inner, main .schedule .content__inner, main .about .content__inner, main .reservation .content__inner, main .step .content__inner, main .voice .content__inner, main .blog .content__inner, main .about-us .content__inner, main .post-page .content__inner, main .archive .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 70%;
-    text-align: center; }
-    main .for-youth .content__inner .section__title, main .for-parents .content__inner .section__title, main .schedule .content__inner .section__title, main .about .content__inner .section__title, main .reservation .content__inner .section__title, main .step .content__inner .section__title, main .voice .content__inner .section__title, main .blog .content__inner .section__title, main .about-us .content__inner .section__title, main .post-page .content__inner .section__title, main .archive .content__inner .section__title {
-      font-size: 1.8em;
-      margin-bottom: 15px; }
-    main .for-youth .content__inner .section__description, main .for-parents .content__inner .section__description, main .schedule .content__inner .section__description, main .about .content__inner .section__description, main .reservation .content__inner .section__description, main .step .content__inner .section__description, main .voice .content__inner .section__description, main .blog .content__inner .section__description, main .about-us .content__inner .section__description, main .post-page .content__inner .section__description, main .archive .content__inner .section__description {
-      font-size: 1.2em; }
-main .for-youth .content__inner, main .for-parents .content__inner, main .voice .content__inner, main .step .content__inner {
-  display: flex; }
-  main .for-youth .content__inner--l .eyecatch, main .for-parents .content__inner--l .eyecatch, main .voice .content__inner--l .eyecatch, main .step .content__inner--l .eyecatch {
-    border-radius: 50%;
-    border: solid 3px #61B420; }
-  main .for-youth .content__inner--r, main .for-parents .content__inner--r, main .voice .content__inner--r, main .step .content__inner--r {
-    position: relative;
-    width: 100%; }
-    main .for-youth .content__inner--r .section, main .for-parents .content__inner--r .section, main .voice .content__inner--r .section, main .step .content__inner--r .section {
-      color: #fafcfc;
-      position: absolute;
-      top: 40%;
-      left: 30%;
-      transform: translate(-30%, -40%); }
-main .schedule .content__inner, main .about-us .content__inner, main .blog .content__inner, main .reservation .content__inner {
+    transform: translateY(-50%); } }
+.eyecatch {
+  border-radius: 50%;
+  border: solid 3px #61B420; }
+
+.schedule .content__inner, .about-us .content__inner, .blog .content__inner, .reservation .content__inner {
   position: relative;
   min-height: 220px; }
-  main .schedule .content__inner .section, main .about-us .content__inner .section, main .blog .content__inner .section, main .reservation .content__inner .section {
+  .schedule .content__inner .section, .about-us .content__inner .section, .blog .content__inner .section, .reservation .content__inner .section {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%); }
-main .step {
+
+.step {
   background-color: #a3d17c;
   color: #fafcfc; }
-main .voice {
+
+.voice {
   border: solid 1px #efefef; }
-main .schedule {
+
+.schedule {
   background-image: url("img/schedule_bg.png");
   background-size: cover;
   color: #fafcfc; }
-main .for-parents, main .about-us, main .archive {
+
+.for-parents, .about-us, .archive {
   background-color: #F2E8D4; }
-  main .for-parents .section__title, main .for-parents .section__description, main .about-us .section__title, main .about-us .section__description, main .archive .section__title, main .archive .section__description {
+  .for-parents .section__title, .for-parents .section__description, .about-us .section__title, .about-us .section__description, .archive .section__title, .archive .section__description {
     color: #666; }
-main .blog {
+
+.blog {
   background-image: url("img/blog_bg.jpg");
   background-size: cover;
   background-position: center;
   color: #fafcfc; }
-main .for-youth, main .reservation {
+
+.for-youth, .reservation {
   background-color: #8CC4E3; }
-  main .for-youth .section__title, main .for-youth .section__description, main .reservation .section__title, main .reservation .section__description {
+  .for-youth .section__title, .for-youth .section__description, .reservation .section__title, .reservation .section__description {
     color: #fafcfc; }
 
 .content {
@@ -521,10 +510,6 @@ main .for-youth, main .reservation {
 .footer.sticky {
   position: fixed;
   bottom: 0; }
-
-.content .for-youth {
-  background-color: #8CC4E3;
-  color: #fafcfc; }
 
 .index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
   background-color: #fafcfc;

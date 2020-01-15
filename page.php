@@ -13,25 +13,20 @@
 get_header();
 ?>
 
-<main class="index-page for-yhouth-page for-parents-page about-us-page post-page blog-page schedule-page reservation-page archive-page">
-    
-    <?php if(is_page('foryouth')){ 
-      get_template_part('get_template_parttop-foryouth');
-    } else if (is_page('forparents')){
-     get_template_part('template-parts/top-forparents');
-    } else if (is_page('schedule')){
-      get_template_part('template-parts/top-schedule');
-    } else if (is_page('aboutus')){
-      get_template_part('template-parts/top-aboutus');
-    } else if (is_page('reservation')){
-      get_template_part('template-parts/top-reservation');
-    } else if (is_page('steps')){
-      get_template_part('template-parts/top-steps');
-    } else {
+<main class="">
+  <!-- 固定ページのスラッグを$slugに代入 -->
+  <?php $slug = esc_attr($post->post_name); ?>
+
+  <section class="page-top <?php echo $slug; ?> container-fluid  py-4 d-flex justify-content-center">
+    <?php if(is_page($slug)){ 
+      get_template_part('template-parts/top-'.$slug);
+    }  else {
       // 汎用ページのキービジュアルです。
       get_template_part('template-parts/top-other');
     }
     ?>
+  </section>
+
     <div class="content">
 <!-- start wordpress loop -->
   <?php

@@ -44,6 +44,11 @@ button{
   margin-bottom:20px;
 }
 
+.no-gutters {
+  margin: 0;
+  padding: 0;
+}
+
 .page__title, .eyecatch, .section__title, .section__description {
   &:hover{
   opacity: 0.8;
