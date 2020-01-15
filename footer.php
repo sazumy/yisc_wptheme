@@ -29,7 +29,7 @@
 
         <p class="privacy">
           <a href="<?php echo home_url();?>/privacy" class="privacy__link">
-            プライバシーポリシー
+            <?php echo get_the_title(187); ?>
           </a>
         </p>
       </div>

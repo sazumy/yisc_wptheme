@@ -1,45 +1,18 @@
 main {
-// div.slider内のスライド「以外」に関するcss---------------------------
-  .slider{
-    .slider__slides{
-      .slide{
-        &__img{
-          width: 100%;
-        }
-        &:first-child{
-          position: relative;
-          .main-copy{
-            font-size: 2em;
-            color:$white;
-            text-align: center;
-            text-shadow: 2px 2px 2px $gray-lv4;
-            position: absolute;
-            top:50%;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-        &:nth-child(n+2){
-          display: none;
-          // あとで見えるようにする
-        }
-      }
-    }
-  }
 // 各ページのトップ画像 */
-    .for-youth, .for-parents, .schedule, .about, .reservation, .step, .voice, .blog, .about-us, .post-page, .archive{
-      @include column-content;
-      .content__inner{
-        @include content-inner;
-        max-width: 70%;
-        text-align: center;
-        .section__title{
-          font-size:$h3-size;
-          margin-bottom:15px;
-        }
-        .section__description{
-          font-size:$h4-size;
-        }
+  .for-youth, .for-parents, .schedule, .about, .reservation, .step, .voice, .blog, .about-us, .post-page, .archive{
+    @include column-content;
+    .content__inner{
+      @include content-inner;
+      max-width: 70%;
+      text-align: center;
+      .section__title{
+        font-size:$h3-size;
+        margin-bottom:15px;
+      }
+      .section__description{
+        font-size:$h4-size;
+      }
     }
   }
 // 各ページのheaderが２カラムの時のcss */
