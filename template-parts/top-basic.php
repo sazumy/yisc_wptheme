@@ -3,13 +3,13 @@
     <?php $url = get_template_directory_uri();
           $slug = esc_attr($post->post_name); ?>
     <img src="<?php echo $url; ?>/img/eyecatch_<?php echo $slug; ?>.png" alt="対象者のイメージ" class="eyecatch">
-</figure>
+  </figure>
 
-  <div class="page-info text-center float-right mt-3 col-md-6">
-    <h2 class="page-info__title">
+  <div class="page-info two-column text-center mt-3 col-md-6">
+    <h2 class="page-info__title w-100">
       <?php echo the_title(); ?>
     </h2>
-    <h3 class="page-info__description">
+    <h3 class="page-info__description mt-2 w-100">
       <?php if(is_page('foryouth')){ 
           echo '支援内容';
         } else if (is_page('forparents')){

@@ -1,13 +1,18 @@
 /*----------------------------------------------
  固定ページのトップ画像 
  ---------------------------------------------*/
- /* 背景色・画像の設定----------------------------*/
-.foryouth {
+/* トップ画像共通----*/
+.page-top {
+  min-height: 288px;
+}
+
+/* 背景色・画像の設定---*/
+.foryouth, .reservation {
   background-color: $saposute-aqua;
   color: $white;
 }
 
-.forparents {
+.forparents, .aboutus {
   background-color: $saposute-beige;
 }
 
@@ -42,9 +47,11 @@
   /* ページトップ---------------------------*/ 
   .page-info {
     position: absolute;
-      right: 0px;
       top: 50%;
     transform: translateY(-50%);
+    &.two-column {
+      right: 0px;
+    }
   }
 }
 

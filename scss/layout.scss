@@ -55,15 +55,6 @@
 }
 
 /* index-page------------------------------------------*/
-/* top ページから各ページにリンクするタイルのレイアウト*/
-/* 2カラムにする関係 */
-.two-column{
-  display: flex;
-  padding: 32px 0;
-  section:first-child{
-    margin-right: 32px;
-  }
-}
 
 .last-content{
   width:100%;

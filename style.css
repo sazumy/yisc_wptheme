@@ -227,14 +227,6 @@ img.size-post-thumbnail {
   margin: 40px auto; }
 
 /* index-page------------------------------------------*/
-/* top ページから各ページにリンクするタイルのレイアウト*/
-/* 2カラムにする関係 */
-.two-column {
-  display: flex;
-  padding: 32px 0; }
-  .two-column section:first-child {
-    margin-right: 32px; }
-
 .last-content {
   width: 100%; }
   .last-content section {
@@ -493,12 +485,16 @@ img.size-post-thumbnail {
 /*----------------------------------------------
  固定ページのトップ画像 
  ---------------------------------------------*/
-/* 背景色・画像の設定----------------------------*/
-.foryouth {
+/* トップ画像共通----*/
+.page-top {
+  min-height: 288px; }
+
+/* 背景色・画像の設定---*/
+.foryouth, .reservation {
   background-color: #8CC4E3;
   color: #fafcfc; }
 
-.forparents {
+.forparents, .aboutus {
   background-color: #F2E8D4; }
 
 .steps {
@@ -522,9 +518,10 @@ img.size-post-thumbnail {
   /* ページトップ---------------------------*/
   .page-info {
     position: absolute;
-    right: 0px;
     top: 50%;
-    transform: translateY(-50%); } }
+    transform: translateY(-50%); }
+    .page-info.two-column {
+      right: 0px; } }
 .index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
   background-color: #fafcfc;
   color: #61B420; }

@@ -18,9 +18,11 @@ get_header();
   <?php $slug = esc_attr($post->post_name); ?>
 
   <section class="page-top <?php echo $slug; ?> container-fluid  py-4 d-flex justify-content-center">
-    <?php if(is_page($slug)){ 
+    <?php if(is_page(array('foryouth', 'forparents', 'steps'))){ 
       get_template_part('template-parts/top-basic');
-    }  else {
+    }  elseif(is_page($slug)) {
+      get_template_part('template-parts/top-single');
+    } else {
       // 汎用ページのキービジュアルです。
       get_template_part('template-parts/top-other');
     }
