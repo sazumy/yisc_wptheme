@@ -22,35 +22,35 @@
 }
 
 /* 人物のイラスト------*/
-.eyecatch{
-  @include eyecatch;
+.keyvis__img {
+  @include keyvis;
 }
 
 
 /* ページタイトル・説明-----*/
-.page-top__content{
-  position: relative;
-  .page-info {
-    &__title{
-      font-size:$h3-size;
-    }
-    &__description{
-      font-size:$h4-size;
-    }
+.page-info {
+  text-align: center;
+  &__title{
+    font-size:$h3-size;
+  }
+  &__description{
+    font-size:$h4-size;
   }
 }
 
 
 
-
 @media all and (min-width: 720px) {
-  /* ページトップ---------------------------*/ 
-  .page-info {
-    position: absolute;
-      top: 50%;
-    transform: translateY(-50%);
-    &.two-column {
-      right: 0px;
+  /* ページトップ---------------------------*/
+  .page-top__content{
+    position: relative; 
+    .page-info {
+      position: absolute;
+        top: 50%;
+      transform: translateY(-50%);
+      &.two-column {
+        right: 0px;
+      }
     }
   }
 }

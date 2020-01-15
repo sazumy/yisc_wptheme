@@ -36,7 +36,7 @@
           </h3>
 
           <section class="post__content">
-            <figure class="post__content__eyecatch">
+            <figure class="post__content__keyvis">
               <?php
                 if(has_post_thumbnail()){ 
                   the_post_thumbnail();

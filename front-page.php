@@ -52,35 +52,35 @@ get_header();
   <div class="col-12 d-md-flex">
     <section class="foryouth w-md-50">
       <a href="<?php echo home_url();?>/foryouth">
-        <div class="index-tile__inner">
-          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="eyecatch anim-rotate">
-          <div class="section">
-            <h3 class="section__title">
-              悩んでいるあなたへ
-            </h3>
-            <h4 class="section__description">
-              支援内容
-            </h4>
-          </div>
-        </div><!--end.index-tile__inner-->
+        <figure>
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="keyvis__img anim-rotate">
+        </figure>
+        <div class="page-info">
+          <h3 class="page-info__title">
+            悩んでいるあなたへ
+          </h3>
+          <h4 class="page-info__description">
+            支援内容
+          </h4>
+        </div>
       </a>
     </section>
     
 
     <section class="forparents w-md-50">
       <a href="<?php echo home_url();?>/forparents">
-        <div class="index-tile__inner">
-          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="eyecatch anim-shake">
-        
-          <div class="section">
-            <h3 class="section__title">
-              保護者の皆様へ
-            </h3>
-            <h4 class="section__description">
-              保護者支援のご案内
-            </h4>
-          </div>
-        </div><!--end.index-tile__inner-->
+ 
+        <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">
+      
+        <div class="page-info">
+          <h3 class="page-info__title">
+            保護者の皆様へ
+          </h3>
+          <h4 class="page-info__description">
+            保護者支援のご案内
+          </h4>
+        </div>
+
       </a>
     </section>
     
@@ -89,7 +89,7 @@ get_header();
         
     <section class="schedule index-tile">
       <a href="<?php echo home_url();?>/schedule">
-        <div class="index-tile__inner no-eyecatch">
+        <div class="index-tile__inner no-keyvis">
           <div class="section">
             <h3 class="section__title">
               スケジュール
@@ -108,7 +108,7 @@ get_header();
       <section class="voice index-tile">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="eyecatch bigger">
+            <img src="<?php echo get_template_directory_uri();?>/img/keyvis_03.png" alt="対象者のイメージ" class="keyvis bigger">
       
             <div class="section">
               <p class="balloon">
@@ -124,7 +124,7 @@ get_header();
 
       <section class="blog index-tile">
         <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
-          <div class="index-tile__inner no-eyecatch">
+          <div class="index-tile__inner no-keyvis">
             <div class="section">
               <p class="balloon">
                 若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
@@ -143,7 +143,7 @@ get_header();
       <!-- start top-reservation.php -->
       <section class="reservation index-tile">
         <a href="<?php echo home_url();?>/reservation">
-          <div class="index-tile__inner no-eyecatch">
+          <div class="index-tile__inner no-keyvis">
             <div class="section">
               <h3 class="section__title">
                 ご利用・ご予約方法
@@ -156,7 +156,7 @@ get_header();
       <section class="step index-tile">
         <a href="<?php echo home_url();?>/steps">
           <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_04.png" alt="対象者のイメージ" class="eyecatch rotate">
+            <img src="<?php echo get_template_directory_uri();?>/img/keyvis_04.png" alt="対象者のイメージ" class="keyvis rotate">
           
             <div class="section">
               <h3 class="section__title">
@@ -176,7 +176,7 @@ get_header();
       <!-- start top-aboutus.php -->
       <section class="about-us index-tile">
         <a href="<?php echo home_url();?>/aboutus">
-          <div class="index-tile__inner no-eyecatch">
+          <div class="index-tile__inner no-keyvis">
             <div class="section">
               <h3 class="section__title">
                 運営組織・アクセス

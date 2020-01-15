@@ -84,27 +84,3 @@ PICK UP
     margin: 0 auto;
   }
 }
-// それぞれのタイルの内部 */
-
-.index-tile{
-  @include va-center-outer;
-  &__inner{
-    @include content-inner;
-    text-align: center;
-    .eyecatch{
-      @include eyecatch;
-    }
-    .section{
-      &__title{
-        font-size: $h3-size;
-      }
-      &__description{
-        font-size: $h4-size;
-      }
-    }
-  }
-  // アイキャッチ画像がないときに、タイトル文字を縦横中央揃えにする */
-  .no-eyecatch{
-    @include va-center-inner;
-  }
-}

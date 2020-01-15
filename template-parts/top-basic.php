@@ -2,10 +2,10 @@
   <figure class="keyvis text-center col-md-4">
     <?php $url = get_template_directory_uri();
           $slug = esc_attr($post->post_name); ?>
-    <img src="<?php echo $url; ?>/img/eyecatch_<?php echo $slug; ?>.png" alt="対象者のイメージ" class="eyecatch">
+    <img src="<?php echo $url; ?>/img/eyecatch_<?php echo $slug; ?>.png" alt="対象者のイメージ" class="keyvis__img">
   </figure>
 
-  <div class="page-info two-column text-center mt-3 col-md-6">
+  <div class="page-info two-column mt-3 col-md-6">
     <h2 class="page-info__title w-100">
       <?php echo the_title(); ?>
     </h2>

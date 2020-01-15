@@ -129,9 +129,6 @@ main {
   margin: 0;
   padding: 0; }
 
-.page__title:hover, .eyecatch:hover, .section__title:hover, .section__description:hover {
-  opacity: 0.8; }
-
 .read-more {
   color: #61B420 !important;
   margin-left: 20px; }
@@ -245,27 +242,6 @@ PICK UP
   .last-content section {
     width: 50% !important;
     margin: 0 auto; }
-
-.index-tile {
-  position: relative;
-  min-height: 220px; }
-  .index-tile__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .index-tile__inner .eyecatch {
-      border-radius: 50%;
-      border: solid 3px #61B420; }
-    .index-tile__inner .section__title {
-      font-size: 1.8em; }
-    .index-tile__inner .section__description {
-      font-size: 1.2em; }
-  .index-tile .no-eyecatch {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
 
 .header {
   color: #61B420; }
@@ -388,26 +364,28 @@ PICK UP
   color: #fafcfc; }
 
 /* 人物のイラスト------*/
-.eyecatch {
+.keyvis__img {
   border-radius: 50%;
   border: solid 3px #61B420; }
 
 /* ページタイトル・説明-----*/
-.page-top__content {
-  position: relative; }
-  .page-top__content .page-info__title {
+.page-info {
+  text-align: center; }
+  .page-info__title {
     font-size: 1.8em; }
-  .page-top__content .page-info__description {
+  .page-info__description {
     font-size: 1.2em; }
 
 @media all and (min-width: 720px) {
   /* ページトップ---------------------------*/
-  .page-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-    .page-info.two-column {
-      right: 0px; } }
+  .page-top__content {
+    position: relative; }
+    .page-top__content .page-info {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .page-top__content .page-info.two-column {
+        right: 0px; } }
 .index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
   background-color: #fafcfc;
   color: #61B420; }
@@ -498,9 +476,9 @@ PICK UP
   .post__content {
     margin-top: 10px;
     display: flex; }
-    .post__content__eyecatch {
+    .post__content__keyvis {
       margin-right: 10px; }
-      .post__content__eyecatch img {
+      .post__content__keyvis img {
         width: 200px; }
     .post__content__right .post__info, .post__content__right .post__categories, .post__content__right .post__tags {
       display: flex;
