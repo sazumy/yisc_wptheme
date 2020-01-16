@@ -16,7 +16,7 @@ PICK UP
     }
     &:before{
       color: $saposute-green;
-      font-family: font-awesome free;
+      font-family: 'font-awesome free';
       content: '>>';
       &:hover{
         font-weight: 400;
@@ -24,63 +24,47 @@ PICK UP
     }
   }
 }
+/*------------------------------------------------
+各ページへのリンク
+--------------------------------------------------*/ 
+/* 全体・共通-------------------------*/
+.keyvis {
+  width: 100%;
+  text-align: center;
+}
+
+/* レイアウト------------------------*/
 
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
-.schedule, .about-us, .blog, .reservation{
-  .content__inner{
-    @include va-center-outer;
-    .section{
-      @include va-center-inner;
-      }
+.schedule, .aboutus, .blog, .reservation{
+  min-height: 300px;
+  position: relative;
+  .page-info {
+    @include vertical-alien-center();
   }
 }
-// 個別のpageのcss・レイアウトcss */
-.step{
-  background-color: $saposute-green-hue;
-  color: $white;
-}
-.voice{
+
+.voice {
   border: $light-gray-border;
 }
+
+.aboutus {
+  background-color: $saposute-beige;
+}
+
+
 .schedule{
   background-image:url("img/schedule_bg.png");
   background-size:cover;
   color: $white;
+  position: relative;
 }
-.for-parents, .about-us, .archive{
-  background-color: $saposute-beige;
-  .section{
-    &__title, &__description{
-      color: $gray-lv4;
-    }
-  }
-}
+
+
 .blog{
   background-image:url("img/blog_bg.jpg");
   background-size: cover;
   background-position: center;
   color: $white;
-}
-.for-youth, .reservation{
-  background-color: $saposute-aqua;
-  .section{
-    &__title, &__description{
-      color: $white;
-    }
-  }
-}
-
-.content{
-  width: 80%;
-  margin: 40px auto;
-}
-
-/* index-page------------------------------------------*/
-
-.last-content{
-  width:100%;
-  section{
-    width: 50% !important; //important取りたい
-    margin: 0 auto;
-  }
+  position: relative;
 }

@@ -21,7 +21,7 @@ get_header();
 <!-- PICK UP! -------->
 <main class="container">
   <div class="row">
-    <section class="pick-up text-center col-12">
+    <section class="pick-up text-center col-12 mt-5">
       <a href="<?php get_template_directory_uri(); ?>/yisc/home">
         <h3 class="pick-up__header anim-bigger">
           PICK UP!
@@ -49,13 +49,13 @@ get_header();
   </section>
 <!-- PICK UP! ここまで-------->
 <!-- 各ページへのリンク-------->
-  <div class="col-12 d-md-flex">
-    <section class="foryouth w-md-50">
+  <div class="col-12 d-md-flex no-gutters">
+    <section class="foryouth w-md-50 p-4 mt-5">
       <a href="<?php echo home_url();?>/foryouth">
-        <figure>
+        <figure class="keyvis">
           <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="keyvis__img anim-rotate">
         </figure>
-        <div class="page-info">
+        <div class="page-info mt-3">
           <h3 class="page-info__title">
             悩んでいるあなたへ
           </h3>
@@ -67,12 +67,12 @@ get_header();
     </section>
     
 
-    <section class="forparents w-md-50">
+    <section class="forparents w-md-50 p-4 mt-5"> 
       <a href="<?php echo home_url();?>/forparents">
-        <figure>
+        <figure class="keyvis">
           <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">      
         </figure>
-        <div class="page-info">
+        <div class="page-info mt-3">
           <h3 class="page-info__title">
             保護者の皆様へ
           </h3>
@@ -87,7 +87,7 @@ get_header();
   </div><!-- end.two-column-->
 
         
-    <section class="schedule col-12">
+    <section class="schedule col-12 p-4 mt-5">
       <a href="<?php echo home_url();?>/schedule">
         <div class="page-info">
           <h3 class="page-info__title">
@@ -101,14 +101,14 @@ get_header();
     </section>
     <!-- end top-schedule.php -->
 
-    <div class="col-12 d-md-flex">
+    <div class="col-12 d-md-flex no-gutters">
       <!-- 外部サイトへのリンク -->
-      <section class="voice w-md-50">
+      <section class="voice w-md-50 p-4 mt-4">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
-          <figure>
+          <figure class="keyvis">
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="keyvis__img bigger">
           </figure>
-          <div class="page-info">
+          <div class="page-info mt-3">
             <p class="balloon">
               若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
             </p>
@@ -119,13 +119,13 @@ get_header();
         </a>
       </section>
 
-      <section class="blog w-md-50">
+      <section class="blog w-md-50 p-4 mt-4">
         <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
-          <div class="section">
+          <div class="page-info mt-3">
             <p class="balloon">
               若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
             </p>
-            <h3 class="section__title">
+            <h3 class="page-info__title">
               スタッフブログ
             </h3> 
           </div>
@@ -133,11 +133,11 @@ get_header();
       </section>
     </div>
 
-    <div class="col-12 d-md-flex">
+    <div class="col-12 d-md-flex no-gutters">
       <!-- start top-reservation.php -->
-      <section class="reservation w-md-50">
+      <section class="reservation w-md-50 p-4 mt-4">
         <a href="<?php echo home_url();?>/reservation">
-          <div class="page-info">
+          <div class="page-info mt-3">
             <h3 class="page-info__title">
               ご利用・ご予約方法
             </h3>
@@ -145,11 +145,12 @@ get_header();
         </a>
       </section>
 
-      <section class="step w-md-50">
+      <section class="steps w-md-50 p-4 mt-4">
         <a href="<?php echo home_url();?>/steps">
-          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
-        
-          <div class="page-info">
+          <figure class="keyvis">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
+          </figure>
+          <div class="page-info mt-3">
             <h3 class="page-info__title">
               就職までのステップ
             </h3>
@@ -162,21 +163,18 @@ get_header();
     <!-- end top-steps.php -->
     </div>
 
-    <div class="last-content">
       <!-- start top-aboutus.php -->
-      <section class="about-us">
+      <section class="aboutus col-12 p-4 mt-4">
         <a href="<?php echo home_url();?>/aboutus">
-
-            <div class="section">
-              <h3 class="section__title">
-                運営組織・アクセス
-              </h3>
-              <h4 class="section__description">
-                かわぐち若者サポートステーション<br>
-                育て上げネットについて
-              </h4>
-            </div>
-
+          <div class="page-info">
+            <h3 class="page-info__title">
+              運営組織・アクセス
+            </h3>
+            <h4 class="page-info__description">
+              かわぐち若者サポートステーション<br>
+              育て上げネットについて
+            </h4>
+          </div>
         </a>
       </section>
       <!-- end top-aboutus.php -->

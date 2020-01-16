@@ -66,18 +66,15 @@
   border: solid 3px $saposute-green; 
 }
 
-@mixin va-center-outer{
-  position: relative;
-  min-height: 220px;
+
+@mixin vertical-alien-center {
+  /*親要素に position:relative が効いていること*/
+  position: absolute;
+    top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
-@mixin va-center-inner{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-}
 
 @mixin transition{
   transition: all 0.5s ease;

@@ -123,7 +123,8 @@ html {
     box-sizing: inheritate; }
 
 main {
-  min-height: 600px; }
+  min-height: 600px;
+  padding-bottom: 150px; }
 
 .no-gutters {
   margin: 0;
@@ -189,59 +190,48 @@ PICK UP
       font-weight: 900; }
     .pick-up__list:before {
       color: #61B420;
-      font-family: font-awesome free;
+      font-family: 'font-awesome free';
       content: '>>'; }
       .pick-up__list:before:hover {
         font-weight: 400; }
 
-.schedule .content__inner, .about-us .content__inner, .blog .content__inner, .reservation .content__inner {
-  position: relative;
-  min-height: 220px; }
-  .schedule .content__inner .section, .about-us .content__inner .section, .blog .content__inner .section, .reservation .content__inner .section {
+/*------------------------------------------------
+各ページへのリンク
+--------------------------------------------------*/
+/* 全体・共通-------------------------*/
+.keyvis {
+  width: 100%;
+  text-align: center; }
+
+/* レイアウト------------------------*/
+.schedule, .aboutus, .blog, .reservation {
+  min-height: 300px;
+  position: relative; }
+  .schedule .page-info, .aboutus .page-info, .blog .page-info, .reservation .page-info {
+    /*親要素に position:relative が効いていること*/
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
-
-.step {
-  background-color: #a3d17c;
-  color: #fafcfc; }
+    transform: translateY(-50%);
+    width: 100%; }
 
 .voice {
   border: solid 1px #efefef; }
 
+.aboutus {
+  background-color: #F2E8D4; }
+
 .schedule {
   background-image: url("img/schedule_bg.png");
   background-size: cover;
-  color: #fafcfc; }
-
-.for-parents, .about-us, .archive {
-  background-color: #F2E8D4; }
-  .for-parents .section__title, .for-parents .section__description, .about-us .section__title, .about-us .section__description, .archive .section__title, .archive .section__description {
-    color: #666; }
+  color: #fafcfc;
+  position: relative; }
 
 .blog {
   background-image: url("img/blog_bg.jpg");
   background-size: cover;
   background-position: center;
-  color: #fafcfc; }
-
-.for-youth, .reservation {
-  background-color: #8CC4E3; }
-  .for-youth .section__title, .for-youth .section__description, .reservation .section__title, .reservation .section__description {
-    color: #fafcfc; }
-
-.content {
-  width: 80%;
-  margin: 40px auto; }
-
-/* index-page------------------------------------------*/
-.last-content {
-  width: 100%; }
-  .last-content section {
-    width: 50% !important;
-    margin: 0 auto; }
+  color: #fafcfc;
+  position: relative; }
 
 .header {
   color: #61B420; }
