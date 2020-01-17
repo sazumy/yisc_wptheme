@@ -48,9 +48,10 @@ get_header();
     </ul>
   </section>
 <!-- PICK UP! ここまで-------->
+
 <!-- 各ページへのリンク-------->
   <div class="col-12 d-md-flex no-gutters">
-    <section class="foryouth w-md-50 p-4 mt-5">
+    <section class="foryouth col p-4 mt-5 mr-md-3">
       <a href="<?php echo home_url();?>/foryouth">
         <figure class="keyvis">
           <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="keyvis__img anim-rotate">
@@ -67,7 +68,7 @@ get_header();
     </section>
     
 
-    <section class="forparents w-md-50 p-4 mt-5"> 
+    <section class="forparents col p-4 mt-5 ml-md-3"> 
       <a href="<?php echo home_url();?>/forparents">
         <figure class="keyvis">
           <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">      
@@ -103,7 +104,7 @@ get_header();
 
     <div class="col-12 d-md-flex no-gutters">
       <!-- 外部サイトへのリンク -->
-      <section class="voice w-md-50 p-4 mt-4">
+      <section class="voice col p-4 mt-4 mr-md-3">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
           <figure class="keyvis">
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="keyvis__img bigger">
@@ -119,7 +120,7 @@ get_header();
         </a>
       </section>
 
-      <section class="blog w-md-50 p-4 mt-4">
+      <section class="blog col p-4 mt-4 ml-md-3">
         <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
           <div class="page-info mt-3">
             <p class="balloon">
@@ -135,7 +136,7 @@ get_header();
 
     <div class="col-12 d-md-flex no-gutters">
       <!-- start top-reservation.php -->
-      <section class="reservation w-md-50 p-4 mt-4">
+      <section class="reservation col p-4 mt-4 mr-md-3">
         <a href="<?php echo home_url();?>/reservation">
           <div class="page-info mt-3">
             <h3 class="page-info__title">
@@ -145,7 +146,7 @@ get_header();
         </a>
       </section>
 
-      <section class="steps w-md-50 p-4 mt-4">
+      <section class="steps col p-4 mt-4 ml-md-3">
         <a href="<?php echo home_url();?>/steps">
           <figure class="keyvis">
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
@@ -164,19 +165,21 @@ get_header();
     </div>
 
       <!-- start top-aboutus.php -->
-      <section class="aboutus col-12 p-4 mt-4">
-        <a href="<?php echo home_url();?>/aboutus">
-          <div class="page-info">
-            <h3 class="page-info__title">
-              運営組織・アクセス
-            </h3>
-            <h4 class="page-info__description">
-              かわぐち若者サポートステーション<br>
-              育て上げネットについて
-            </h4>
-          </div>
-        </a>
-      </section>
+      <div class="col-12 d-flex justify-content-center">
+        <section class="aboutus col-9 p-4 mt-4">
+          <a href="<?php echo home_url();?>/aboutus">
+            <div class="page-info">
+              <h3 class="page-info__title">
+                運営組織・アクセス
+              </h3>
+              <h4 class="page-info__description">
+                かわぐち若者サポートステーション<br>
+                育て上げネットについて
+              </h4>
+            </div>
+          </a>
+        </section>
+      </div>
       <!-- end top-aboutus.php -->
     </div>
   </div><!-- end.content -->
