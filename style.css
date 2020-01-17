@@ -123,8 +123,11 @@ html {
     box-sizing: inheritate; }
 
 main {
-  min-height: 600px;
-  padding-bottom: 150px; }
+  min-height: 400px;
+  padding-bottom: 100px; }
+
+.cta {
+  margin: 0 auto; }
 
 .no-gutters {
   margin: 0;
