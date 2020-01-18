@@ -1,17 +1,3 @@
-@mixin column-content {
-  width: 100%;
-  padding: $column-padding;
-}
-
-@mixin content-inner{
-  width: 90%;
-  margin: 0 auto;
-}
-
-@mixin content-inner-sp{
-    width: 100%;
-    padding: 20px;
-}
 
 @mixin btn-reset{
   appearance: none;

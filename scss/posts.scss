@@ -1,8 +1,5 @@
 .post{
-  @include column-content;
-  .content__inner{
-    @include content-inner;
-  }
+  
   &__header{
     color: $saposute-green;
     font-size: $h3-size;
