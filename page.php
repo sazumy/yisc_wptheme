@@ -40,7 +40,7 @@ get_header();
           the_post();
       ?>
 
-    <article class="col-10" id="">      
+    <article class="page-article col-10" id="">
       <?php the_content();?>
     </article>
 

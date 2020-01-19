@@ -38,7 +38,7 @@ button{
 }
 
 /* 投稿のh3 */
-.container .row h3 {
+.page-article h3 {
   color: $saposute-green;
   font-size: $h4-size;
   line-height: 1.5;
@@ -46,7 +46,7 @@ button{
 }
 
 /* 投稿のh4 */
-.container .row h4 {
+.page-article h4 {
   color: $gray-lv5;
   font-size: $h4-size;
   line-height: 1.2;
@@ -54,12 +54,12 @@ button{
 }
 
 /* 投稿のp */
-.container .row p {
+.page-article p {
   margin-bottom: 5px;
 }
 
 /* 投稿のli */
-.container .row ul {
+.page-article ul {
   margin: 10px 0 10px 20px;
   li:before {
     color: $saposute-green-hue;

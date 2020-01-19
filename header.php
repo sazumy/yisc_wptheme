@@ -42,7 +42,7 @@
   <?php wp_head(); ?>
 </head>
 <!--end head----------------------------------------------------------------->
-<body>
+<body <?php body_class(); ?> id="<?php echo esc_attr( $post->post_name ); ?>">
   <header class="header container">
     <div class="row no-gutters py-5 d-flex justify-content-between">
       <a href="<?php echo home_url();?>" class="page__title col-10 col-md-5">
