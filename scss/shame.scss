@@ -1,0 +1,16 @@
+/* トップページとstepsページのトップ*/
+// steps(←スラッグで生まれる)とご利用までの流れ、卒業までの流れに
+// .steps というクラス名が使われているため、ページトップのものとトップページのものは詳細度をあげて対応している
+.page-top.steps, .index-page.steps {
+  background-color: $saposute-green-hue;
+  color: $white;
+}
+
+/* テンプレートパーツ(top-other.php)のレイアアウトcss*/
+// 他の".page-top"と構造が違うため、"__other"をつけて管理している
+.page-top {
+  position: relative;
+  &__other {
+    @include vertical-alien-center;
+  }
+}

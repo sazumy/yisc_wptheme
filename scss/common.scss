@@ -29,6 +29,48 @@ button{
   margin-bottom:20px;
 }
 
+/* 投稿のh2 */
+.container .row h2 {
+  color: $saposute-green;
+  font-size: $h3-size;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+/* 投稿のh3 */
+.container .row h3 {
+  color: $saposute-green;
+  font-size: $h4-size;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* 投稿のh4 */
+.container .row h4 {
+  color: $gray-lv5;
+  font-size: $h4-size;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+/* 投稿のp */
+.container .row p {
+  margin-bottom: 5px;
+}
+
+/* 投稿のli */
+.container .row ul {
+  margin: 10px 0 10px 20px;
+  li:before {
+    color: $saposute-green-hue;
+    content: '\f111';
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+}
+
+
 figure{
   margin-block-start: 0;
   margin-block-end: 0;
@@ -51,7 +93,16 @@ main {
   padding-bottom: 100px;
 }
 
+img.size-post-thumbnail{
+  width: 200px;
+  height: 165px;
+}
 
+
+/*----------------------------------------------
+ 汎用クラス
+---------------------------------------------*/
+/* ボタン --------------------*/
 .cta {
   margin: 0 auto;
 }
@@ -61,25 +112,53 @@ main {
   padding: 0;
 }
 
-.read-more{
-  color: $saposute-green !important;
-  margin-left:20px;
-}
-
-img.size-post-thumbnail{
-  width: 200px;
-  height: 165px;
-}
-
 /*投稿のテキストの直前に自動挿入されるクラス*/
 .post__text{
   margin-top: 15px;
+}
+
+.read-more{
+  color: $saposute-green;
+  margin-left:20px;
+}
+
+.visible-pc {
+  display: none;
 }
 
 /*投稿の画像*/
 .wp-block-image{
   margin-top: 15px;
   text-align: center;
+}
+
+/* wordpressにデフォルトでついているblockquoteタグのクラス*/
+.wp-block-quote {
+  background: $saposute-green-pale;
+  margin: 20px;
+  padding: 20px 40px;
+  position: relative;
+
+  &:before {
+    color: $saposute-green;
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-size: 40px;
+    font-weight: 900;
+    position: absolute;
+      top: -10px;
+      left: -20px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .visible-pc {
+    display: block;
+  }
+
+  .visible-sp {
+    display: none;
+  }
 }
 
 /*----------------------------------------------
@@ -123,5 +202,26 @@ img.size-post-thumbnail{
 
   100% {
     transform: translateX(0);
+  }
+}
+
+/*----------------------------------------------
+ aside(コードが増えたら別ファイルに)
+---------------------------------------------*/
+/* トップに戻るボタン */
+.aside{
+  .back-to-top{
+    width: 80px;
+    height: 80px;
+    border-radius:50%;
+    font-size:2.5em;
+    text-align: center;
+    line-height:2.2;
+    color: $white;
+    background: $saposute-green-hue;
+    position: fixed;
+    top: 50%;
+    right: 64px;
+    display: none;
   }
 }

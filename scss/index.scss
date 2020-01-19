@@ -7,7 +7,7 @@ PICK UP
 }
 .pick-up{
   text-align: center; 
-  &__list{
+  li.pick-up__list{
     font-size:1.3em;
     line-height: 2;
     &:hover{
@@ -15,9 +15,11 @@ PICK UP
       font-weight: 900;
     }
     &:before{
-      color: $saposute-green;
-      font-family: 'font-awesome free';
-      content: '>>';
+      color: $saposute-green-hue;
+      content: '\f054' !important;
+      margin-right: 10px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 400;
       &:hover{
         font-weight: 400;
       }
@@ -36,11 +38,11 @@ PICK UP
 /* レイアウト------------------------*/
 
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
-.schedule, .aboutus, .blog, .reservation{
+.schedule, .aboutus, .blog, .reservation {
   min-height: 300px;
   position: relative;
   .page-info {
-    @include vertical-alien-center();
+    @include vertical-alien-center;
   }
 }
 

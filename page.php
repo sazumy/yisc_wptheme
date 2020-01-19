@@ -31,8 +31,8 @@ get_header();
   ?>
 </section>
 
-<main class="">
-  <div class="container">
+<main class="container">
+  <div class="row d-flex justify-content-center">
     <!-- start wordpress loop -->
     <?php
       if (have_posts()){
@@ -40,7 +40,7 @@ get_header();
           the_post();
       ?>
 
-    <article class="row" id="">      
+    <article class="col-10" id="">      
       <?php the_content();?>
     </article>
 

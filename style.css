@@ -110,6 +110,41 @@ button {
   button:hover {
     opacity: 0.8; }
 
+/* 投稿のh2 */
+.container .row h2 {
+  color: #61B420;
+  font-size: 1.8em;
+  line-height: 2;
+  margin-bottom: 10px; }
+
+/* 投稿のh3 */
+.container .row h3 {
+  color: #61B420;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 10px; }
+
+/* 投稿のh4 */
+.container .row h4 {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin-bottom: 5px; }
+
+/* 投稿のp */
+.container .row p {
+  margin-bottom: 5px; }
+
+/* 投稿のli */
+.container .row ul {
+  margin: 10px 0 10px 20px; }
+  .container .row ul li:before {
+    color: #a3d17c;
+    content: '\f111';
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; }
+
 figure {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -127,6 +162,14 @@ main {
   min-height: 400px;
   padding-bottom: 100px; }
 
+img.size-post-thumbnail {
+  width: 200px;
+  height: 165px; }
+
+/*----------------------------------------------
+ 汎用クラス
+---------------------------------------------*/
+/* ボタン --------------------*/
 .cta {
   margin: 0 auto; }
 
@@ -134,23 +177,44 @@ main {
   margin: 0;
   padding: 0; }
 
-.read-more {
-  color: #61B420 !important;
-  margin-left: 20px; }
-
-img.size-post-thumbnail {
-  width: 200px;
-  height: 165px; }
-
 /*投稿のテキストの直前に自動挿入されるクラス*/
 .post__text {
   margin-top: 15px; }
+
+.read-more {
+  color: #61B420;
+  margin-left: 20px; }
+
+.visible-pc {
+  display: none; }
 
 /*投稿の画像*/
 .wp-block-image {
   margin-top: 15px;
   text-align: center; }
 
+/* wordpressにデフォルトでついているblockquoteタグのクラス*/
+.wp-block-quote {
+  background: #dcead1;
+  margin: 20px;
+  padding: 20px 40px;
+  position: relative; }
+  .wp-block-quote:before {
+    color: #61B420;
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-size: 40px;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    left: -20px; }
+
+@media all and (min-width: 768px) {
+  .visible-pc {
+    display: block; }
+
+  .visible-sp {
+    display: none; } }
 /*----------------------------------------------
  アニメーション
 ---------------------------------------------*/
@@ -177,6 +241,24 @@ img.size-post-thumbnail {
     transform: translateX(3%); }
   100% {
     transform: translateX(0); } }
+/*----------------------------------------------
+ aside(コードが増えたら別ファイルに)
+---------------------------------------------*/
+/* トップに戻るボタン */
+.aside .back-to-top {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 2.2;
+  color: #fafcfc;
+  background: #a3d17c;
+  position: fixed;
+  top: 50%;
+  right: 64px;
+  display: none; }
+
 /*------------------------------------------------
 PICK UP
 --------------------------------------------------*/
@@ -186,17 +268,19 @@ PICK UP
 
 .pick-up {
   text-align: center; }
-  .pick-up__list {
+  .pick-up li.pick-up__list {
     font-size: 1.3em;
     line-height: 2; }
-    .pick-up__list:hover {
+    .pick-up li.pick-up__list:hover {
       opacity: .8;
       font-weight: 900; }
-    .pick-up__list:before {
-      color: #61B420;
-      font-family: 'font-awesome free';
-      content: '>>'; }
-      .pick-up__list:before:hover {
+    .pick-up li.pick-up__list:before {
+      color: #a3d17c;
+      content: '\f054' !important;
+      margin-right: 10px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 400; }
+      .pick-up li.pick-up__list:before:hover {
         font-weight: 400; }
 
 /*------------------------------------------------
@@ -306,20 +390,6 @@ PICK UP
 
   .active {
     display: block; } }
-.aside .back-to-top {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  font-size: 2.5em;
-  text-align: center;
-  line-height: 2.2;
-  color: #fafcfc;
-  background: #a3d17c;
-  position: fixed;
-  top: 50%;
-  right: 64px;
-  display: none; }
-
 .footer {
   background: #333;
   color: #fafcfc;
@@ -343,24 +413,21 @@ PICK UP
  ---------------------------------------------*/
 /* トップ画像共通----*/
 .page-top {
-  min-height: 288px; }
-
-/* 背景色・画像の設定---*/
-.foryouth, .reservation {
-  background-color: #8CC4E3;
-  color: #fafcfc; }
-
-.forparents, .aboutus {
+  min-height: 288px;
   background-color: #F2E8D4; }
 
-.steps {
-  background-color: #a3d17c;
+/* 背景色・画像の設定(緑色はcommon.scssに定義)---*/
+.foryouth, .reservation {
+  background-color: #8CC4E3;
   color: #fafcfc; }
 
 /* 人物のイラスト------*/
 .keyvis__img {
   border-radius: 50%;
   border: solid 3px #61B420; }
+
+.keyvis__other {
+  margin: 0 auto; }
 
 /* ページタイトル・説明-----*/
 .page-info {
@@ -380,75 +447,78 @@ PICK UP
       transform: translateY(-50%); }
       .page-top__content .page-info.two-column {
         right: 0px; } }
-.index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
-  background-color: #fafcfc;
-  color: #61B420; }
-.index-page .support, .for-youth-page .support, .for-parents-page .support, .schedule-page .support, .about-us-page .support, .reservation-page .support, .steps-page .support, .archive .support {
-  padding: 20px 0;
-  display: flex; }
-  .index-page .support__header, .for-youth-page .support__header, .for-parents-page .support__header, .schedule-page .support__header, .about-us-page .support__header, .reservation-page .support__header, .steps-page .support__header, .archive .support__header {
-    font-size: 1.8em;
-    color: #61B420;
-    margin: 10px 0; }
-  .index-page .support__header.visible-sp, .for-youth-page .support__header.visible-sp, .for-parents-page .support__header.visible-sp, .schedule-page .support__header.visible-sp, .about-us-page .support__header.visible-sp, .reservation-page .support__header.visible-sp, .steps-page .support__header.visible-sp, .archive .support__header.visible-sp {
-    display: none; }
-  .index-page .support__image, .for-youth-page .support__image, .for-parents-page .support__image, .schedule-page .support__image, .about-us-page .support__image, .reservation-page .support__image, .steps-page .support__image, .archive .support__image {
-    margin-right: 15px; }
-    .index-page .support__image__img, .for-youth-page .support__image__img, .for-parents-page .support__image__img, .schedule-page .support__image__img, .about-us-page .support__image__img, .reservation-page .support__image__img, .steps-page .support__image__img, .archive .support__image__img {
-      width: 250px;
-      height: 200px; }
-  .index-page .support__description, .for-youth-page .support__description, .for-parents-page .support__description, .schedule-page .support__description, .about-us-page .support__description, .reservation-page .support__description, .steps-page .support__description, .archive .support__description {
-    padding-top: 10px; }
-.index-page .calender, .for-youth-page .calender, .for-parents-page .calender, .schedule-page .calender, .about-us-page .calender, .reservation-page .calender, .steps-page .calender, .archive .calender {
-  max-width: 600px;
-  margin: 0 auto;
+.support__header {
+  color: #61B420;
+  font-size: 1.8em;
+  text-align: center; }
+.support__header:not(:first-child) {
+  margin-top: 15px; }
+.support__image {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%; }
+  .support__image__img {
+    height: 200px;
+    width: 250px; }
+.support__description {
+  padding-top: 10px; }
+
+.calender {
   padding: 20px 0; }
-  .index-page .calender__description, .for-youth-page .calender__description, .for-parents-page .calender__description, .schedule-page .calender__description, .about-us-page .calender__description, .reservation-page .calender__description, .steps-page .calender__description, .archive .calender__description {
+  .calender__description {
     margin-bottom: 20px; }
-  .index-page .calender__google, .for-youth-page .calender__google, .for-parents-page .calender__google, .schedule-page .calender__google, .about-us-page .calender__google, .reservation-page .calender__google, .steps-page .calender__google, .archive .calender__google {
+  .calender__google {
     margin: 0 auto;
-    text-align: center; }
-.index-page .introduction, .for-youth-page .introduction, .for-parents-page .introduction, .schedule-page .introduction, .about-us-page .introduction, .reservation-page .introduction, .steps-page .introduction, .archive .introduction {
+    text-align: center;
+    width: 300px !important; }
+
+.introduction {
   margin: 0 auto; }
-  .index-page .introduction__image, .for-youth-page .introduction__image, .for-parents-page .introduction__image, .schedule-page .introduction__image, .about-us-page .introduction__image, .reservation-page .introduction__image, .steps-page .introduction__image, .archive .introduction__image {
+  .introduction__image {
     margin: 50px auto;
     text-align: center; }
-    .index-page .introduction__image img, .for-youth-page .introduction__image img, .for-parents-page .introduction__image img, .schedule-page .introduction__image img, .about-us-page .introduction__image img, .reservation-page .introduction__image img, .steps-page .introduction__image img, .archive .introduction__image img {
+    .introduction__image img {
       max-width: 100%; }
-  .index-page .introduction__description, .for-youth-page .introduction__description, .for-parents-page .introduction__description, .schedule-page .introduction__description, .about-us-page .introduction__description, .reservation-page .introduction__description, .steps-page .introduction__description, .archive .introduction__description {
+  .introduction__description {
     text-align: center; }
-.index-page .adress *, .for-youth-page .adress *, .for-parents-page .adress *, .schedule-page .adress *, .about-us-page .adress *, .reservation-page .adress *, .steps-page .adress *, .archive .adress * {
+
+.adress * {
   text-align: center; }
-.index-page .adress__header, .for-youth-page .adress__header, .for-parents-page .adress__header, .schedule-page .adress__header, .about-us-page .adress__header, .reservation-page .adress__header, .steps-page .adress__header, .archive .adress__header {
+.adress__header {
   font-weight: 900;
   margin: 10px 0 5px 0; }
-.index-page .steps, .for-youth-page .steps, .for-parents-page .steps, .schedule-page .steps, .about-us-page .steps, .reservation-page .steps, .steps-page .steps, .archive .steps {
-  margin: 0 auto 40px; }
-  .index-page .steps__header, .for-youth-page .steps__header, .for-parents-page .steps__header, .schedule-page .steps__header, .about-us-page .steps__header, .reservation-page .steps__header, .steps-page .steps__header, .archive .steps__header {
+
+.steps {
+  margin: 0 auto; }
+  .steps__header {
     font-size: 1.8em;
     font-weight: 900;
-    margin: 10px 0;
+    margin: 50px 0 10px;
     text-align: center; }
-  .index-page .steps .section, .for-youth-page .steps .section, .for-parents-page .steps .section, .schedule-page .steps .section, .about-us-page .steps .section, .reservation-page .steps .section, .steps-page .steps .section, .archive .steps .section {
+  .steps .description {
+    margin-bottom: 20px;
+    text-align: center; }
+  .steps .section {
     display: block; }
-    .index-page .steps .section *, .for-youth-page .steps .section *, .for-parents-page .steps .section *, .schedule-page .steps .section *, .about-us-page .steps .section *, .reservation-page .steps .section *, .steps-page .steps .section *, .archive .steps .section * {
+    .steps .section * {
       text-align: center; }
-    .index-page .steps .section__info, .index-page .steps .section__info--parents, .for-youth-page .steps .section__info, .for-youth-page .steps .section__info--parents, .for-parents-page .steps .section__info, .for-parents-page .steps .section__info--parents, .schedule-page .steps .section__info, .schedule-page .steps .section__info--parents, .about-us-page .steps .section__info, .about-us-page .steps .section__info--parents, .reservation-page .steps .section__info, .reservation-page .steps .section__info--parents, .steps-page .steps .section__info, .steps-page .steps .section__info--parents, .archive .steps .section__info, .archive .steps .section__info--parents {
+    .steps .section__info, .steps .section__info--parents {
       font-size: 1.2em;
       color: #61B420;
       margin-bottom: 20px; }
-    .index-page .steps .section__info--parents, .for-youth-page .steps .section__info--parents, .for-parents-page .steps .section__info--parents, .schedule-page .steps .section__info--parents, .about-us-page .steps .section__info--parents, .reservation-page .steps .section__info--parents, .steps-page .steps .section__info--parents, .archive .steps .section__info--parents {
+    .steps .section__info--parents {
       margin-top: 20px; }
-    .index-page .steps .section__image, .for-youth-page .steps .section__image, .for-parents-page .steps .section__image, .schedule-page .steps .section__image, .about-us-page .steps .section__image, .reservation-page .steps .section__image, .steps-page .steps .section__image, .archive .steps .section__image {
+    .steps .section__image {
       margin: 0 auto 20px; }
-      .index-page .steps .section__image__img, .for-youth-page .steps .section__image__img, .for-parents-page .steps .section__image__img, .schedule-page .steps .section__image__img, .about-us-page .steps .section__image__img, .reservation-page .steps .section__image__img, .steps-page .steps .section__image__img, .archive .steps .section__image__img {
+      .steps .section__image__img {
         width: 250px; }
-        .index-page .steps .section__image__img.wider, .for-youth-page .steps .section__image__img.wider, .for-parents-page .steps .section__image__img.wider, .schedule-page .steps .section__image__img.wider, .about-us-page .steps .section__image__img.wider, .reservation-page .steps .section__image__img.wider, .steps-page .steps .section__image__img.wider, .archive .steps .section__image__img.wider {
+        .steps .section__image__img.wider {
           width: 400px; }
-        .index-page .steps .section__image__img.middle, .for-youth-page .steps .section__image__img.middle, .for-parents-page .steps .section__image__img.middle, .schedule-page .steps .section__image__img.middle, .about-us-page .steps .section__image__img.middle, .reservation-page .steps .section__image__img.middle, .steps-page .steps .section__image__img.middle, .archive .steps .section__image__img.middle {
+        .steps .section__image__img.middle {
           width: 300px; }
-    .index-page .steps .section__description, .for-youth-page .steps .section__description, .for-parents-page .steps .section__description, .schedule-page .steps .section__description, .about-us-page .steps .section__description, .reservation-page .steps .section__description, .steps-page .steps .section__description, .archive .steps .section__description {
-      margin-bottom: 20px; }
+
+.reservation-page {
+  margin: 0 auto; }
 
 .access__header {
   font-size: 1.8em;
@@ -488,5 +558,20 @@ PICK UP
     border-radius: 3px;
     background-color: #61B420;
     opacity: 0.5; }
+
+/* トップページとstepsページのトップ*/
+.page-top.steps, .index-page.steps {
+  background-color: #a3d17c;
+  color: #fafcfc; }
+
+/* テンプレートパーツ(top-other.php)のレイアアウトcss*/
+.page-top {
+  position: relative; }
+  .page-top__other {
+    /*親要素に position:relative が効いていること*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

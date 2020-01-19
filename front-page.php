@@ -145,8 +145,8 @@ get_header();
           </div>
         </a>
       </section>
-
-      <section class="steps col p-4 mt-4 ml-md-3">
+      <!-- 他のCSSとの兼ね合いで↓ここにだけindex-pageが入っている -->
+      <section class="index-page steps col p-4 mt-4 ml-md-3">
         <a href="<?php echo home_url();?>/steps">
           <figure class="keyvis">
             <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
