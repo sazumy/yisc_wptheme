@@ -16,10 +16,10 @@ PICK UP
     }
     &:before{
       color: $saposute-green-hue;
-      content: '\f054' !important;
+      content: '\f054';
       margin-right: 10px;
       font-family: "Font Awesome 5 Free";
-      font-weight: 400;
+      font-weight: 900;
       &:hover{
         font-weight: 400;
       }
@@ -37,20 +37,11 @@ PICK UP
 
 /* レイアウト------------------------*/
 
-// <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
-.schedule, .aboutus, .blog, .reservation {
-  min-height: 300px;
-  position: relative;
-  .page-info {
-    @include vertical-alien-center;
-  }
-}
-
 .voice {
   border: $light-gray-border;
 }
 
-.aboutus {
+.aboutus, .forparents {
   background-color: $saposute-beige;
 }
 
@@ -69,4 +60,13 @@ PICK UP
   background-position: center;
   color: $white;
   position: relative;
+}
+
+// <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
+.schedule, .aboutus, .blog, .reservation {
+  min-height: 300px;
+  position: relative;
+  .page-info {
+    @include vertical-alien-center;
+  }
 }

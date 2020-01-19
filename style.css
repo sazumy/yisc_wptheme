@@ -204,7 +204,7 @@ img.size-post-thumbnail {
     content: '\f10d';
     font-family: "Font Awesome 5 Free";
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 400;
     position: absolute;
     top: -10px;
     left: -20px; }
@@ -276,10 +276,10 @@ PICK UP
       font-weight: 900; }
     .pick-up li.pick-up__list:before {
       color: #a3d17c;
-      content: '\f054' !important;
+      content: '\f054';
       margin-right: 10px;
       font-family: "Font Awesome 5 Free";
-      font-weight: 400; }
+      font-weight: 900; }
       .pick-up li.pick-up__list:before:hover {
         font-weight: 400; }
 
@@ -292,20 +292,10 @@ PICK UP
   text-align: center; }
 
 /* レイアウト------------------------*/
-.schedule, .aboutus, .blog, .reservation {
-  min-height: 300px;
-  position: relative; }
-  .schedule .page-info, .aboutus .page-info, .blog .page-info, .reservation .page-info {
-    /*親要素に position:relative が効いていること*/
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%; }
-
 .voice {
   border: solid 1px #efefef; }
 
-.aboutus {
+.aboutus, .forparents {
   background-color: #F2E8D4; }
 
 .schedule {
@@ -320,6 +310,16 @@ PICK UP
   background-position: center;
   color: #fafcfc;
   position: relative; }
+
+.schedule, .aboutus, .blog, .reservation {
+  min-height: 300px;
+  position: relative; }
+  .schedule .page-info, .aboutus .page-info, .blog .page-info, .reservation .page-info {
+    /*親要素に position:relative が効いていること*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
 
 .header {
   color: #61B420; }
@@ -367,6 +367,9 @@ PICK UP
       bottom: 0; }
 
 @media all and (max-width: 768px) {
+  .page__title--yisc {
+    font-size: 2rem !important; }
+
   .page__nav__box {
     display: none;
     position: absolute;

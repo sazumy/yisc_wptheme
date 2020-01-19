@@ -63,8 +63,11 @@
   }
 }
 
-  //-------- タブレット以下の場合のナビゲーションボックス ------------
+//-------- タブレット以下の場合のナビゲーションボックス ------------
 @media all and (max-width: 768px) {
+  .page__title--yisc {
+    font-size: 2rem !important;
+  }
   .page__nav__box{
     display: none;
     position: absolute;
