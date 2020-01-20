@@ -165,8 +165,8 @@ get_header();
     </div>
 
       <!-- start top-aboutus.php -->
-      <div class="col-12 d-flex justify-content-center">
-        <section class="aboutus col-9 p-4 mt-4">
+      <div class="col-md-9 no-gutters margin-auto">
+        <section class="aboutus col p-4 mt-4">
           <a href="<?php echo home_url();?>/aboutus">
             <div class="page-info">
               <h3 class="page-info__title">

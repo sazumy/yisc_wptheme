@@ -10,9 +10,10 @@ PICK UP
   li.pick-up__list{
     font-size:1.3em;
     line-height: 2;
-    &:hover{
+    a:hover{
       opacity:.8;
       font-weight: 900;
+      text-decoration: underline;
     }
     &:before{
       color: $saposute-green-hue;

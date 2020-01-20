@@ -271,9 +271,10 @@ PICK UP
   .pick-up li.pick-up__list {
     font-size: 1.3em;
     line-height: 2; }
-    .pick-up li.pick-up__list:hover {
+    .pick-up li.pick-up__list a:hover {
       opacity: .8;
-      font-weight: 900; }
+      font-weight: 900;
+      text-decoration: underline; }
     .pick-up li.pick-up__list:before {
       color: #a3d17c;
       content: '\f054';
@@ -366,7 +367,7 @@ PICK UP
     .header .page-nav-btn span:nth-of-type(3) {
       bottom: 0; }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 992px) {
   .page__title--yisc {
     font-size: 2rem !important; }
 
@@ -439,6 +440,9 @@ PICK UP
     font-size: 1.8em; }
   .page-info__description {
     font-size: 1.2em; }
+
+.home .page-info__title:hover {
+  text-decoration: underline; }
 
 @media all and (min-width: 720px) {
   /* ページトップ---------------------------*/
@@ -580,5 +584,9 @@ PICK UP
     top: 50%;
     transform: translateY(-50%);
     width: 100%; }
+
+/* トップページのaboutusのレイアウトcss*/
+.margin-auto {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

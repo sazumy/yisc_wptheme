@@ -45,7 +45,7 @@
 <body <?php body_class(); ?> id="<?php echo esc_attr( $post->post_name ); ?>">
   <header class="header container">
     <div class="row no-gutters py-5 d-flex justify-content-between">
-      <a href="<?php echo home_url();?>" class="page__title col-10 col-md-5">
+      <a href="<?php echo home_url();?>" class="page__title col-10 col-lg-5">
         <h1 class="page__title--yisc">
           <?php bloginfo('name'); ?>  <!-- サイトタイトルをここに表示 -->
         </h1>
@@ -56,13 +56,13 @@
 
       
       <!-- ハンバーガーメニューのボタン（タブレット以下で表示） -->
-      <a class="page-nav-btn d-md-none cod-2" id="page-nav-btn">
+      <a class="page-nav-btn d-lg-none cod-2" id="page-nav-btn">
         <span></span>
         <span></span>
         <span></span>
       </a>
       <!-- グローバルナビゲーション -------------------------------------------->
-      <nav class="page__nav__box col-12 col-md-7" id="page-nav-box">
+      <nav class="page__nav__box col-12 col-lg-7" id="page-nav-box">
         <ul class="page__nav w-100 d-flex juctify-content-between">
           <li class="page__nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
           <li class="page__nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
