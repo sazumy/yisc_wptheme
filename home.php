@@ -2,21 +2,19 @@
 
 
 
-<main class="blog-top-page">
-  <section class="schedule">
-    <div class="content__inner">
-      <div class="section">
-        <h3 class="section__title">
-          おすすめ情報
-        </h3>
-        <h4 class="section__description">
-          PICK UP
-        </h4>
-      </div>
-    </div>
-  </section>
 
-  <div class="content">
+<section class="page-top <?php echo $slug; ?> container-fluid  py-4 d-flex justify-content-center">
+  <div class="page-top__content col-10 d-flex justify-content-center">
+    <div class="page-info">
+      <h3 class="page-info__title">
+        おすすめ情報
+      </h3>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="row d-flex justify-content-center">
     <?php
       if ( have_posts() ) :
       ?>
@@ -28,13 +26,7 @@
 
 
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <h3 class="post__header">
-          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-            <?php the_title(); ?>
-          </a>
-        </h3>
-
-        <section class="post__content">
+        <section class="post__content my-4">
           <figure class="post__content__keyvis">
             <?php
               if(has_post_thumbnail()){ 
@@ -48,6 +40,11 @@
           </figure>
 
           <div class="post__content__right">
+            <h3 class="post__header">
+              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                <?php the_title(); ?>
+              </a>
+            </h3>
             <ul class="post__info">
               <li class="post__info__date">
                 <?php the_time( get_option( 'date_format' ) ); ?>

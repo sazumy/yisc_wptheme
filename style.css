@@ -4,7 +4,7 @@ Theme Name: YISC
 Theme URI: https://github.com/seinoazumi/yisc_wptheme
 Author: Seino Azumi
 Description: the original theme of YISC.
-Version: 1.0
+Version: 2.0
 */
 /*
 YUI 3.18.1 (build f7e7bcb)
@@ -311,7 +311,7 @@ PICK UP
   color: #fafcfc;
   position: relative; }
 
-.blog {
+.blog:not(#renewal) {
   background-image: url("img/blog_bg.jpg");
   background-size: cover;
   background-position: center;
