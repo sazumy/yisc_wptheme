@@ -85,7 +85,9 @@
   &__google{
     margin:0 auto;
     text-align: center;
-    width: 300px !important;
+    iframe {
+      max-width: 100%;
+    }
   }
 }
 

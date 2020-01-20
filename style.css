@@ -472,8 +472,9 @@ PICK UP
     margin-bottom: 20px; }
   .calender__google {
     margin: 0 auto;
-    text-align: center;
-    width: 300px !important; }
+    text-align: center; }
+    .calender__google iframe {
+      max-width: 100%; }
 
 .introduction {
   margin: 0 auto; }
