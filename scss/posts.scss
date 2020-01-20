@@ -1,8 +1,9 @@
 .post{
-  
+  display: flex;
+  justify-content: center;
   &__header{
     color: $saposute-green;
-    font-size: $h3-size;
+    font-size: 2em;
   }
   &__content{
     margin-top: 10px;
