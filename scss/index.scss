@@ -54,6 +54,13 @@ PICK UP
   position: relative;
 }
 
+.about-yisc{
+  background-image:url("img/car_with_heart.jpg");
+  background-size:cover;
+  color: $white;
+  position: relative;
+}
+
 
 .blog{
   background-image:url("img/blog_bg.jpg");
@@ -64,7 +71,7 @@ PICK UP
 }
 
 // <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
-.schedule, .aboutus, .blog, .reservation {
+.schedule, .aboutus, .blog, .reservation, .about-yisc {
   min-height: 300px;
   position: relative;
   .page-info {
