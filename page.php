@@ -21,7 +21,7 @@ get_header();
   <?php if(is_page(array('foryouth', 'forparents', 'steps'))){ 
     // トップが２カラムのキービジュアルです。
     get_template_part('template-parts/top-basic');
-  }  elseif(is_page(array('aboutus', 'schedule', 'reservation'))) {
+  }  elseif(is_page(array('aboutus', 'schedule', 'reservation', 'about-yisc'))) {
     // トップが１カラムのキービジュアルです。
     get_template_part('template-parts/top-single');
   } else {
