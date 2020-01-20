@@ -164,8 +164,19 @@ get_header();
     <!-- end top-steps.php -->
     </div>
 
+    <section class="about-yisc col-12 p-4 mt-5">
+      <a href="<?php echo home_url();?>/about-yisc">
+        <div class="page-info">
+          <h3 class="page-info__title">
+            若者自立支援センター埼玉とは
+          </h3>
+          
+        </div>
+      </a>
+    </section>
+
       <!-- start top-aboutus.php -->
-      <div class="col-md-9 no-gutters margin-auto">
+      <div class="col-md-6 no-gutters margin-auto">
         <section class="aboutus col p-4 mt-4">
           <a href="<?php echo home_url();?>/aboutus">
             <div class="page-info">
