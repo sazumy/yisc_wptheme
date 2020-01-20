@@ -1,16 +1,14 @@
 .post{
-  @include column-content;
-  .content__inner{
-    @include content-inner;
-  }
+  display: flex;
+  justify-content: center;
   &__header{
     color: $saposute-green;
-    font-size: $h3-size;
+    font-size: 2em;
   }
   &__content{
     margin-top: 10px;
     display: flex;
-    &__eyecatch{
+    &__keyvis{
       margin-right:10px;
       img {
         width: 200px;

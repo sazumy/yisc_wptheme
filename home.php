@@ -28,57 +28,55 @@
 
 
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <div class="content__inner">
-          <h3 class="post__header">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-              <?php the_title(); ?>
-            </a>
-          </h3>
+        <h3 class="post__header">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <?php the_title(); ?>
+          </a>
+        </h3>
 
-          <section class="post__content">
-            <figure class="post__content__eyecatch">
+        <section class="post__content">
+          <figure class="post__content__keyvis">
+            <?php
+              if(has_post_thumbnail()){ 
+                the_post_thumbnail();
+              } else {
+            ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="no image">
+            <?php
+              }
+            ?>
+          </figure>
+
+          <div class="post__content__right">
+            <ul class="post__info">
+              <li class="post__info__date">
+                <?php the_time( get_option( 'date_format' ) ); ?>
+              </li>
+              <li class="post__info__auther">
+                <?php the_author(); ?>
+              </li>
+            </ul>
+
+            <div class="post__categories">
               <?php
-                if(has_post_thumbnail()){ 
-                  the_post_thumbnail();
-                } else {
+                the_category(' ');
               ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="no image">
-              <?php
-                }
+            </div>
+
+            <div class="post__tags">
+              <?php the_tags('', ' ');
               ?>
-            </figure>
+            </div>
 
-            <div class="post__content__right">
-              <ul class="post__info">
-                <li class="post__info__date">
-                  <?php the_time( get_option( 'date_format' ) ); ?>
-                </li>
-                <li class="post__info__auther">
-                  <?php the_author(); ?>
-                </li>
-              </ul>
+            <section>
+              <p class="post__text">
+                <?php the_excerpt(); ?>
+              </p>
+            </section>
 
-              <div class="post__categories">
-                <?php
-                  the_category(' ');
-                ?>
-              </div>
-
-              <div class="post__tags">
-                <?php the_tags('', ' ');
-                ?>
-              </div>
-
-              <section>
-                <p class="post__text">
-                  <?php the_excerpt(); ?>
-                </p>
-              </section>
-
-            </div><!--end.post__content__right-->
-          </section>
+          </div><!--end.post__content__right-->
+        </section>
           
-        </div><!--end.content__inner-->
       </article>
 
 

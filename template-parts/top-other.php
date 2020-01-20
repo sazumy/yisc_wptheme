@@ -1,15 +1,11 @@
-<section class="archive">
-  <div class="content__inner">
-    <figure class="content__inner--l">
-      <img src="<?php echo get_template_directory_uri();?>/img/archve_keyviz.png" alt="対象者のイメージ" class="eyecatch__img w-100">
-    </figure>
+<section class="page-top__other col-10">
+  <figure class="keyvis text-center">
+    <img src="<?php echo get_template_directory_uri();?>/img/archve_keyviz.png" alt="対象者のイメージ" class="keyvis__other img-fluid">
+  </figure>
 
-    <div class="content__inner--r">
-      <div class="section">
-        <h2 class="section__title">
-          <?php the_title(); ?>
-        </h3>
-      </div>
-    </div>
+  <div class="page-info">
+    <h2 class="page-info__title">
+      <?php the_title(); ?>
+    </h3>
   </div>
 </section>

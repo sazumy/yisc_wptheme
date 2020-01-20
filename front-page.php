@@ -13,180 +13,173 @@
 get_header();
 ?>
 
-<main class="index-page">
-
+<!-- スライダー ---------------------------------------------->
 <?php echo do_shortcode('[metaslider id="75"]'); ?>
+<!-- スライダー ここまで---------------------------------------->
 
-
-  <div class="content">
-    <section class="pick-up-index">
-      <div class="content__inner">
+<!-- コンテンツ ---------------------------------------------->
+<!-- PICK UP! -------->
+<main class="container">
+  <div class="row">
+    <section class="pick-up text-center col-12 mt-5">
       <a href="<?php get_template_directory_uri(); ?>/yisc/home">
-        <h3 class="pick-up-header bigger">
+        <h3 class="pick-up__header anim-bigger">
           PICK UP!
         </h3>
       </a>
 
-        <ul class="pick-up">
-          <?php
-            $args = array(
-              'posts_per_page' => 4 // 表示件数
-              );
-              $posts = get_posts( $args );
-              foreach ( $posts as $post ): // ループの開始
-                setup_postdata( $post ); // 記事データの取得
-              ?>
-              <li class="pick-up__list bold">
-              <a href="<?php the_permalink(); ?>" class="bold"><?php the_title(); ?></a>
-              </li>
-            <?php
-            endforeach; // ループの終了
-            ?>
-          </ul>
+    <ul class="pick-up__index">
+      <?php
+        $args = array(
+          'posts_per_page' => 4 // 表示件数
+          );
+          $posts = get_posts( $args );
+          foreach ( $posts as $post ): // ループの開始
+            setup_postdata( $post ); // 記事データの取得
+          ?>
+          <li class="pick-up__list">
+            <a href="<?php the_permalink(); ?>" class="pick-up__link">
+              <?php the_title(); ?>
+            </a>
+          </li>
+        <?php
+          endforeach; // ループの終了
+      ?>
+    </ul>
+  </section>
+<!-- PICK UP! ここまで-------->
 
-      </div>
+<!-- 各ページへのリンク-------->
+  <div class="col-12 d-md-flex no-gutters">
+    <section class="foryouth col p-4 mt-5 mr-md-3">
+      <a href="<?php echo home_url();?>/foryouth">
+        <figure class="keyvis">
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_foryouth.png" alt="対象者のイメージ" class="keyvis__img anim-rotate">
+        </figure>
+        <div class="page-info mt-3">
+          <h3 class="page-info__title">
+            悩んでいるあなたへ
+          </h3>
+          <h4 class="page-info__description">
+            支援内容
+          </h4>
+        </div>
+      </a>
     </section>
+    
 
-    <div class="two-column">
-      <section class="for-youth index-tile">
-        <a href="<?php echo home_url();?>/foryouth">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_01.png" alt="対象者のイメージ" class="eyecatch rotate">
-            <div class="section">
-              <h3 class="section__title .font-kotodama">
-                悩んでいるあなたへ
-              </h3>
-              <h4 class="section__description">
-                支援内容
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-      
+    <section class="forparents col p-4 mt-5 ml-md-3"> 
+      <a href="<?php echo home_url();?>/forparents">
+        <figure class="keyvis">
+          <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_forparents.png" alt="対象者のイメージ" class="keyvis__img anim-shake">      
+        </figure>
+        <div class="page-info mt-3">
+          <h3 class="page-info__title">
+            保護者の皆様へ
+          </h3>
+          <h4 class="page-info__description">
+            保護者支援のご案内
+          </h4>
+        </div>
 
-      <section class="for-parents index-tile">
-        <a href="<?php echo home_url();?>/forparents">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_02.png" alt="対象者のイメージ" class="eyecatch shake">
-          
-            <div class="section">
-              <h3 class="section__title">
-                保護者の皆様へ
-              </h3>
-              <h4 class="section__description">
-                保護者支援のご案内
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-      
-    </div><!-- end.two-column-->
+      </a>
+    </section>
+    
+  </div><!-- end.two-column-->
 
         
-    <section class="schedule index-tile">
+    <section class="schedule col-12 p-4 mt-5">
       <a href="<?php echo home_url();?>/schedule">
-        <div class="index-tile__inner no-eyecatch">
-          <div class="section">
-            <h3 class="section__title">
-              スケジュール
-            </h3>
-            <h4 class="section__description">
-              講座開催情報
-            </h4>
-          </div>
+        <div class="page-info">
+          <h3 class="page-info__title">
+            スケジュール
+          </h3>
+          <h4 class="page-info__description">
+            講座開催情報
+          </h4>
         </div>
       </a>
     </section>
     <!-- end top-schedule.php -->
 
-    <div class="two-column">
+    <div class="col-12 d-md-flex no-gutters">
       <!-- 外部サイトへのリンク -->
-      <section class="voice index-tile">
+      <section class="voice col p-4 mt-4 mr-md-3">
         <a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="eyecatch bigger">
-      
-            <div class="section">
-              <p class="balloon">
-                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
-              </p>
-              <h3 class="section__title">
-                利用者の声
-              </h3>
-            </div>
-          </div><!--end.index-tile__inner-->
-        </a>
-      </section>
-
-      <section class="blog index-tile">
-        <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
-          <div class="index-tile__inner no-eyecatch">
-            <div class="section">
-              <p class="balloon">
-                若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
-              </p>
-              <h3 class="section__title">
-                スタッフブログ
-              </h3> 
-            </div>
+          <figure class="keyvis">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_03.png" alt="対象者のイメージ" class="keyvis__img bigger">
+          </figure>
+          <div class="page-info mt-3">
+            <p class="balloon">
+              若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+            </p>
+            <h3 class="page-info__title">
+              利用者の声
+            </h3>
           </div>
         </a>
       </section>
 
+      <section class="blog col p-4 mt-4 ml-md-3">
+        <a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">
+          <div class="page-info mt-3">
+            <p class="balloon">
+              若者自立支援センター埼玉<br>かわぐち若者サポートステーションの
+            </p>
+            <h3 class="page-info__title">
+              スタッフブログ
+            </h3> 
+          </div>
+        </a>
+      </section>
     </div>
 
-    <div class="two-column">
+    <div class="col-12 d-md-flex no-gutters">
       <!-- start top-reservation.php -->
-      <section class="reservation index-tile">
+      <section class="reservation col p-4 mt-4 mr-md-3">
         <a href="<?php echo home_url();?>/reservation">
-          <div class="index-tile__inner no-eyecatch">
-            <div class="section">
-              <h3 class="section__title">
-                ご利用・ご予約方法
-              </h3>
-            </div>
+          <div class="page-info mt-3">
+            <h3 class="page-info__title">
+              ご利用・ご予約方法
+            </h3>
           </div>
         </a>
       </section>
-
-      <section class="step index-tile">
+      <!-- 他のCSSとの兼ね合いで↓ここにだけindex-pageが入っている -->
+      <section class="index-page steps col p-4 mt-4 ml-md-3">
         <a href="<?php echo home_url();?>/steps">
-          <div class="index-tile__inner">
-            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_04.png" alt="対象者のイメージ" class="eyecatch rotate">
-          
-            <div class="section">
-              <h3 class="section__title">
-                就職までのステップ
-              </h3>
-              <h4 class="section__description">
-                ご利用開始から就職までの流れ
-              </h4>
-            </div>
-          </div><!--end.index-tile__inner-->
+          <figure class="keyvis">
+            <img src="<?php echo get_template_directory_uri();?>/img/eyecatch_steps.png" alt="対象者のイメージ" class="keyvis__img rotate">
+          </figure>
+          <div class="page-info mt-3">
+            <h3 class="page-info__title">
+              就職までのステップ
+            </h3>
+            <h4 class="page-info__description">
+              ご利用開始から就職までの流れ
+            </h4>
+          </div>
         </a>
       </section>
     <!-- end top-steps.php -->
     </div>
 
-    <div class="last-content">
       <!-- start top-aboutus.php -->
-      <section class="about-us index-tile">
-        <a href="<?php echo home_url();?>/aboutus">
-          <div class="index-tile__inner no-eyecatch">
-            <div class="section">
-              <h3 class="section__title">
+      <div class="col-md-9 no-gutters margin-auto">
+        <section class="aboutus col p-4 mt-4">
+          <a href="<?php echo home_url();?>/aboutus">
+            <div class="page-info">
+              <h3 class="page-info__title">
                 運営組織・アクセス
               </h3>
-              <h4 class="section__description">
+              <h4 class="page-info__description">
                 かわぐち若者サポートステーション<br>
                 育て上げネットについて
               </h4>
             </div>
-          </div>
-        </a>
-      </section>
+          </a>
+        </section>
+      </div>
       <!-- end top-aboutus.php -->
     </div>
   </div><!-- end.content -->

@@ -67,37 +67,25 @@ legend {
 #yui3-css-stamp.cssreset {
   display: none; }
 
-html {
-  box-sizing: border-box; }
-  html *, html *::before, html *::after {
-    box-sizing: inheritate; }
-
-body {
-  color: #666;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-size: 14px;
-  position: relative;
-  background-color: #fafcfc;
-  background-size: contain;
-  background-repeat: repeat-y; }
-
-.wrapper {
-  background-color: #fafcfc; }
-
+/*----------------------------------------------
+ 要素のCSS
+---------------------------------------------*/
 a {
   text-decoration: none; }
   a:link {
     color: inherit; }
   a:hover {
-    color: inherit; }
+    color: inherit;
+    text-decoration: none; }
   a:visited {
     color: inherit; }
 
-figure {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0; }
+body {
+  background-color: #fafcfc;
+  color: #666;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1.4rem;
+  position: relative; }
 
 button {
   appearance: none;
@@ -122,41 +110,125 @@ button {
   button:hover {
     opacity: 0.8; }
 
-.page__title:hover, .eyecatch:hover, .section__title:hover, .section__description:hover {
-  opacity: 0.8; }
+/* 投稿のh2 */
+.container .row h2 {
+  color: #61B420;
+  font-size: 1.8em;
+  line-height: 2;
+  margin-bottom: 10px; }
+
+/* 投稿のh3 */
+.page-article h3:not(.steps__header), .post h3 {
+  color: #61B420;
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 15px auto 10px; }
+
+/* 投稿のh4 */
+.page-article h4, .post h4 {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 10px auto 5px; }
+
+/* 投稿のp */
+.page-article p {
+  margin-bottom: 5px; }
+
+/* 投稿のli */
+.page-article ul, .post ul:not(.post__info) {
+  margin: 10px 0 10px 20px; }
+  .page-article ul li:before, .post ul:not(.post__info) li:before {
+    color: #a3d17c;
+    content: '\f111';
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; }
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  html *, html *::before, html *::after {
+    box-sizing: inheritate; }
 
 main {
-  min-height: 600px; }
-
-.content__inner {
-  width: 90%;
-  margin: 0 auto; }
-
-.read-more {
-  color: #61B420 !important;
-  margin-left: 20px; }
+  margin-top: 64px;
+  min-height: 400px;
+  padding-bottom: 100px; }
 
 img.size-post-thumbnail {
   width: 200px;
   height: 165px; }
 
+/*----------------------------------------------
+ 汎用クラス
+---------------------------------------------*/
+/* ボタン --------------------*/
+.cta {
+  margin: 0 auto; }
+
+.no-gutters {
+  margin: 0;
+  padding: 0; }
+
 /*投稿のテキストの直前に自動挿入されるクラス*/
 .post__text {
   margin-top: 15px; }
+
+.read-more {
+  color: #61B420;
+  margin-left: 20px; }
+
+.visible-pc {
+  display: none; }
 
 /*投稿の画像*/
 .wp-block-image {
   margin-top: 15px;
   text-align: center; }
 
-/* ホバーエフェクト */
-/* アニメーション */
-.rotate:hover {
+/* wordpressにデフォルトでついているblockquoteタグのクラス*/
+.wp-block-quote {
+  background: #dcead1;
+  margin: 20px;
+  padding: 20px 40px;
+  position: relative; }
+  .wp-block-quote:before {
+    color: #61B420;
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-size: 40px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: -20px; }
+
+@media all and (min-width: 768px) {
+  .visible-pc {
+    display: block; }
+
+  .visible-sp {
+    display: none; } }
+/*----------------------------------------------
+ アニメーション
+---------------------------------------------*/
+/* ホバーエフェクト -----------------------------*/
+.anim-bigger:hover {
+  transition: all 0.5s ease;
+  transform: perspective(500px) translate3d(0, -8px, 50px); }
+
+.anim-rotate:hover {
   transition: 1s;
   transform: rotateZ(360deg);
   opacity: 1; }
 
-.shake:hover {
+.anim-shake:hover {
   animation: shake .2s linear;
   opacity: 1; }
 
@@ -169,493 +241,313 @@ img.size-post-thumbnail {
     transform: translateX(3%); }
   100% {
     transform: translateX(0); } }
-.bigger:hover {
-  transition: all 0.5s ease;
-  transform: perspective(500px) translate3d(0, -8px, 50px); }
-
-.font-kotodama {
-  font-family: ta-kotodama-r, sans-serif;
-  font-weight: 400;
-  font-style: normal; }
-
-.w-100 {
-  width: 100%; }
-
-main .slider .slider__slides .slide__img {
-  width: 100%; }
-main .slider .slider__slides .slide:first-child {
-  position: relative; }
-  main .slider .slider__slides .slide:first-child .main-copy {
-    font-size: 2em;
-    color: #fafcfc;
-    text-align: center;
-    text-shadow: 2px 2px 2px #666;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%); }
-main .slider .slider__slides .slide:nth-child(n+2) {
-  display: none; }
-main .for-youth, main .for-parents, main .schedule, main .about, main .reservation, main .step, main .voice, main .blog, main .about-us, main .post-page, main .archive {
-  width: 100%;
-  padding: 24px 0; }
-  main .for-youth .content__inner, main .for-parents .content__inner, main .schedule .content__inner, main .about .content__inner, main .reservation .content__inner, main .step .content__inner, main .voice .content__inner, main .blog .content__inner, main .about-us .content__inner, main .post-page .content__inner, main .archive .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 70%;
-    text-align: center; }
-    main .for-youth .content__inner .section__title, main .for-parents .content__inner .section__title, main .schedule .content__inner .section__title, main .about .content__inner .section__title, main .reservation .content__inner .section__title, main .step .content__inner .section__title, main .voice .content__inner .section__title, main .blog .content__inner .section__title, main .about-us .content__inner .section__title, main .post-page .content__inner .section__title, main .archive .content__inner .section__title {
-      font-size: 1.8em;
-      margin-bottom: 15px; }
-    main .for-youth .content__inner .section__description, main .for-parents .content__inner .section__description, main .schedule .content__inner .section__description, main .about .content__inner .section__description, main .reservation .content__inner .section__description, main .step .content__inner .section__description, main .voice .content__inner .section__description, main .blog .content__inner .section__description, main .about-us .content__inner .section__description, main .post-page .content__inner .section__description, main .archive .content__inner .section__description {
-      font-size: 1.2em; }
-main .for-youth .content__inner, main .for-parents .content__inner, main .voice .content__inner, main .step .content__inner {
-  display: flex; }
-  main .for-youth .content__inner--l .eyecatch, main .for-parents .content__inner--l .eyecatch, main .voice .content__inner--l .eyecatch, main .step .content__inner--l .eyecatch {
-    border-radius: 50%;
-    border: solid 3px #61B420; }
-  main .for-youth .content__inner--r, main .for-parents .content__inner--r, main .voice .content__inner--r, main .step .content__inner--r {
-    position: relative;
-    width: 100%; }
-    main .for-youth .content__inner--r .section, main .for-parents .content__inner--r .section, main .voice .content__inner--r .section, main .step .content__inner--r .section {
-      color: #fafcfc;
-      position: absolute;
-      top: 40%;
-      left: 30%;
-      transform: translate(-30%, -40%); }
-main .schedule .content__inner, main .about-us .content__inner, main .blog .content__inner, main .reservation .content__inner {
-  position: relative;
-  min-height: 220px; }
-  main .schedule .content__inner .section, main .about-us .content__inner .section, main .blog .content__inner .section, main .reservation .content__inner .section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
-main .step {
-  background-color: #a3d17c;
-  color: #fafcfc; }
-main .voice {
-  border: solid 1px #efefef; }
-main .schedule {
-  background-image: url("img/schedule_bg.png");
-  background-size: cover;
-  color: #fafcfc; }
-main .for-parents, main .about-us, main .archive {
-  background-color: #F2E8D4; }
-  main .for-parents .section__title, main .for-parents .section__description, main .about-us .section__title, main .about-us .section__description, main .archive .section__title, main .archive .section__description {
-    color: #666; }
-main .blog {
-  background-image: url("img/blog_bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fafcfc; }
-main .for-youth, main .reservation {
-  background-color: #8CC4E3; }
-  main .for-youth .section__title, main .for-youth .section__description, main .reservation .section__title, main .reservation .section__description {
-    color: #fafcfc; }
-
-.content {
-  width: 80%;
-  margin: 40px auto; }
-
-/* index-page------------------------------------------*/
-/* top ページから各ページにリンクするタイルのレイアウト*/
-/* 2カラムにする関係 */
-.two-column {
-  display: flex;
-  padding: 32px 0; }
-  .two-column section:first-child {
-    margin-right: 32px; }
-
-.last-content {
-  width: 100%; }
-  .last-content section {
-    width: 50% !important;
-    margin: 0 auto; }
-
-.index-tile {
-  position: relative;
-  min-height: 220px; }
-  .index-tile__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .index-tile__inner .eyecatch {
-      border-radius: 50%;
-      border: solid 3px #61B420; }
-    .index-tile__inner .section__title {
-      font-size: 1.8em; }
-    .index-tile__inner .section__description {
-      font-size: 1.2em; }
-  .index-tile .no-eyecatch {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%); }
-
-@media screen and (max-width: 1068px) {
-  body {
-    padding-bottom: 100px; }
-    body header .content__inner--r.visible-tablet {
-      display: block !important; }
-    body header .content__inner--r.visible-pc {
-      display: none; }
-    body .index-page .two-column {
-      display: block;
-      padding: 0px; }
-    body .index-page .last-content section {
-      width: 100% !important; }
-    body .schedule-page .content__inner .calender__google iframe {
-      width: 100%; }
-    body .archive-page .archive .content__inner--l img {
-      max-width: 100%; } }
-@media screen and (max-width: 680px) {
-  .wrapper .header .content__inner {
-    width: 100%;
-    max-width: 100%;
-    font-size: 1.4em; }
-    .wrapper .header .content__inner .page__title {
-      margin-left: 20px; }
-    .wrapper .header .content__inner--r {
-      position: relative;
-      max-width: 100%; }
-      .wrapper .header .content__inner--r .page-nav-btn {
-        position: absolute;
-        top: 0px;
-        right: 20px; }
-      .wrapper .header .content__inner--r .page-nav-box .page-nav {
-        width: 100vw;
-        top: 48px;
-        right: 0;
-        position: absolute; }
-  .wrapper main[class$="page"] .slider {
-    min-height: 200px; }
-    .wrapper main[class$="page"] .slider__slides .slide:first-child .main-copy {
-      font-size: 1.4em !important; }
-  .wrapper main[class$="page"] .schedule, .wrapper main[class$="page"] .blog, .wrapper main[class$="page"] .reservation, .wrapper main[class$="page"] .about-us {
-    min-height: 200px !important; }
-  .wrapper main[class$="page"] .index-tile__inner {
-    width: 100%; }
-    .wrapper main[class$="page"] .index-tile__inner .eyecatch {
-      width: 150px;
-      height: auto;
-      margin-bottom: 20px; }
-    .wrapper main[class$="page"] .index-tile__inner .section {
-      position: static;
-      transform: translate(0%, 0%); }
-  .wrapper main[class$="page"] .for-youth .content__inner, .wrapper main[class$="page"] .for-parents .content__inner, .wrapper main[class$="page"] .step .content__inner {
-    display: block !important;
-    max-width: 100%; }
-    .wrapper main[class$="page"] .for-youth .content__inner--l, .wrapper main[class$="page"] .for-parents .content__inner--l, .wrapper main[class$="page"] .step .content__inner--l {
-      width: 100%; }
-      .wrapper main[class$="page"] .for-youth .content__inner--l .eyecatch, .wrapper main[class$="page"] .for-parents .content__inner--l .eyecatch, .wrapper main[class$="page"] .step .content__inner--l .eyecatch {
-        width: 150px;
-        height: auto;
-        margin-bottom: 20px; }
-    .wrapper main[class$="page"] .for-youth .content__inner--r, .wrapper main[class$="page"] .for-parents .content__inner--r, .wrapper main[class$="page"] .step .content__inner--r {
-      width: 100%; }
-      .wrapper main[class$="page"] .for-youth .content__inner--r .section, .wrapper main[class$="page"] .for-parents .content__inner--r .section, .wrapper main[class$="page"] .step .content__inner--r .section {
-        position: static;
-        transform: translate(0%, 0%); }
-  .wrapper main[class$="page"] .content {
-    margin: 0px auto 40px auto; }
-    .wrapper main[class$="page"] .content .content__inner {
-      padding: 10px 0; }
-      .wrapper main[class$="page"] .content .content__inner .section__title {
-        margin-bottom: 0px !important; }
-    .wrapper main[class$="page"] .content .about .content__inner .section {
-      top: 25%; }
-  .wrapper aside .back-to-top {
-    width: 50px;
-    height: 50px;
-    font-size: 1.6em;
-    line-height: 2.1;
-    right: 15px; }
-  .wrapper .for-youth-page .content__inner .support, .wrapper .for-parents-page .content__inner .support {
-    display: block; }
-    .wrapper .for-youth-page .content__inner .support__image, .wrapper .for-parents-page .content__inner .support__image {
-      max-width: 250px;
-      margin: 0 auto; }
-      .wrapper .for-youth-page .content__inner .support__image__img, .wrapper .for-parents-page .content__inner .support__image__img {
-        width: 100%;
-        height: auto;
-        text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-sp, .wrapper .for-parents-page .content__inner .support__header.visible-sp {
-      display: block;
-      width: 100%;
-      text-align: center; }
-    .wrapper .for-youth-page .content__inner .support__header.visible-pc, .wrapper .for-parents-page .content__inner .support__header.visible-pc {
-      display: none; }
-  .wrapper .reservation-page .content__inner .steps, .wrapper .steps-page .content__inner .steps {
-    margin-bottom: 30px; }
-    .wrapper .reservation-page .content__inner .steps .section, .wrapper .steps-page .content__inner .steps .section {
-      display: block;
-      margin-bottom: 20px; }
-      .wrapper .reservation-page .content__inner .steps .section__image, .wrapper .steps-page .content__inner .steps .section__image {
-        margin: 0 auto 10px; }
-        .wrapper .reservation-page .content__inner .steps .section__image__img, .wrapper .reservation-page .content__inner .steps .section__image__img.wider, .wrapper .reservation-page .content__inner .steps .section__image__img.middle, .wrapper .steps-page .content__inner .steps .section__image__img, .wrapper .steps-page .content__inner .steps .section__image__img.wider, .wrapper .steps-page .content__inner .steps .section__image__img.middle {
-          width: 100%;
-          text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-sp, .wrapper .reservation-page .content__inner .steps .visible-sp.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-sp, .wrapper .steps-page .content__inner .steps .visible-sp.section__info--parents {
-        display: block;
-        width: 100%;
-        text-align: center; }
-      .wrapper .reservation-page .content__inner .steps .section__info.visible-pc, .wrapper .reservation-page .content__inner .steps .visible-pc.section__info--parents, .wrapper .steps-page .content__inner .steps .section__info.visible-pc, .wrapper .steps-page .content__inner .steps .visible-pc.section__info--parents {
-        display: none; }
-    .wrapper .reservation-page .content__inner .steps .notification__image, .wrapper .steps-page .content__inner .steps .notification__image {
-      max-width: 250px; }
-  .wrapper .post__header {
-    text-align: center; }
-  .wrapper .post__content {
-    display: block; }
-    .wrapper .post__content__eyecatch {
-      margin: 0 0 10px 0;
-      text-align: center; }
-      .wrapper .post__content__eyecatch img {
-        width: 250px; }
-    .wrapper .post__content__right .post__text {
-      margin-top: 10px; } }
-.header .content__inner {
-  width: 100%;
-  padding: 24px 0;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 80%;
-  color: #61B420;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.8em; }
-  .header .content__inner .saposute-name {
-    font-size: 0.4em;
-    line-height: 0.4; }
-  .header .content__inner--r {
-    max-width: 500px; }
-    .header .content__inner--r.visible-tablet {
-      display: none; }
-    .header .content__inner--r .page-nav-pc .page-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-      .header .content__inner--r .page-nav-pc .page-nav__list {
-        font-size: 0.49em;
-        line-height: 2;
-        margin-right: 20px; }
-        .header .content__inner--r .page-nav-pc .page-nav__list:hover {
-          color: #666; }
-        .header .content__inner--r .page-nav-pc .page-nav__list:last-child {
-          margin-right: 0px; }
-    .header .content__inner--r .page-nav-btn, .header .content__inner--r .page-nav-btn span {
-      display: inline-block;
-      transition: all .4s;
-      box-sizing: border-box; }
-    .header .content__inner--r .page-nav-btn {
-      position: relative;
-      width: 36px;
-      height: 33px; }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(1) {
-        -webkit-transform: translateY(15px) rotate(-45deg);
-        transform: translateY(15px) rotate(-45deg); }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(2) {
-        opacity: 0; }
-      .header .content__inner--r .page-nav-btn.active span:nth-of-type(3) {
-        -webkit-transform: translateY(-15px) rotate(45deg);
-        transform: translateY(-15px) rotate(45deg); }
-    .header .content__inner--r .page-nav-btn span {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: #61B420;
-      border-radius: 3px; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(1) {
-        top: 0; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(2) {
-        top: 15px; }
-      .header .content__inner--r .page-nav-btn span:nth-of-type(3) {
-        bottom: 0; }
-    .header .content__inner--r .page-nav-box {
-      position: relative;
-      display: none; }
-      .header .content__inner--r .page-nav-box .page-nav {
-        width: 300px;
-        background-color: #fafcfc;
-        position: absolute;
-        top: 24px;
-        right: -50px;
-        z-index: 30;
-        color: #666;
-        font-size: 14px;
-        border-bottom: dotted 1px #61B420; }
-        .header .content__inner--r .page-nav-box .page-nav__list {
-          padding: 10px 20px;
-          border-top: dotted 1px #61B420; }
-          .header .content__inner--r .page-nav-box .page-nav__list:hover {
-            background-color: #a3d17c;
-            color: #fafcfc;
-            font-weight: 900; }
-    .header .content__inner--r .active + .page-nav-box {
-      display: block; }
-
+/*----------------------------------------------
+ aside(コードが増えたら別ファイルに)
+---------------------------------------------*/
+/* トップに戻るボタン */
 .aside .back-to-top {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
-  line-height: 2.2;
+  line-height: 2;
   color: #fafcfc;
   background: #a3d17c;
   position: fixed;
-  top: 50%;
-  right: 64px;
+  bottom: 20%;
+  right: 24px;
   display: none; }
 
-.footer {
-  background-color: #333;
-  color: #fafcfc;
-  height: 100px;
+/*------------------------------------------------
+PICK UP
+--------------------------------------------------*/
+.pick-up__header {
+  color: #61B420;
+  font-size: 1.8em; }
+
+.pick-up {
+  text-align: center; }
+  .pick-up li.pick-up__list {
+    font-size: 1.3em;
+    line-height: 2; }
+    .pick-up li.pick-up__list a:hover {
+      opacity: .8;
+      font-weight: 900;
+      text-decoration: underline; }
+    .pick-up li.pick-up__list:before {
+      color: #a3d17c;
+      content: '\f054';
+      margin-right: 10px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900; }
+      .pick-up li.pick-up__list:before:hover {
+        font-weight: 400; }
+
+/*------------------------------------------------
+各ページへのリンク
+--------------------------------------------------*/
+/* 全体・共通-------------------------*/
+.keyvis {
   width: 100%;
+  text-align: center; }
+
+/* レイアウト------------------------*/
+.voice {
+  border: solid 1px #efefef; }
+
+.aboutus, .forparents {
+  background-color: #F2E8D4; }
+
+.schedule {
+  background-image: url("img/schedule_bg.png");
+  background-size: cover;
+  color: #fafcfc;
   position: relative; }
-  .footer .content__inner {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center; }
-    .footer .content__inner .contact {
-      display: flex;
-      justify-content: center; }
-      .footer .content__inner .contact__list {
-        width: 50px;
-        height: 50px;
-        font-size: 2em;
-        text-align: center;
-        line-height: 1.8;
-        margin: 5px 10px; }
+
+.blog {
+  background-image: url("img/blog_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fafcfc;
+  position: relative; }
+
+.schedule, .aboutus, .blog, .reservation {
+  min-height: 300px;
+  position: relative; }
+  .schedule .page-info, .aboutus .page-info, .blog .page-info, .reservation .page-info {
+    /*親要素に position:relative が効いていること*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
+
+.header {
+  color: #61B420; }
+  .header .page__title:hover {
+    color: #666; }
+  .header .page__title--yisc {
+    font-size: 2.4rem; }
+  .header .page__title .saposute-name {
+    font-size: 1.2rem;
+    line-height: 0.4; }
+  .header .page__nav {
+    flex-wrap: wrap; }
+    .header .page__nav__list {
+      display: block;
+      margin: 0 1.5rem .5rem 0; }
+      .header .page__nav__list:hover {
+        color: #666; }
+  .header .page-nav-btn, .header .page-nav-btn span {
+    display: inline-block;
+    transition: all .4s; }
+  .header .page-nav-btn {
+    height: 33px;
+    position: relative;
+    width: 36px; }
+    .header .page-nav-btn.active span:nth-of-type(1) {
+      transform: translateY(15px) rotate(-45deg);
+      -webkit-transform: translateY(15px) rotate(-45deg); }
+    .header .page-nav-btn.active span:nth-of-type(2) {
+      opacity: 0; }
+    .header .page-nav-btn.active span:nth-of-type(3) {
+      transform: translateY(-15px) rotate(45deg);
+      -webkit-transform: translateY(-15px) rotate(45deg); }
+  .header .page-nav-btn span {
+    background-color: #61B420;
+    border-radius: 3px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    width: 100%; }
+    .header .page-nav-btn span:nth-of-type(1) {
+      top: 0; }
+    .header .page-nav-btn span:nth-of-type(2) {
+      top: 15px; }
+    .header .page-nav-btn span:nth-of-type(3) {
+      bottom: 0; }
+
+@media all and (max-width: 992px) {
+  .page__title--yisc {
+    font-size: 2rem !important; }
+
+  .page__nav__box {
+    display: none;
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    z-index: 1; }
+    .page__nav__box .page__nav {
+      background: #fafcfc;
+      border-bottom: dotted 1px #61B420;
+      color: #666; }
+      .page__nav__box .page__nav__list {
+        display: block;
+        border-top: dotted 1px #61B420;
+        padding: 1rem 2rem;
+        margin: 0;
+        width: 100%; }
+        .page__nav__box .page__nav__list:hover {
+          background-color: #a3d17c;
+          color: #fafcfc;
+          font-weight: 900; }
+
+  .active {
+    display: block; } }
+.footer {
+  background: #333;
+  color: #fafcfc;
+  height: 100px; }
+  .footer .contact__list {
+    font-size: 2rem;
+    height: 50px;
+    text-align: center;
+    width: 50px; }
+  .footer .privacy {
+    font-size: 80%; }
+    .footer .privacy__link:hover {
+      text-decoration: underline; }
 
 .footer.sticky {
   position: fixed;
   bottom: 0; }
 
-.content .for-youth {
+/*----------------------------------------------
+ 固定ページのトップ画像 
+ ---------------------------------------------*/
+/* トップ画像共通----*/
+.page-top {
+  min-height: 288px;
+  background-color: #F2E8D4; }
+
+/* 背景色・画像の設定(緑色はcommon.scssに定義)---*/
+.foryouth, .reservation {
   background-color: #8CC4E3;
   color: #fafcfc; }
 
-.index-page .about, .for-youth-page .about, .for-parents-page .about, .schedule-page .about, .about-us-page .about, .reservation-page .about, .steps-page .about, .archive .about {
-  background-color: #fafcfc;
-  color: #61B420; }
-.index-page .content__inner, .for-youth-page .content__inner, .for-parents-page .content__inner, .schedule-page .content__inner, .about-us-page .content__inner, .reservation-page .content__inner, .steps-page .content__inner, .archive .content__inner {
-  width: 100%;
-  padding: 24px 0;
-  width: 90%;
+/* 人物のイラスト------*/
+.keyvis__img {
+  border-radius: 50%;
+  border: solid 3px #61B420; }
+
+.keyvis__other {
   margin: 0 auto; }
-  .index-page .content__inner .pick-up-header, .for-youth-page .content__inner .pick-up-header, .for-parents-page .content__inner .pick-up-header, .schedule-page .content__inner .pick-up-header, .about-us-page .content__inner .pick-up-header, .reservation-page .content__inner .pick-up-header, .steps-page .content__inner .pick-up-header, .archive .content__inner .pick-up-header {
-    font-size: 1.8em;
-    color: #61B420;
-    text-align: center; }
-  .index-page .content__inner .pick-up, .for-youth-page .content__inner .pick-up, .for-parents-page .content__inner .pick-up, .schedule-page .content__inner .pick-up, .about-us-page .content__inner .pick-up, .reservation-page .content__inner .pick-up, .steps-page .content__inner .pick-up, .archive .content__inner .pick-up {
-    text-align: center; }
-    .index-page .content__inner .pick-up__list, .for-youth-page .content__inner .pick-up__list, .for-parents-page .content__inner .pick-up__list, .schedule-page .content__inner .pick-up__list, .about-us-page .content__inner .pick-up__list, .reservation-page .content__inner .pick-up__list, .steps-page .content__inner .pick-up__list, .archive .content__inner .pick-up__list {
-      font-size: 1.3em;
-      line-height: 2; }
-      .index-page .content__inner .pick-up__list:hover, .for-youth-page .content__inner .pick-up__list:hover, .for-parents-page .content__inner .pick-up__list:hover, .schedule-page .content__inner .pick-up__list:hover, .about-us-page .content__inner .pick-up__list:hover, .reservation-page .content__inner .pick-up__list:hover, .steps-page .content__inner .pick-up__list:hover, .archive .content__inner .pick-up__list:hover {
-        opacity: .8;
-        font-weight: 900; }
-      .index-page .content__inner .pick-up__list:before, .for-youth-page .content__inner .pick-up__list:before, .for-parents-page .content__inner .pick-up__list:before, .schedule-page .content__inner .pick-up__list:before, .about-us-page .content__inner .pick-up__list:before, .reservation-page .content__inner .pick-up__list:before, .steps-page .content__inner .pick-up__list:before, .archive .content__inner .pick-up__list:before {
-        color: #61B420;
-        font-family: font-awesome free;
-        content: '>>'; }
-        .index-page .content__inner .pick-up__list:before:hover, .for-youth-page .content__inner .pick-up__list:before:hover, .for-parents-page .content__inner .pick-up__list:before:hover, .schedule-page .content__inner .pick-up__list:before:hover, .about-us-page .content__inner .pick-up__list:before:hover, .reservation-page .content__inner .pick-up__list:before:hover, .steps-page .content__inner .pick-up__list:before:hover, .archive .content__inner .pick-up__list:before:hover {
-          font-weight: 400; }
-  .index-page .content__inner .support, .for-youth-page .content__inner .support, .for-parents-page .content__inner .support, .schedule-page .content__inner .support, .about-us-page .content__inner .support, .reservation-page .content__inner .support, .steps-page .content__inner .support, .archive .content__inner .support {
-    padding: 20px 0;
-    display: flex; }
-    .index-page .content__inner .support__header, .for-youth-page .content__inner .support__header, .for-parents-page .content__inner .support__header, .schedule-page .content__inner .support__header, .about-us-page .content__inner .support__header, .reservation-page .content__inner .support__header, .steps-page .content__inner .support__header, .archive .content__inner .support__header {
-      font-size: 1.8em;
-      color: #61B420;
-      margin: 10px 0; }
-    .index-page .content__inner .support__header.visible-sp, .for-youth-page .content__inner .support__header.visible-sp, .for-parents-page .content__inner .support__header.visible-sp, .schedule-page .content__inner .support__header.visible-sp, .about-us-page .content__inner .support__header.visible-sp, .reservation-page .content__inner .support__header.visible-sp, .steps-page .content__inner .support__header.visible-sp, .archive .content__inner .support__header.visible-sp {
-      display: none; }
-    .index-page .content__inner .support__image, .for-youth-page .content__inner .support__image, .for-parents-page .content__inner .support__image, .schedule-page .content__inner .support__image, .about-us-page .content__inner .support__image, .reservation-page .content__inner .support__image, .steps-page .content__inner .support__image, .archive .content__inner .support__image {
-      margin-right: 15px; }
-      .index-page .content__inner .support__image__img, .for-youth-page .content__inner .support__image__img, .for-parents-page .content__inner .support__image__img, .schedule-page .content__inner .support__image__img, .about-us-page .content__inner .support__image__img, .reservation-page .content__inner .support__image__img, .steps-page .content__inner .support__image__img, .archive .content__inner .support__image__img {
-        width: 250px;
-        height: 200px; }
-    .index-page .content__inner .support__description, .for-youth-page .content__inner .support__description, .for-parents-page .content__inner .support__description, .schedule-page .content__inner .support__description, .about-us-page .content__inner .support__description, .reservation-page .content__inner .support__description, .steps-page .content__inner .support__description, .archive .content__inner .support__description {
-      padding-top: 10px; }
-  .index-page .content__inner .calender, .for-youth-page .content__inner .calender, .for-parents-page .content__inner .calender, .schedule-page .content__inner .calender, .about-us-page .content__inner .calender, .reservation-page .content__inner .calender, .steps-page .content__inner .calender, .archive .content__inner .calender {
-    max-width: 600px;
+
+/* ページタイトル・説明-----*/
+.page-info {
+  text-align: center; }
+  .page-info__title {
+    font-size: 1.8em; }
+  .page-info__description {
+    font-size: 1.2em; }
+
+.home .page-info__title:hover {
+  text-decoration: underline; }
+
+@media all and (min-width: 720px) {
+  /* ページトップ---------------------------*/
+  .page-top__content {
+    position: relative; }
+    .page-top__content .page-info {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .page-top__content .page-info.two-column {
+        right: 0px; } }
+.support__header {
+  color: #61B420;
+  font-size: 1.8em;
+  text-align: center; }
+.support__header:not(:first-child) {
+  margin-top: 15px; }
+.support__image {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%; }
+  .support__image__img {
+    height: 200px;
+    width: 250px; }
+.support__description {
+  padding-top: 10px; }
+
+.calender {
+  padding: 20px 0; }
+  .calender__description {
+    margin-bottom: 20px; }
+  .calender__google {
     margin: 0 auto;
-    padding: 20px 0; }
-    .index-page .content__inner .calender__description, .for-youth-page .content__inner .calender__description, .for-parents-page .content__inner .calender__description, .schedule-page .content__inner .calender__description, .about-us-page .content__inner .calender__description, .reservation-page .content__inner .calender__description, .steps-page .content__inner .calender__description, .archive .content__inner .calender__description {
-      margin-bottom: 20px; }
-    .index-page .content__inner .calender__google, .for-youth-page .content__inner .calender__google, .for-parents-page .content__inner .calender__google, .schedule-page .content__inner .calender__google, .about-us-page .content__inner .calender__google, .reservation-page .content__inner .calender__google, .steps-page .content__inner .calender__google, .archive .content__inner .calender__google {
-      margin: 0 auto;
-      text-align: center; }
-  .index-page .content__inner .introduction, .for-youth-page .content__inner .introduction, .for-parents-page .content__inner .introduction, .schedule-page .content__inner .introduction, .about-us-page .content__inner .introduction, .reservation-page .content__inner .introduction, .steps-page .content__inner .introduction, .archive .content__inner .introduction {
-    margin: 0 auto; }
-    .index-page .content__inner .introduction__image, .for-youth-page .content__inner .introduction__image, .for-parents-page .content__inner .introduction__image, .schedule-page .content__inner .introduction__image, .about-us-page .content__inner .introduction__image, .reservation-page .content__inner .introduction__image, .steps-page .content__inner .introduction__image, .archive .content__inner .introduction__image {
-      margin: 50px auto;
-      text-align: center; }
-      .index-page .content__inner .introduction__image img, .for-youth-page .content__inner .introduction__image img, .for-parents-page .content__inner .introduction__image img, .schedule-page .content__inner .introduction__image img, .about-us-page .content__inner .introduction__image img, .reservation-page .content__inner .introduction__image img, .steps-page .content__inner .introduction__image img, .archive .content__inner .introduction__image img {
-        max-width: 100%; }
-    .index-page .content__inner .introduction__description, .for-youth-page .content__inner .introduction__description, .for-parents-page .content__inner .introduction__description, .schedule-page .content__inner .introduction__description, .about-us-page .content__inner .introduction__description, .reservation-page .content__inner .introduction__description, .steps-page .content__inner .introduction__description, .archive .content__inner .introduction__description {
-      text-align: center; }
-  .index-page .content__inner .adress *, .for-youth-page .content__inner .adress *, .for-parents-page .content__inner .adress *, .schedule-page .content__inner .adress *, .about-us-page .content__inner .adress *, .reservation-page .content__inner .adress *, .steps-page .content__inner .adress *, .archive .content__inner .adress * {
     text-align: center; }
-  .index-page .content__inner .adress__header, .for-youth-page .content__inner .adress__header, .for-parents-page .content__inner .adress__header, .schedule-page .content__inner .adress__header, .about-us-page .content__inner .adress__header, .reservation-page .content__inner .adress__header, .steps-page .content__inner .adress__header, .archive .content__inner .adress__header {
+    .calender__google iframe {
+      max-width: 100%; }
+
+.introduction {
+  margin: 0 auto; }
+  .introduction__image {
+    margin: 50px auto;
+    text-align: center; }
+    .introduction__image img {
+      max-width: 100%; }
+  .introduction__description {
+    text-align: center; }
+
+.adress * {
+  text-align: center; }
+.adress__header {
+  font-weight: 900;
+  margin: 10px 0 5px 0; }
+
+.steps {
+  margin: 0 auto; }
+  .steps__header {
+    font-size: 1.8em;
     font-weight: 900;
-    margin: 10px 0 5px 0; }
-  .index-page .content__inner .steps, .for-youth-page .content__inner .steps, .for-parents-page .content__inner .steps, .schedule-page .content__inner .steps, .about-us-page .content__inner .steps, .reservation-page .content__inner .steps, .steps-page .content__inner .steps, .archive .content__inner .steps {
-    margin: 0 auto 40px; }
-    .index-page .content__inner .steps__header, .for-youth-page .content__inner .steps__header, .for-parents-page .content__inner .steps__header, .schedule-page .content__inner .steps__header, .about-us-page .content__inner .steps__header, .reservation-page .content__inner .steps__header, .steps-page .content__inner .steps__header, .archive .content__inner .steps__header {
-      font-size: 1.8em;
-      font-weight: 900;
-      margin: 10px 0;
+    margin: 50px 0 10px;
+    text-align: center; }
+  .steps .description {
+    margin-bottom: 20px;
+    text-align: center; }
+  .steps .section {
+    display: block; }
+    .steps .section * {
       text-align: center; }
-    .index-page .content__inner .steps .section, .for-youth-page .content__inner .steps .section, .for-parents-page .content__inner .steps .section, .schedule-page .content__inner .steps .section, .about-us-page .content__inner .steps .section, .reservation-page .content__inner .steps .section, .steps-page .content__inner .steps .section, .archive .content__inner .steps .section {
-      display: block; }
-      .index-page .content__inner .steps .section *, .for-youth-page .content__inner .steps .section *, .for-parents-page .content__inner .steps .section *, .schedule-page .content__inner .steps .section *, .about-us-page .content__inner .steps .section *, .reservation-page .content__inner .steps .section *, .steps-page .content__inner .steps .section *, .archive .content__inner .steps .section * {
-        text-align: center; }
-      .index-page .content__inner .steps .section__info, .index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info, .archive .content__inner .steps .section__info--parents {
-        font-size: 1.2em;
-        color: #61B420;
-        margin-bottom: 20px; }
-      .index-page .content__inner .steps .section__info--parents, .for-youth-page .content__inner .steps .section__info--parents, .for-parents-page .content__inner .steps .section__info--parents, .schedule-page .content__inner .steps .section__info--parents, .about-us-page .content__inner .steps .section__info--parents, .reservation-page .content__inner .steps .section__info--parents, .steps-page .content__inner .steps .section__info--parents, .archive .content__inner .steps .section__info--parents {
-        margin-top: 20px; }
-      .index-page .content__inner .steps .section__image, .for-youth-page .content__inner .steps .section__image, .for-parents-page .content__inner .steps .section__image, .schedule-page .content__inner .steps .section__image, .about-us-page .content__inner .steps .section__image, .reservation-page .content__inner .steps .section__image, .steps-page .content__inner .steps .section__image, .archive .content__inner .steps .section__image {
-        margin: 0 auto 20px; }
-        .index-page .content__inner .steps .section__image__img, .for-youth-page .content__inner .steps .section__image__img, .for-parents-page .content__inner .steps .section__image__img, .schedule-page .content__inner .steps .section__image__img, .about-us-page .content__inner .steps .section__image__img, .reservation-page .content__inner .steps .section__image__img, .steps-page .content__inner .steps .section__image__img, .archive .content__inner .steps .section__image__img {
-          width: 250px; }
-          .index-page .content__inner .steps .section__image__img.wider, .for-youth-page .content__inner .steps .section__image__img.wider, .for-parents-page .content__inner .steps .section__image__img.wider, .schedule-page .content__inner .steps .section__image__img.wider, .about-us-page .content__inner .steps .section__image__img.wider, .reservation-page .content__inner .steps .section__image__img.wider, .steps-page .content__inner .steps .section__image__img.wider, .archive .content__inner .steps .section__image__img.wider {
-            width: 400px; }
-          .index-page .content__inner .steps .section__image__img.middle, .for-youth-page .content__inner .steps .section__image__img.middle, .for-parents-page .content__inner .steps .section__image__img.middle, .schedule-page .content__inner .steps .section__image__img.middle, .about-us-page .content__inner .steps .section__image__img.middle, .reservation-page .content__inner .steps .section__image__img.middle, .steps-page .content__inner .steps .section__image__img.middle, .archive .content__inner .steps .section__image__img.middle {
-            width: 300px; }
-      .index-page .content__inner .steps .section__description, .for-youth-page .content__inner .steps .section__description, .for-parents-page .content__inner .steps .section__description, .schedule-page .content__inner .steps .section__description, .about-us-page .content__inner .steps .section__description, .reservation-page .content__inner .steps .section__description, .steps-page .content__inner .steps .section__description, .archive .content__inner .steps .section__description {
-        margin-bottom: 20px; }
-.index-page .access__header, .for-youth-page .access__header, .for-parents-page .access__header, .schedule-page .access__header, .about-us-page .access__header, .reservation-page .access__header, .steps-page .access__header, .archive .access__header {
+    .steps .section__info, .steps .section__info--parents {
+      font-size: 1.2em;
+      color: #61B420;
+      margin-bottom: 20px; }
+    .steps .section__info--parents {
+      margin-top: 20px; }
+    .steps .section__image {
+      margin: 0 auto 20px; }
+      .steps .section__image__img {
+        width: 250px; }
+        .steps .section__image__img.wider {
+          width: 400px; }
+        .steps .section__image__img.middle {
+          width: 300px; }
+
+.reservation-page {
+  margin: 0 auto; }
+
+.access__header {
   font-size: 1.8em;
   color: #61B420;
   text-align: center; }
-.index-page .access__map iframe, .for-youth-page .access__map iframe, .for-parents-page .access__map iframe, .schedule-page .access__map iframe, .about-us-page .access__map iframe, .reservation-page .access__map iframe, .steps-page .access__map iframe, .archive .access__map iframe {
+.access__map iframe {
   width: 100%;
   margin: 20px 0; }
 
 .post {
-  width: 100%;
-  padding: 24px 0; }
-  .post .content__inner {
-    width: 90%;
-    margin: 0 auto; }
+  display: flex;
+  justify-content: center; }
   .post__header {
     color: #61B420;
-    font-size: 1.8em; }
+    font-size: 2em; }
   .post__content {
     margin-top: 10px;
     display: flex; }
-    .post__content__eyecatch {
+    .post__content__keyvis {
       margin-right: 10px; }
-      .post__content__eyecatch img {
+      .post__content__keyvis img {
         width: 200px; }
     .post__content__right .post__info, .post__content__right .post__categories, .post__content__right .post__tags {
       display: flex;
@@ -677,5 +569,24 @@ main .for-youth, main .reservation {
       border-radius: 3px;
       background-color: #61B420;
       opacity: 0.5; }
+
+/* トップページとstepsページのトップ*/
+.page-top.steps, .index-page.steps {
+  background-color: #a3d17c;
+  color: #fafcfc; }
+
+/* テンプレートパーツ(top-other.php)のレイアアウトcss*/
+.page-top {
+  position: relative; }
+  .page-top__other {
+    /*親要素に position:relative が効いていること*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
+
+/* トップページのaboutusのレイアウトcss*/
+.margin-auto {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

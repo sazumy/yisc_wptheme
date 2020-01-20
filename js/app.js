@@ -2,11 +2,12 @@ $(document).ready(function(){
   // メニューボタン -----------------------------------
   // ドロップダウンメニュー-----------------------------
     var $pageNavBtn = $('#page-nav-btn'),
-        $pageNavBox = $('.page-nav-box'),
+        $pageNavBox = $('#page-nav-box'),
         $active = $('.active');
 
     $pageNavBtn.on('click',function(){
-    $(this).toggleClass('active');
+      $pageNavBtn.toggleClass('active');
+      $pageNavBox.toggleClass('active');
     });
   
   // ページトップに向かうボタン---------------------------

@@ -1,17 +1,3 @@
-@mixin column-content {
-  width: 100%;
-  padding: $column-padding;
-}
-
-@mixin content-inner{
-  width: 90%;
-  margin: 0 auto;
-}
-
-@mixin content-inner-sp{
-    width: 100%;
-    padding: 20px;
-}
 
 @mixin btn-reset{
   appearance: none;
@@ -39,6 +25,12 @@
   }
 }
 
+@mixin hover-gray {
+  &:hover{
+    color: $gray-lv4;
+  }
+}
+
 @mixin green-btn{
   background: $saposute-green;
   color: $white;
@@ -55,23 +47,20 @@
   border-radius:3px; 
 }
 
-@mixin eyecatch{
+@mixin keyvis {
   border-radius: 50%;
   border: solid 3px $saposute-green; 
 }
 
-@mixin va-center-outer{
-  position: relative;
-  min-height: 220px;
+
+@mixin vertical-alien-center {
+  /*親要素に position:relative が効いていること*/
+  position: absolute;
+    top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
-@mixin va-center-inner{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-}
 
 @mixin transition{
   transition: all 0.5s ease;

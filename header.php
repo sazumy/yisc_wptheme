@@ -24,78 +24,57 @@
   <meta property="og:image" content="https://yisc-saitama.com/wp-content/uploads/YISC_logo.jpg" />
   <meta name="twitter:card" content="Summary Card" />
 
-
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
+<!-- JS ----------------------------------------------------------------- -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="<?php echo get_theme_file_uri('js/app.js')?>"></script>
-  <script src="https://kit.fontawesome.com/1f22ee88f6.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'kvi5vqm',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  <script src="<?php echo get_theme_file_uri('/js/app.js')?>"></script>
+  <script src="https://kit.fontawesome.com/1f22ee88f6.js" SameSite=None ></script>
+  
+
+<!-- Style Sheet ----------------------------------------------------------------- -->
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
   <link rel="ICON" href="<?php echo get_theme_file_uri('favicon.ico')?>">
   <title>若者自立支援センター埼玉</title>
   <?php wp_head(); ?>
 </head>
 <!--end head----------------------------------------------------------------->
-
-<body>
-  <div class="wrapper" ontouchstart="">
-    <header class="header">
-      <div class="content__inner">
-        <h1 class="page__title">
-          <a href="<?php echo home_url();?>">若者自立支援センター埼玉
-          <p class="saposute-name">かわぐち若者サポートステーション</p>
-          </a>
+<body <?php body_class(); ?> id="<?php echo esc_attr( $post->post_name ); ?>">
+  <header class="header container">
+    <div class="row no-gutters py-5 d-flex justify-content-between">
+      <a href="<?php echo home_url();?>" class="page__title col-10 col-lg-5">
+        <h1 class="page__title--yisc">
+          <?php bloginfo('name'); ?>  <!-- サイトタイトルをここに表示 -->
         </h1>
-        <div class="content__inner--r visible-pc">
-          <nav class="page-nav-pc">
-            <ul class="page-nav">
-              <li class="page-nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
-              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
-              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
-            </ul>
-          </nav>
-        </div>
+        <p class="page__title--saposute">
+          <?php bloginfo('description'); ?> <!-- サイトの説明（ここではサポステ名）を表示 -->
+        </p>
+      </a>
 
-        <!-- タブレットサイズ以下で見えるメニュー -->
-        <div class="content__inner--r visible-tablet">
-          <a class="page-nav-btn" id="page-nav-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-
-          <nav class="page-nav-box">
-            <ul class="page-nav">
-              <li class="page-nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
-              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
-              <li class="page-nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
-              <li class="page-nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div><!--end header.content__inner-->
-    </header>
+      
+      <!-- ハンバーガーメニューのボタン（タブレット以下で表示） -->
+      <a class="page-nav-btn d-lg-none cod-2" id="page-nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <!-- グローバルナビゲーション -------------------------------------------->
+      <nav class="page__nav__box col-12 col-lg-7" id="page-nav-box">
+        <ul class="page__nav w-100 d-flex juctify-content-between">
+          <li class="page__nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
+          <li class="page__nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
+          <li class="page__nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
+          <li class="page__nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
     <!--end header----------------------------------------------------------------->

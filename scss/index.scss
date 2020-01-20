@@ -1,0 +1,73 @@
+/*------------------------------------------------
+PICK UP
+--------------------------------------------------*/ 
+.pick-up__header{
+  color: $saposute-green;
+  font-size:$h3-size;
+}
+.pick-up{
+  text-align: center; 
+  li.pick-up__list{
+    font-size:1.3em;
+    line-height: 2;
+    a:hover{
+      opacity:.8;
+      font-weight: 900;
+      text-decoration: underline;
+    }
+    &:before{
+      color: $saposute-green-hue;
+      content: '\f054';
+      margin-right: 10px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      &:hover{
+        font-weight: 400;
+      }
+    }
+  }
+}
+/*------------------------------------------------
+各ページへのリンク
+--------------------------------------------------*/ 
+/* 全体・共通-------------------------*/
+.keyvis {
+  width: 100%;
+  text-align: center;
+}
+
+/* レイアウト------------------------*/
+
+.voice {
+  border: $light-gray-border;
+}
+
+.aboutus, .forparents {
+  background-color: $saposute-beige;
+}
+
+
+.schedule{
+  background-image:url("img/schedule_bg.png");
+  background-size:cover;
+  color: $white;
+  position: relative;
+}
+
+
+.blog{
+  background-image:url("img/blog_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  position: relative;
+}
+
+// <section></section>内にイラストがないときに共通のcss・レイアウトcss------------------------
+.schedule, .aboutus, .blog, .reservation {
+  min-height: 300px;
+  position: relative;
+  .page-info {
+    @include vertical-alien-center;
+  }
+}

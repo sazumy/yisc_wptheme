@@ -1,147 +1,173 @@
-.content{
-  .for-youth{
-    background-color: $saposute-aqua;
-    color:$white;
+/*----------------------------------------------
+ 固定ページのトップ画像 
+ ---------------------------------------------*/
+/* トップ画像共通----*/
+.page-top {
+  min-height: 288px;
+  background-color: $saposute-beige;
+}
+
+/* 背景色・画像の設定(緑色はcommon.scssに定義)---*/
+.foryouth, .reservation {
+  background-color: $saposute-aqua;
+  color: $white;
+}
+
+/* 人物のイラスト------*/
+.keyvis__img {
+  @include keyvis;
+}
+
+.keyvis__other {
+  margin: 0 auto;;
+}
+
+
+/* ページタイトル・説明-----*/
+.page-info {
+  text-align: center;
+  &__title{
+    font-size:$h3-size; 
+  }
+  &__description{
+    font-size:$h4-size;
   }
 }
 
-.index-page, .for-youth-page, .for-parents-page, .schedule-page, .about-us-page, .reservation-page, .steps-page, .archive{
-// 各ページのヘッダーの変更 ---------------------------------
-  .about{
-    background-color: $white;
-    color:$saposute-green;
+.home {
+  .page-info__title:hover {
+    text-decoration: underline;
   }
+}
+
+
+@media all and (min-width: 720px) {
+  /* ページトップ---------------------------*/
+  .page-top__content{
+    position: relative; 
+    .page-info {
+      position: absolute;
+        top: 50%;
+      transform: translateY(-50%);
+      &.two-column {
+        right: 0px;
+      }
+    }
+  }
+}
+
    
-// 全ページ共通 ---------------------------------
-  .content__inner{
-    @include column-content;
-    @include content-inner;
-    .pick-up-header{
-      font-size:$h3-size;
-      color: $saposute-green;
-      text-align: center;
-    }
-    .pick-up{
-      text-align: center; 
-      &__list{
-        font-size:1.3em;
-        line-height: 2;
-        &:hover{
-          opacity:.8;
-          font-weight: 900;
-        }
-        &:before{
-          color: $saposute-green;
-          font-family: font-awesome free;
-          content: '>>';
-          &:hover{
-            font-weight: 400;
-          }
-        }
-      }
-    }
 // for-youth.html / for-parebts.html ---------------------------------
-    .support{
-      padding: 20px 0;
-      display: flex;
-      &__header{
-        font-size:$h3-size;
-        color: $saposute-green;
-        margin:10px 0;
-      }
-      &__header.visible-sp{
-        display: none;
-      }
-      &__image{
-        margin-right: 15px;
-        &__img{
-          width: 250px;
-          height: 200px;
-        }
-      }
-      &__description{
-        padding-top:10px;
-      }
+.support{
+  &__header {
+    color: $saposute-green;
+    font-size:$h3-size;
+    text-align: center;
+  }
+  &__header:not(:first-child) {
+    margin-top: 15px;
+  }
+  &__image{
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    &__img{
+      height: 200px;
+      width: 250px;
     }
+  }
+  &__description{
+    padding-top:10px;
+  }
+}
+
 // schedule.html ---------------------------------
-    .calender{
-      max-width:600px;
-      margin:0 auto;
-      padding: 20px 0;
-      &__description{
-        margin-bottom: 20px;
-      }
-      &__google{
-        margin:0 auto;
-        text-align: center;
-      }
+.calender{
+  padding: 20px 0;
+  &__description{
+    margin-bottom: 20px;
+  }
+  &__google{
+    margin:0 auto;
+    text-align: center;
+    iframe {
+      max-width: 100%;
     }
+  }
+}
 
 // about-us.html ---------------------------------
-    .introduction{
-      margin: 0 auto;
-      &__image{
-        margin: 50px auto;
-        text-align: center;
-        img{
-          max-width: 100%;
-        }
-      }
-      &__description{
-        text-align: center;
-      }
+.introduction{
+  margin: 0 auto;
+  &__image{
+    margin: 50px auto;
+    text-align: center;
+    img{
+      max-width: 100%;
     }
-    .adress{
-      *{
-        text-align: center;
-      }
-      &__header{
-        font-weight:900;
-        margin: 10px 0 5px 0;
-      }
-    }
+  }
+  &__description{
+    text-align: center;
+  }
+}
+.adress{
+  *{
+    text-align: center;
+  }
+  &__header{
+    font-weight:900;
+    margin: 10px 0 5px 0;
+  }
+}
    
-// reservation.html ---------------------------------
-    .steps{
-      margin: 0 auto 40px;
-      &__header{
-        font-size: $h3-size;
-        font-weight: 900;
-        margin: 10px 0;
-        text-align: center;
-      }
-      .section{
-        display: block;
-        * {
-          text-align: center;
+
+.steps{
+  margin: 0 auto;
+  &__header{
+    font-size: $h3-size;
+    font-weight: 900;
+    margin: 50px 0 10px;
+    text-align: center;
+  }
+  .description{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  
+  .section{
+    display: block;
+    * {
+      text-align: center;
+    }
+    &__info{
+      font-size: $h4-size;
+      color: $saposute-green;
+      margin-bottom: 20px;
+    }
+    &__info--parents{
+      @extend .section__info;
+      margin-top: 20px;
+    }
+    &__image{
+      margin: 0 auto 20px;
+      &__img{
+        width: 250px;
+        &.wider{
+          width: 400px;
         }
-        &__info{
-          font-size: $h4-size;
-          color: $saposute-green;
-          margin-bottom: 20px;
-        }
-        &__info--parents{
-          @extend .section__info;
-          margin-top: 20px;
-        }
-        &__image{
-          margin: 0 auto 20px;
-          &__img{
-            width: 250px;
-            &.wider{
-              width: 400px;
-            }
-            &.middle{
-              width: 300px;
-            }
-          }
-        }
-        &__description{
-          margin-bottom: 20px;
+        &.middle{
+          width: 300px;
         }
       }
     }
-  } //end.content__inner
+  }
+}
+
+.reservation-page {
+  margin: 0 auto;
+}
+
 
 // about-us.html(google mapのみ) ---------------------------------
   .access{
@@ -157,4 +183,3 @@
       }
     }
   }
-}

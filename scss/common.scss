@@ -1,24 +1,6 @@
-html{
-  box-sizing: border-box;
-  *, *::before, *::after{
-    box-sizing: inheritate;
-  }
-}
-
-body{
-  color: $gray-lv4;
-  font-family: 'M PLUS 1p', sans-serif;
-  font-size:14px;
-  position: relative;
-  background-color: $white;
-  background-size: contain;
-  background-repeat: repeat-y; 
-}
-
-.wrapper{
-  background-color:$white;
-}
-
+/*----------------------------------------------
+ 要素のCSS
+---------------------------------------------*/
 a{
   text-decoration: none;
   &:link{
@@ -26,17 +8,19 @@ a{
   }
   &:hover{
     color: inherit;
+    text-decoration: none;
   }
   &:visited{
     color: inherit;
   }
 }
 
-figure{
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+body{
+  background-color: $white;
+  color: $gray-lv4;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 1.4rem;
+  position: relative;
 }
 
 button{
@@ -45,24 +29,68 @@ button{
   margin-bottom:20px;
 }
 
-.page__title, .eyecatch, .section__title, .section__description {
-  &:hover{
-  opacity: 0.8;
+/* 投稿のh2 */
+.container .row h2 {
+  color: $saposute-green;
+  font-size: $h3-size;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+/* 投稿のh3 */
+.page-article h3:not(.steps__header), .post h3 {
+  color: $saposute-green;
+  font-size: $h4-size;
+  line-height: 1.8;
+  margin-bottom: 15px auto 10px;
+}
+
+/* 投稿のh4 */
+.page-article h4, .post h4 {
+  color: $gray-lv5;
+  font-size: $h4-size;
+  line-height: 1.5;
+  margin: 10px auto 5px;
+}
+
+/* 投稿のp */
+.page-article p {
+  margin-bottom: 5px;
+}
+
+/* 投稿のli */
+.page-article ul, .post ul:not(.post__info) {
+  margin: 10px 0 10px 20px;
+  li:before {
+    color: $saposute-green-hue;
+    content: '\f111';
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
   }
 }
 
-main{
-  min-height: 600px;
+
+figure{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
-.content__inner{
-  @include content-inner;
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+  *, *::before, *::after{
+    box-sizing: inheritate;
+  }
 }
 
-
-.read-more{
-  color: $saposute-green !important;
-  margin-left:20px;
+main {
+  margin-top: 64px;
+  min-height: 400px;
+  padding-bottom: 100px;
 }
 
 img.size-post-thumbnail{
@@ -70,9 +98,32 @@ img.size-post-thumbnail{
   height: 165px;
 }
 
+
+/*----------------------------------------------
+ 汎用クラス
+---------------------------------------------*/
+/* ボタン --------------------*/
+.cta {
+  margin: 0 auto;
+}
+
+.no-gutters {
+  margin: 0;
+  padding: 0;
+}
+
 /*投稿のテキストの直前に自動挿入されるクラス*/
 .post__text{
   margin-top: 15px;
+}
+
+.read-more{
+  color: $saposute-green;
+  margin-left:20px;
+}
+
+.visible-pc {
+  display: none;
 }
 
 /*投稿の画像*/
@@ -81,9 +132,47 @@ img.size-post-thumbnail{
   text-align: center;
 }
 
-/* ホバーエフェクト */
-/* アニメーション */ 
-.rotate{
+/* wordpressにデフォルトでついているblockquoteタグのクラス*/
+.wp-block-quote {
+  background: $saposute-green-pale;
+  margin: 20px;
+  padding: 20px 40px;
+  position: relative;
+
+  &:before {
+    color: $saposute-green;
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-size: 40px;
+    font-weight: 400;
+    position: absolute;
+      top: -10px;
+      left: -20px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .visible-pc {
+    display: block;
+  }
+
+  .visible-sp {
+    display: none;
+  }
+}
+
+/*----------------------------------------------
+ アニメーション
+---------------------------------------------*/
+/* ホバーエフェクト -----------------------------*/ 
+.anim-bigger{
+  &:hover{
+    @include transition;
+    transform: perspective(500px) translate3d(0, -8px,50px);
+  }
+}
+
+.anim-rotate{
   &:hover{
     transition: 1s;
     transform: rotateZ( 360deg ) ;
@@ -91,7 +180,7 @@ img.size-post-thumbnail{
     }
 }
 
-.shake{
+.anim-shake{
   &:hover{
     animation: shake .2s linear;
     opacity: 1;
@@ -116,19 +205,23 @@ img.size-post-thumbnail{
   }
 }
 
-.bigger{
-  &:hover{
-    @include transition;
-    transform: perspective(500px) translate3d(0, -8px,50px);
+/*----------------------------------------------
+ aside(コードが増えたら別ファイルに)
+---------------------------------------------*/
+/* トップに戻るボタン */
+.aside{
+  .back-to-top{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    font-size:1.5em;
+    text-align: center;
+    line-height: 2;
+    color: $white;
+    background: $saposute-green-hue;
+    position: fixed;
+    bottom: 20%;
+    right: 24px;
+    display: none;
   }
-}
-
-.font-kotodama{
-  font-family: ta-kotodama-r, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.w-100{
-  width: 100%;
 }
