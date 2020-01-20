@@ -1,67 +1,70 @@
 .header{
   color:$saposute-green;
-  
-  .page__title{
-    @include hover-gray;
-    &--yisc{
-      font-size: 2.4rem;
-    }
-    .saposute-name{  
-      font-size: 1.2rem;
-      line-height:0.4;
-    }
+}
+.page__title{
+  @include hover-gray;
+  &--yisc{
+    font-size: 2.4rem;
   }
-
-  .page__nav{
+  .saposute-name{  
+    font-size: 1.2rem;
+    line-height:0.4;
+  }
+}
+.menu-groval-navigation-container{
+  max-width: 58%;
+  .menu {
+    display: flex;
     flex-wrap: wrap;
-    &__list{
+    .menu-item {
       @include hover-gray;
       display: block;
       margin: 0 1.5rem .5rem 0;
     }
   }
+}
 //----- ハンバーガーメニューのボタン --------------
-  .page-nav-btn, .page-nav-btn span{
-    display: inline-block;
-    transition: all .4s;
-  }
-  .page-nav-btn {
-    height: 33px;
-    position: relative;
-    width: 36px;
+.page-nav-btn, .page-nav-btn span{
+  display: inline-block;
+  transition: all .4s;
+}
+.page-nav-btn {
+  height: 33px;
+  position: relative;
+  width: 36px;
+  
+  &.active span:nth-of-type(1) {
+    transform: translateY(15px) rotate(-45deg);
+    -webkit-transform: translateY(15px) rotate(-45deg);
     
-    &.active span:nth-of-type(1) {
-      transform: translateY(15px) rotate(-45deg);
-      -webkit-transform: translateY(15px) rotate(-45deg);
-      
-    }
-    &.active span:nth-of-type(2) {
-      opacity: 0;
-    }
-    &.active span:nth-of-type(3) {
-      transform: translateY(-15px) rotate(45deg);
-      -webkit-transform: translateY(-15px) rotate(45deg);
-    }
   }
-  .page-nav-btn span {
-    background-color: $saposute-green;
-    border-radius: 3px;
-    height: 3px;
-    position: absolute;
-      left: 0;
-    width: 100%;
-    
-    &:nth-of-type(1) {
-      top: 0;
-    }
-    &:nth-of-type(2) {
-      top: 15px;
-    }
-    &:nth-of-type(3) {
-      bottom: 0;
-    }
+  &.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  &.active span:nth-of-type(3) {
+    transform: translateY(-15px) rotate(45deg);
+    -webkit-transform: translateY(-15px) rotate(45deg);
   }
 }
+.page-nav-btn span {
+  background-color: $saposute-green;
+  border-radius: 3px;
+  height: 3px;
+  position: absolute;
+    left: 0;
+  width: 100%;
+  
+  &:nth-of-type(1) {
+    top: 0;
+  }
+  &:nth-of-type(2) {
+    top: 15px;
+  }
+  &:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+
 
 //-------- タブレット以下の場合のナビゲーションボックス ------------
 @media all and (max-width: 992px) {
@@ -70,11 +73,12 @@
   }
   .menu-groval-navigation-container{
     display: none;
+    max-width: 100%;
     position: absolute;
       top: 9rem;
       left: 0;
-    z-index: 1;
     width: 100%;
+    z-index: 1;
     .menu{
       background: $white;
       border-bottom:$green-border-dotted; 
