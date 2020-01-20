@@ -62,19 +62,11 @@
         <span></span>
       </a>
       <!-- グローバルナビゲーション -------------------------------------------->
-      <nav class="page__nav__box col-12 col-lg-7" id="page-nav-box">
-        <ul class="page__nav w-100 d-flex juctify-content-between">
-          <li class="page__nav__list"><a href="<?php echo home_url();?>">ホーム</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/foryouth">悩んでいるあなたへ</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/forparents">保護者の皆様へ</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/schedule">スケジュール</a></li>
-          <li class="page__nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/voice/" target="_new">利用者の声</a></li>
-          <li class="page__nav__list"><a href="https://www.sodateage.net/yss/kawaguchi/blog/" target="_new">スタッフブログ</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/reservation">ご利用・ご予約方法</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/steps">就職までのステップ</a></li>
-          <li class="page__nav__list"><a href="<?php echo home_url();?>/aboutus">運営組織・アクセス</a></li>
-        </ul>
-      </nav>
+      <?php 
+        wp_nav_menu( array( 
+          'theme_location' => 'header-navigation' 
+        ) ); 
+      ?>
     </div>
   </header>
     <!--end header----------------------------------------------------------------->

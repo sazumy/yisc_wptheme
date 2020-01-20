@@ -2,7 +2,7 @@ $(document).ready(function(){
   // メニューボタン -----------------------------------
   // ドロップダウンメニュー-----------------------------
     var $pageNavBtn = $('#page-nav-btn'),
-        $pageNavBox = $('#page-nav-box'),
+        $pageNavBox = $('.menu-groval-navigation-container'),
         $active = $('.active');
 
     $pageNavBtn.on('click',function(){
