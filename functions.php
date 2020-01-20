@@ -21,10 +21,12 @@
   }
   add_filter('excerpt_mblength', 'yisc_excerpt_length');
 
-  //=========================================================
-  // 2. Style Sheet Java Script
-  //=========================================================
-
+  // メニューの機能を有効化する
+  function yisc_setup_menu() {
+    register_nav_menu( 'header-navigation', 'Groval Navigation' );
+  }
+  
+  add_action( 'after_setup_theme', 'yisc_setup_menu' );
 
 
 ?>

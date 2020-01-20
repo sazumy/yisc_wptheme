@@ -371,23 +371,24 @@ PICK UP
   .page__title--yisc {
     font-size: 2rem !important; }
 
-  .page__nav__box {
+  .menu-groval-navigation-container {
     display: none;
     position: absolute;
     top: 9rem;
     left: 0;
-    z-index: 1; }
-    .page__nav__box .page__nav {
+    z-index: 1;
+    width: 100%; }
+    .menu-groval-navigation-container .menu {
       background: #fafcfc;
       border-bottom: dotted 1px #61B420;
       color: #666; }
-      .page__nav__box .page__nav__list {
+      .menu-groval-navigation-container .menu .menu-item {
         display: block;
         border-top: dotted 1px #61B420;
         padding: 1rem 2rem;
         margin: 0;
         width: 100%; }
-        .page__nav__box .page__nav__list:hover {
+        .menu-groval-navigation-container .menu .menu-item:hover {
           background-color: #a3d17c;
           color: #fafcfc;
           font-weight: 900; }
