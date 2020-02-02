@@ -42,3 +42,22 @@
     }
   }
 }
+
+@media all and (max-width: 576px) {
+  .post {
+    &__content {
+      display: block;
+      text-align: center;
+    }
+    &__info{
+      justify-content: center;
+    }
+    &__text {
+      text-align: justify;
+    }
+    .category-and-tag {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
