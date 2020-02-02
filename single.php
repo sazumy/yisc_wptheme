@@ -37,12 +37,22 @@ get_header();
     
       <article id="post-<?php the_id(); ?>" <?php post_class();?> >
         <div class="col-10">
-          <h3 class="post__header">
+          <h3 class="post__header text-center text-md-left">
             <?php the_title(); ?>
           </h3>
 
           <section class="post__content">
-            
+            <figure class="post__content__keyvis">
+              <?php
+                if(has_post_thumbnail()){ 
+                  the_post_thumbnail();
+                } else {
+              ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/no-image.png" alt="no image">
+              <?php
+                }
+              ?>
+            </figure>
 
             <div class="post__content__right">
               <ul class="post__info">
@@ -54,6 +64,7 @@ get_header();
                 </li>
               </ul>
 
+            <div class="category-and-tag">
               <div class="post__categories">
                 <?php
                   the_category(' ');
@@ -64,12 +75,11 @@ get_header();
                 <?php the_tags('', ' ');
                 ?>
               </div>
+            </div>
 
-              <section>
-                <p class="post__text">
-                  <?php the_content(); ?>
-                </p>
-              </section>
+            <section class="post__text">
+              <?php the_content(); ?>
+            </section>
 
             </div><!--end.post__content__right-->
           </section>
@@ -77,7 +87,7 @@ get_header();
         </div><!--end.content__inner-->
       </article>
 
-      <section class="cta">
+      <section class="cta mt-5">
         <a href="reservation.html">
           <button class="cta__button">
             ご利用方法はこちら
